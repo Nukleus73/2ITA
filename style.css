@@ -1,6 +1,9 @@
 :root {
-    --blue: #1e90ff;
+    --yellow: #ec9a29;
+    --green: #419d78;
+    --red: #ee7674;
+    --blue: #26408b;
     --white: #ffffff;
   }
   
-  body { background-color: var(--blue); }
+  body { background-color: var(--white); }
