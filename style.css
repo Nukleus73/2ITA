@@ -1,7 +1,6 @@
 *{
   margin: 0;
   padding: 0;
-  border: none;
 }
 
 :root {
@@ -11,8 +10,6 @@
   --blue: #26408b;
   --white: #ffffff;
 }
-  
-body { background-color: var(--white); }
 
 /* MAIN ARTICLE */
 
@@ -21,22 +18,26 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient( var(--green), var(--blue));
+  background-repeat: no-repeat;
 }
 
 main {
   aspect-ratio: 9/16;
-  width: 20rem;
+  width: 18rem;
 }
 
 #console {
   border: 1px solid black;
-  height: 100%;
+  height: 95%;
 }
 
 #input {
-  height: 10rem;
+  height: 5%;
 }
 
-input {
-  border: 1px solid red;
+#input textarea {
+  resize: none;
+  height: 100%;
+  width: 80%;
 }
