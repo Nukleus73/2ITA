@@ -16,17 +16,12 @@ body { background-color: var(--white); }
 
 /* MAIN ARTICLE */
 
-main {
+body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 10px;
-  gap: 10px;
 }
 
-.articleitem {
-  width: 100%;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+main {
+  aspect-ratio: 16/9;
 }
