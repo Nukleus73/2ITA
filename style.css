@@ -21,6 +21,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient( var(--green), var(--blue));
+  background-repeat: no-repeat;
 }
 
 main {
