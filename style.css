@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Dosis:wght@300&family=Playfair+Display&family=Poppins:wght@200;300&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -34,6 +35,8 @@ body {
 
 h1 {
   position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
 }
 
 main {
@@ -43,8 +46,11 @@ main {
 }
 
 #console {
+  margin-top:5%;
+  padding: 10px; 
   border: 1px solid black;
-  height: 95%;
+  height: 90%;
+  font-family: 'Bitter', serif;
 }
 
 #input {

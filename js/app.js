@@ -17,7 +17,7 @@ function numberInput() {
             document.querySelector("#input input").value = NaN
         } else {  
             document.getElementById("console").innerHTML += guess + " er riktig! Vil du spille på nytt?<p><button>Spill</button>"   ;
-            document.querySelector("#input input").value = NaN
+            document.querySelector("#input input").value = ""
 
         }
     }
