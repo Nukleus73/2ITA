@@ -26,3 +26,16 @@ main {
   aspect-ratio: 9/16;
   width: 20rem;
 }
+
+#console {
+  border: 1px solid black;
+  height: 100%;
+}
+
+#input {
+  height: 10rem;
+}
+
+input {
+  border: 1px solid red;
+}
