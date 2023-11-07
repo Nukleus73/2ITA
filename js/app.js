@@ -5,7 +5,11 @@ console.log(random_number);
 function numberInput() {
     var guess = document.querySelector("#input textarea").value
     console.log(guess)
+    document.getElementById("console").innerHTML += "<p>Your guess is: " + guess ;
 }
+
+
+
 
 
 
