@@ -3,26 +3,27 @@ var guess = 0;
 console.log(random_number);
 
 function numberInput() {
-    var guess = document.querySelector("#input textarea").value
+    var guess = document.querySelector("#input input").value
     console.log(guess)
-    document.getElementById("console").innerHTML += "<p>Your guess is: " + guess ;
+    
+        if (guess > random_number) {
+            document.getElementById("console").innerHTML += guess + " er for høyt.<p>"  ;
+            document.querySelector("#input input").value = NaN
+        } else if (guess < random_number) {  
+            document.getElementById("console").innerHTML += guess + " er for lavt.<p>"  ;
+            document.querySelector("#input input").value = NaN
+        } else {  
+            document.getElementById("console").innerHTML += guess + " er riktig! Vil du spille på nytt?<p><button>Spill</button>"   ;
+            document.querySelector("#input input").value = NaN
+
+        }
+    }
+
+function resetGame () {
+    document.getElementById("console").innerHTML = "";
+
 }
 
 
-
-
-
-
-// while (guess != random_number) {
-    
-//     if (guess > random_number) {
-//         console.log("Gjett lavere!");
-//     } else if (guess < random_number) {  
-//         console.log("Gjett høyere!");
-//     } else {  
-//         console.log("Riktig!");
-//         break;
-//     }
-// }
 
 
