@@ -14,15 +14,29 @@
 /* MAIN ARTICLE */
 
 body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient( var(--green), var(--blue));
   background-repeat: no-repeat;
 }
 
+h1 {
+  position: relative;
+}
+
 main {
+  position: relative;
   aspect-ratio: 9/16;
   width: 18rem;
 }
