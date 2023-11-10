@@ -7,16 +7,30 @@
         <title>Gjett tallet</title>
     </head>
     <body>
-        <div id="background"></div>
-            <h1>Gjett tallet!</h1>
-            <main>
-                <div id=console>
+        <main>
+            <div class="vignette hide"></div>
+            <img class="flare hide" src="parallax/img/lensFlare.png">
+            <img class="parallax background6 bg" src="parallax/img/6.png" data-speedx=".2" data-speedy=".24" data-speedz="0" data-rotation=".02" data-distance="400">
+            <img class="parallax background5 bg" src="parallax/img/5.png" data-speedx=".2" data-speedy=".24" data-speedz="0" data-rotation=".02" data-distance="600">
+            <img class="parallax background4 bg" src="parallax/img/4.png" data-speedx=".15" data-speedy=".18" data-speedz="0" data-rotation=".05" data-distance="1000">
+            <img class="parallax background3 bg" src="parallax/img/3.png" data-speedx=".1" data-speedy=".12" data-speedz="0" data-rotation=".09" data-distance="1400">
+            <div class="text" data-speedx=".08" data-speedy=".1" data-speedz="0" data-rotation=".1" data-distance="1600">
+                <h1>Gjett tallet!</h1>
+                <div id="game" class="hide">
+                    <div id=console>
+                    </div>
+                    <div id="input">
+                        <input min="0" max="100" type="number">
+                        <button onclick="numberInput()">Send</button>
+                    </div>
                 </div>
-                <div id="input">
-                    <input min="0" max="100" type="number">
-                    <button onclick="numberInput()">Send</button>
-                </div>
-            </main>
-        <script src="js/app.js"></script> 
+            </div>
+            <img class="parallax background2 bg" src="parallax/img/2.png" data-speedx=".05" data-speedy=".08" data-speedz=".05" data-rotation=".15" data-distance="2000">
+            <img class="parallax background1" src="parallax/img/1.png" data-speedx=".04" data-speedy=".06" data-speedz=".1" data-rotation=".2" data-distance="2400">
+            <div class="gradient"></div>
+        </main>
+        <script src="js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="parallax/parallax.js"></script> 
     </body>
 </html>
