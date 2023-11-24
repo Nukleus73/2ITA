@@ -102,6 +102,7 @@ main {
   background-color: var(--background);
   border-radius: 10px;
   box-shadow: 0 0px 5px 1px var(--text);
+  transition-duration: 0.3s;
 }
 
 .answer h3{
@@ -115,4 +116,10 @@ main {
   width:30px;
   height:30px;
   border-radius: 100%;
+}
+
+.answer:hover{
+  background-color:rgb(228, 227, 227);
+  box-shadow: 0 0px 10px 2px var(--text);
+  cursor:pointer;
 }
