@@ -2,9 +2,11 @@
 
 /* farger */
 :root {
-    --blue: #3AAFB9;
-    --white: #ffffff;
-    --black: #150128;
+    --text: #1c0d26;
+    --background: #ffffff;
+    --primary: #d48b82;
+    --secondary: #e6dbdb;
+    --accent: #3b9eab;
   }
 /* alle objekter */
 *,
