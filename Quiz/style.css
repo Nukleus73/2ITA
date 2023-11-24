@@ -19,7 +19,7 @@
 
 /* markert tekst */
 ::selection {
-    background-color: var(--blue);
+    background-color: var(--accent);
 }
 
 /* scrollbar */
@@ -130,4 +130,10 @@ main {
   right: 0;
   margin: 1rem;
   font-size: 2rem;
+  transition-duration: .2s;
+}
+
+#volumeButton:hover {
+  scale: 1.1;
+  cursor: pointer;
 }
