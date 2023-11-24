@@ -3,7 +3,7 @@ let currentQuestion = 0;
 function checkAnswer(selectedOption) {
     const correctAnswerIndex = questions[currentQuestion].correctAnswer;
 
-    if (selectedOption.textContent === questions[currentQuestion].options[correctAnswerIndex]) {
+    if (selectedOption.lastElementChild.textContent === questions[currentQuestion].options[correctAnswerIndex]) {
         alert("Riktig svar!");
     } else {
         alert("Feil svar. Prøv igjen!");
@@ -76,9 +76,8 @@ const questions = [
     {
         question: "Bing chilling?",
         options: ["Chillern", "Mango", "Bing Chlling", "Eple"],
-        correctAnswer: 3
+        correctAnswer: 2
     },
-    // Legg til flere spørsmål etter behov
 ];
 
 updateUI();

@@ -19,11 +19,24 @@
             <h4>Spørsmål 1/13</h4>
             <h1 id="question">Hva er hovedstaden i Danmark?</h1>
             <div id="quiz-container">
-                <div class="option"> <h3>A</h3>   <p onclick="checkAnswer(this)">Oslo</p></div>
-                <div class="option"> <h3>B</h3>   <p onclick="checkAnswer(this)">Stockholm</p></div>
-                <div class="option"> <h3>C</h3>   <p onclick="checkAnswer(this)">København</p></div>
-                <div class="option"> <h3>D</h3>   <p onclick="checkAnswer(this)">København</p></div>
+                <div class="option" onclick="checkAnswer(this)">
+                    <h3>A</h3>
+                    <p>Oslo</p>
+                </div>
+                <div class="option" onclick="checkAnswer(this)">
+                    <h3>B</h3>
+                    <p>Stockholm</p>
+                </div>
+                <div class="option" onclick="checkAnswer(this)">
+                    <h3>C</h3>
+                    <p>København</p>
+                </div>
+                <div class="option" onclick="checkAnswer(this)">
+                    <h3>D</h3>
+                    <p>Helsinki</p>
+                </div>
             </div>
+            
             <ion-icon id="volumeButton" name="volume-high-outline" onclick="muteSound()"></ion-icon>
         </main>
         <script src="script2.js"></script>
