@@ -41,12 +41,31 @@
 #buttons {
   display:flex;
   flex-direction: column;
-  margin-top:20%;
+  margin-top:35vh;
   align-items: center;
 }
 
 .answer {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content: center;
   margin:2vh;
-  height:5vh;
-  width:20vh;
+  height:8vh;
+  width:50vh;
+  border:solid rgba(89, 86, 86, 0.49) 1px;
+  border-radius: 3px;
+}
+
+.answer h3{
+  color:white;
+  display:inline-flex;
+  align-items:center;
+  justify-content: center;
+  position:absolute;
+  left:2vh;
+  background-color:blue;
+  width:30px;
+  height:30px;
+  border-radius: 100%;
 }
