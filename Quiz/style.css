@@ -84,7 +84,7 @@ main {
   width: 20%;
 }
 
-#buttons {
+#quiz-container {
   display:flex;
   flex-direction: column;
   margin-top:10vh;
