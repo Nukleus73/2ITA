@@ -36,9 +36,9 @@ function resetQuiz() {
 
 const questions = [
     {
-        question: "Hva er hovedstaden i Norge?",
-        options: ["Oslo", "Stockholm", "København", "Helsinki"],
-        correctAnswer: 0
+        question: "Hva er hovedstaden i Danmark?",
+        options: ["Oslo", "Stockholm", "København", "Berlin"],
+        correctAnswer: 2
     },
     {
         question: "Hva er hovedstaden i Sverige?",
