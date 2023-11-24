@@ -123,3 +123,11 @@ main {
   box-shadow: 0 0px 10px 2px var(--text);
   cursor:pointer;
 }
+
+#volumeButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  font-size: 2rem;
+}
