@@ -24,8 +24,15 @@ function checkAnswer(selectedOption) {
             updateUI();
             updateProgressBar();
         } else {
-            alert("Din poengsum ble:" + score);
-            resetQuiz();
+            const scoreCounter = document.querySelector("#questionsRight");
+            const quiz = document.querySelector("#quiz-container");
+            const questionElement = document.getElementById("question");
+
+            scoreCounter.innerHTML = `${score}/${questions.length}`;
+            scoreCounter.style.display = "flex";
+            quiz.style.display = "none"
+            questionElement.innerHTML = "Your points is:"
+
         }
     }, 1000);
 }
@@ -46,14 +53,6 @@ function updateUI() {
     total.innerHTML = questions.length
 }
 
-//  resetter hele quizen
-function resetQuiz() {
-    currentQuestion = 0;
-    score = 0;
-    updateUI();
-    updateProgressBar(); // Reset progress bar
-}
-
 //  resetter progressbaren basert på hvilket spørsmål vi er på
 function updateProgressBar() {
     const progressBar = document.getElementById("bar");
@@ -61,131 +60,126 @@ function updateProgressBar() {
     progressBar.style.width = `${progress}%`;
 }
 
-const animeQuiz = [
+const questions = [
     {
-        question: "What is the name of the protagonist in 'Naruto'?",
-        options: ["Sasuke Uchiha", "Sakura Haruno", "Naruto Uzumaki", "Kakashi Hatake"],
+        question: "Who harbors the powerful Nine-Tailed Fox in the hidden village of Konoha?",
+        options: ["Sasuke's family", "Hidden Leaf elders", "Naruto Uzumaki", "Kakashi's sensei"],
         correctAnswer: 2
     },
     {
-        question: "In 'Attack on Titan,' what are the giant humanoid creatures that threaten humanity called?",
-        options: ["Titans", "Giants", "Colossals", "Behemoths"],
-        correctAnswer: 0
-    },
-    {
-        question: "Which anime features a high school club named the SOS Brigade, led by the eccentric Haruhi Suzumiya?",
-        options: ["Lucky Star", "Haruhi Suzumiya", "Clannad", "Toradora!"],
-        correctAnswer: 1
-    },
-    {
-        question: "What is the signature move of Goku in 'Dragon Ball Z'?",
-        options: ["Kamehameha", "Spirit Bomb", "Solar Flare", "Final Flash"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'One Piece,' what is the name of Monkey D. Luffy's straw hat?",
-        options: ["Sunny", "Shanks", "Going Merry", "Thousand Sunny"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which anime features a Death Note that allows the user to kill anyone whose name is written in it?",
-        options: ["Code Geass", "Paranoia Agent", "Death Note", "Mirai Nikki"],
-        correctAnswer: 2
-    },
-    {
-        question: "In 'My Hero Academia,' what is the protagonist Izuku Midoriya's superhero name?",
-        options: ["Endeavor", "All Might", "Deku", "Shoto"],
-        correctAnswer: 2
-    },
-    {
-        question: "What is the setting of 'Fullmetal Alchemist: Brotherhood'?",
-        options: ["Amestris", "Fiore", "Drakon", "Ishval"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'Sword Art Online,' what is the name of the virtual reality MMORPG where players get trapped?",
-        options: ["Alfheim Online", "Gun Gale Online", "Aincrad", "Accel World"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which anime follows the story of two brothers, Edward and Alphonse Elric, on a quest to find the Philosopher's Stone?",
-        options: ["Blue Exorcist", "Soul Eater", "Fullmetal Alchemist", "D.Gray-man"],
-        correctAnswer: 2
-    },
-    {
-        question: "What is the name of the demon fox sealed within Naruto in 'Naruto'?",
-        options: ["Kurama", "Shukaku", "Kyuubi", "Matatabi"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'Cowboy Bebop,' what is the name of the bounty hunter who travels with a genetically engineered corgi?",
-        options: ["Spike Spiegel", "Jet Black", "Faye Valentine", "Edward Wong Hau Pepelu Tivrusky IV"],
+        question: "What ancient artifact fuels Goku's quest for strength in 'Dragon Ball Z'?",
+        options: ["The Spirit Crystal", "The Mystic Orb", "Kamehameha", "The Dragon Balls"],
         correctAnswer: 3
     },
     {
-        question: "Which anime features a young alchemist named Aladdin and his magical companion, Ugo?",
-        options: ["Magi: The Labyrinth of Magic", "The Seven Deadly Sins", "Black Clover", "Fairy Tail"],
-        correctAnswer: 0
-    },
-    {
-        question: "What is the name of the iconic attack used by Sailor Moon in 'Sailor Moon'?",
-        options: ["Moonlight Kick", "Crescent Beam", "Moon Tiara Action", "Moon Healing Escalation"],
+        question: "Which brilliant high school detective solves crimes while hiding his true identity?",
+        options: ["The Silent Sleuth", "Detective Conundrum", "Shinichi Kudo", "Mysterious Mind"],
         correctAnswer: 2
     },
     {
-        question: "In 'Demon Slayer,' what is the name of Tanjiro Kamado's sister, who becomes a demon?",
-        options: ["Nezuko", "Mitsuri", "Shinobu", "Kanao"],
-        correctAnswer: 0
-    },
-    {
-        question: "Which anime features a high school student named Light Yagami who discovers a mysterious notebook with deadly powers?",
-        options: ["Psycho-Pass", "Steins;Gate", "Death Note", "Parasyte"],
+        question: "In a world where superpowers are the norm, who inherits 'One For All' in 'My Hero Academia'?",
+        options: ["Endeavor's son", "Shoto Todoroki", "Deku", "The Stealthy Hero"],
         correctAnswer: 2
     },
     {
-        question: "In 'Hunter x Hunter,' what is the name of the main character who aspires to become a Hunter?",
-        options: ["Killua Zoldyck", "Hisoka", "Gon Freecss", "Kurapika"],
-        correctAnswer: 2
-    },
-    {
-        question: "What is the central theme of 'Neon Genesis Evangelion'?",
-        options: ["Mecha battles", "Time travel", "Psychological and existential exploration", "Magical girls"],
-        correctAnswer: 2
-    },
-    {
-        question: "In 'One Punch Man,' what is the hero name of the protagonist, Saitama?",
-        options: ["Speed-o'-Sound Sonic", "Genos", "Mumen Rider", "Caped Baldy"],
-        correctAnswer: 3
-    },
-    {
-        question: "What is the primary power system in 'Hunter x Hunter'?",
-        options: ["Nen", "Chakra", "Devil Fruits", "Quirks"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'Dragon Ball,' who is Goku's best friend and constant companion?",
-        options: ["Piccolo", "Krillin", "Vegeta", "Bulma"],
+        question: "Humanity fights for survival against giant creatures in what anime?",
+        options: ["Guardians of the Wall", "Attack on Titan", "Colossal Struggle", "Titanic Assault"],
         correctAnswer: 1
     },
     {
-        question: "Which anime features a group of students trying to survive in a post-apocalyptic world filled with giant humanoid creatures known as Klaxosaurs?",
-        options: ["Darling in the Franxx", "Guilty Crown", "Seraph of the End", "Aldnoah.Zero"],
-        correctAnswer: 0
+        question: "Students must assassinate their alien teacher in what peculiar classroom setting?",
+        options: ["Killer Homeroom", "Assassination Classroom", "Dangerous Lessons", "Classroom X"],
+        correctAnswer: 1
     },
     {
-        question: "What is the name of the magical school in 'Little Witch Academia'?",
-        options: ["Luna Nova Academy", "Mahoutokoro School of Magic", "Hogwarts School of Witchcraft and Wizardry", "WizTech Academy"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'Black Clover,' what is Asta's unique trait that sets him apart from other magic users?",
-        options: ["Super speed", "Immortality", "Lack of magic", "Mind control"],
+        question: "What virtual reality MMORPG traps players in a life-or-death game?",
+        options: ["Alfheim Adventures", "Gun Gale Online", "Sword Art Online", "Virtual Reality Wars"],
         correctAnswer: 2
     },
     {
-        question: "Which anime is known for its distinctive art style featuring characters with big, expressive eyes and colorful hair?",
-        options: ["Cowboy Bebop", "One Punch Man", "Naruto", "My Neighbor Totoro"],
+        question: "Which hero can defeat any opponent with a single punch in 'One Punch Man'?",
+        options: ["Invincible Fighter", "The Bald Avenger", "Saitama", "Fist of Justice"],
         correctAnswer: 2
+    },
+    {
+        question: "Which supernatural item grants its wielder the power to end lives simply by writing names?",
+        options: ["Reaper's Diary", "Soul Notebook", "Lethal Journal", "Name Enigma"],
+        correctAnswer: 2
+    },
+    {
+        question: "What family of demon slayers battles against evil creatures in 'Demon Slayer'?",
+        options: ["Slayer Clan", "Kamado Clan", "Hashira Alliance", "The Demon Hunters"],
+        correctAnswer: 1
+    },
+    {
+        question: "In a world of espionage, which family is hiding a spy in 'Spy x Family'?",
+        options: ["Family X", "Infiltrator Clan", "Espionage Union", "Twilight Family"],
+        correctAnswer: 3
+    },
+    {
+        question: "Brothers Edward and Alphonse seek the Philosopher's Stone in what anime?",
+        options: ["Metal Manipulators", "Alchemy Quest", "Fullmetal Alchemist", "Philosopher's Pursuit"],
+        correctAnswer: 2
+    },
+    {
+        question: "In a dystopian future, what technology measures a person's psychological state in 'Psycho-Pass'?",
+        options: ["Mind Scanner", "Sibyl System", "Psycho-Detector", "Emotion Gauge"],
+        correctAnswer: 1
+    },
+    {
+        question: "In 'Attack on Titan,' what is the name of the elite squad known for their unique vertical maneuvering equipment?",
+        options: ["Thunder Spears", "Scout Regiment", "Survey Corps", "Garrison Unit"],
+        correctAnswer: 2
+    },
+    {
+        question: "What alchemical ability sets Edward Elric apart from other practitioners in 'Fullmetal Alchemist'?",
+        options: ["Metal Control", "Alchemy Mastery", "Magic Hands", "No Transmutation Circle"],
+        correctAnswer: 3
+    },
+    {
+        question: "Who is the mysterious and powerful antagonist in 'My Hero Academia' known for his strategic mind and quirk erasing bullets?",
+        options: ["All For One", "Shigaraki Tomura", "Overhaul", "Stain the Hero Killer"],
+        correctAnswer: 2
+    },
+    {
+        question: "What is the primary goal of the Public Safety Bureau in the dystopian world of 'Psycho-Pass'?",
+        options: ["Crime Prevention", "Thought Control", "Criminal Rehabilitation", "Enforcing Martial Law"],
+        correctAnswer: 0
+    },
+    {
+        question: "In 'Demon Slayer,' what is the name of the Water Hashira known for his calm demeanor and powerful swordsmanship?",
+        options: ["Tengen Uzui", "Sanemi Shinazugawa", "Giyu Tomioka", "Kanao Tsuyuri"],
+        correctAnswer: 2
+    },
+    {
+        question: "What is the name of the organization in 'Spy x Family' that hires Twilight, a telepathic spy?",
+        options: ["Twilight Agency", "Westalian Intelligence", "Mission Confidential", "Espionage Syndicate"],
+        correctAnswer: 1
+    },
+    {
+        question: "Which character in 'Sword Art Online' is known as the 'Black Swordsman' and wields dual swords?",
+        options: ["Kirito", "Asuna", "Klein", "Sinon"],
+        correctAnswer: 0
+    },
+    {
+        question: "In 'Dragon Ball,' what item must be gathered to summon the eternal dragon, Shenron?",
+            options: ["Power Crystals", "Chaos Emeralds", "Dragon Balls", "Eternal Gems"],
+            correctAnswer: 2
+    },
+    {
+        question: "Who is the creator of the Death Note in the anime 'Death Note'?",
+        options: ["Ryuk", "Shinigami King", "Light Yagami", "Watari"],
+        correctAnswer: 0
+    },
+    {
+        question: "In 'Naruto,' what is the name of the ninja village where Naruto Uzumaki was born?",
+        options: ["Hidden Leaf Village", "Hidden Mist Village", "Hidden Sand Village", "Hidden Cloud Village"],
+        correctAnswer: 0
+    },
+    {
+        question: "What is the name of the protagonist in 'Assassination Classroom' who is a smiley-faced, octopus-creature?",
+        options: ["Koro Sensei", "Nagisa Shiota", "Karma Akabane", "Irina Jelavic"],
+        correctAnswer: 0
     }
 ];
 
