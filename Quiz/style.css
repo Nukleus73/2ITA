@@ -139,6 +139,20 @@ main {
   cursor: pointer;
 }
 
+#menuButton {
+  position:absolute;
+  top:0;
+  right: 0;
+  margin: 2rem;
+  font-size: 2.3rem;
+  transition-duration: .2s;
+}
+
+#menuButton:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   main {
