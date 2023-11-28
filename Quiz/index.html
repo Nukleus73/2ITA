@@ -11,13 +11,6 @@
     </head>
 
     <body>
-        <div id="dropdownMenu">
-            <ion-icon id="menuButton" class="button" name="menu-outline" onclick="dropMenu()"></ion-icon>
-            <div id="dropdown">
-                <ion-icon id="volumeButton" class="button" name="volume-high-outline" onclick="muteSound()"></ion-icon>
-                <ion-icon id="darkTheme" class="button" name="contrast-outline" onclick="darkTheme()"></ion-icon>
-            </div>
-        </div>
         <main>
             <div id="progressBar">
                 <div id="bar"></div>
@@ -46,6 +39,14 @@
             </div>
             <p id="questionsRight">12/24</p>
         </main>
+        <div id="dropdownMenu">
+            <ion-icon id="menuButton" class="button" name="menu-outline" onclick="dropMenu()"></ion-icon>
+            <div id="dropdown">
+                <ion-icon id="volumeButton" class="button" name="volume-high-outline" onclick="muteSound()"></ion-icon>
+                <ion-icon id="darkTheme" class="button" name="contrast-outline" onclick="darkTheme()"></ion-icon>
+            </div>
+        </div>
+
         <audio id="audioImitation" src="The Imitation Game.mp3"></audio>
         <audio id="lose" src="lose.mp3"></audio>
         <audio id="win" src="win.mp3"></audio>
