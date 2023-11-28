@@ -62,156 +62,152 @@ function updateProgressBar() {
 
 const questions = [
     {
-        question: "In Greek mythology, who is the god of the sea?",
-        options: ["Zeus", "Hades", "Poseidon", "Apollo"],
-        correctAnswer: 3
+        question: "In '1984,' who leads the oppressive regime known as 'The Party'?",
+        options: ["Big Brother", "Emmanuel Goldstein", "O'Brien", "Winston Smith"],
+        correctAnswer: 0
     },
     {
-        question: "Which scientist formulated the laws of motion and universal gravitation?",
-        options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
+        question: "Which physicist formulated the theory of general relativity?",
+        options: ["Isaac Newton", "Niels Bohr", "Albert Einstein", "Max Planck"],
+        correctAnswer: 2
+    },
+    {
+        question: "What element does 'O' represent on the periodic table?",
+        options: ["Oxygen", "Osmium", "Oganesson", "Olivine"],
+        correctAnswer: 0
+    },
+    {
+        question: "Who painted 'Starry Night,' a masterpiece of post-impressionist art?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Claude Monet", "Leonardo da Vinci"],
+        correctAnswer: 0
+    },
+    {
+        question: "What literary work begins with the line 'Call me Ishmael'?",
+        options: ["Moby-Dick", "The Great Gatsby", "To Kill a Mockingbird", "War and Peace"],
+        correctAnswer: 0
+    },
+    {
+        question: "Which composer is known for the 'Moonlight Sonata' and 'Fur Elise'?",
+        options: ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach", "Frederic Chopin"],
+        correctAnswer: 0
+    },
+    {
+        question: "What molecule is responsible for carrying genetic information in living organisms?",
+        options: ["RNA", "DNA", "Protein", "Carbohydrate"],
         correctAnswer: 1
+    },
+    {
+        question: "Which ancient civilization built the pyramids at Giza?",
+        options: ["Greek", "Roman", "Egyptian", "Mayan"],
+        correctAnswer: 2
+    },
+    {
+        question: "In psychology, what term is used for the process of encoding, storing, and retrieving information?",
+        options: ["Cognition", "Hypnosis", "Psychoanalysis", "Memory"],
+        correctAnswer: 3
     },
     {
         question: "What is the capital city of Australia?",
-        options: ["Sydney", "Melbourne", "Canberra", "Perth"],
-        correctAnswer: 3
+        options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
+        correctAnswer: 2
     },
     {
-        question: "Which novel begins with the line 'Call me Ishmael'?",
-        options: ["Moby-Dick", "Pride and Prejudice", "1984", "The Great Gatsby"],
+        question: "Who wrote 'The Catcher in the Rye,' a classic novel of teenage angst?",
+        options: ["J.D. Salinger", "F. Scott Fitzgerald", "Ernest Hemingway", "Mark Twain"],
+        correctAnswer: 0
+    },
+    {
+        question: "Which planet is known as the 'Red Planet'?",
+        options: ["Mars", "Venus", "Jupiter", "Saturn"],
+        correctAnswer: 0
+    },
+    {
+        question: "In which war did the Battle of Gettysburg take place?",
+        options: ["World War I", "Civil War", "World War II", "Vietnam War"],
         correctAnswer: 1
     },
     {
-        question: "Who painted the famous 'Starry Night'?",
-        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        question: "What is the largest mammal on Earth?",
+        options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who is the author of 'One Hundred Years of Solitude'?",
+        options: ["Gabriel Garcia Marquez", "Isabel Allende", "Julio Cortazar", "Pablo Neruda"],
+        correctAnswer: 0
+    },
+    {
+        question: "Which scientist proposed the theory of continental drift?",
+        options: ["Charles Darwin", "Alfred Wegener", "Isaac Newton", "Galileo Galilei"],
         correctAnswer: 1
     },
     {
         question: "What is the chemical symbol for gold?",
-        options: ["Gd", "Au", "Ag", "Fe"],
+        options: ["Au", "Ag", "Cu", "Fe"],
+        correctAnswer: 0
+    },
+    {
+        question: "Which language is most widely spoken in the world?",
+        options: ["Spanish", "English", "Mandarin", "Hindi"],
         correctAnswer: 2
     },
     {
-        question: "Which planet is known as the 'Red Planet'?",
-        options: ["Mars", "Jupiter", "Venus", "Saturn"],
+        question: "Who is the protagonist of the play 'Hamlet' by William Shakespeare?",
+        options: ["Macbeth", "Romeo", "Hamlet", "Othello"],
+        correctAnswer: 2
+    },
+    {
+        question: "Which phobia is the fear of spiders?",
+        options: ["Agoraphobia", "Arachnophobia", "Acrophobia", "Claustrophobia"],
         correctAnswer: 1
-    },
-    {
-        question: "Who wrote 'Romeo and Juliet'?",
-        options: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"],
-        correctAnswer: 1
-    },
-    {
-        question: "What is the largest mammal in the world?",
-        options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
-        correctAnswer: 2
-    },
-    {
-        question: "In which year did World War II end?",
-        options: ["1945", "1939", "1941", "1950"],
-        correctAnswer: 1
-    },
-    {
-        question: "Who developed the theory of relativity?",
-        options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
-        correctAnswer: 3
-    },
-    {
-        question: "What is the powerhouse of the cell?",
-        options: ["Nucleus", "Mitochondria", "Endoplasmic Reticulum", "Golgi Apparatus"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which country is known as the 'Land of the Rising Sun'?",
-        options: ["China", "Japan", "South Korea", "Vietnam"],
-        correctAnswer: 2
-    },
-    {
-        question: "Who painted the 'Mona Lisa'?",
-        options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which element has the chemical symbol 'O'?",
-        options: ["Osmium", "Oxygen", "Oganesson", "Osirium"],
-        correctAnswer: 2
     },
     {
         question: "What is the currency of Japan?",
-        options: ["Won", "Ringgit", "Yuan", "Yen"],
-        correctAnswer: 4
-    },
-    {
-        question: "Who wrote 'The Great Gatsby'?",
-        options: ["F. Scott Fitzgerald", "Ernest Hemingway", "Jane Austen", "George Orwell"],
-        correctAnswer: 1
-    },
-    {
-        question: "What is the capital city of Brazil?",
-        options: ["Rio de Janeiro", "Sao Paulo", "Brasilia", "Buenos Aires"],
-        correctAnswer: 3
-    },
-    {
-        question: "Which planet is known as the 'Blue Planet'?",
-        options: ["Mars", "Earth", "Jupiter", "Saturn"],
+        options: ["Won", "Yuan", "Yen", "Ringgit"],
         correctAnswer: 2
     },
     {
-        question: "Who is the author of 'To Kill a Mockingbird'?",
-        options: ["Harper Lee", "J.K. Rowling", "George Orwell", "Ernest Hemingway"],
-        correctAnswer: 1
-    },
-    {
-        question: "What is the square root of 144?",
-        options: ["10", "12", "14", "16"],
+        question: "Who developed the theory of psychoanalysis in psychology?",
+        options: ["B.F. Skinner", "Carl Jung", "Sigmund Freud", "Ivan Pavlov"],
         correctAnswer: 2
     },
     {
-        question: "Which gas makes up the majority of Earth's atmosphere?",
-        options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+        question: "What is the capital of Canada?",
+        options: ["Vancouver", "Toronto", "Ottawa", "Montreal"],
         correctAnswer: 2
     },
     {
-        question: "Who is the Norse god of thunder?",
-        options: ["Odin", "Loki", "Thor", "Freya"],
-        correctAnswer: 3
-    },
-    {
-        question: "What is the speed of light in a vacuum?",
-        options: ["299,792 kilometers per second", "300,000 kilometers per second", "299,792 miles per second", "300,000 miles per second"],
-        correctAnswer: 1
-    },
-    {
-        question: "Which planet is known as the 'Giant of the Solar System'?",
-        options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
-        correctAnswer: 1
-    },
-    {
-        question: "Who wrote 'The Catcher in the Rye'?",
-        options: ["J.D. Salinger", "F. Scott Fitzgerald", "Ernest Hemingway", "George Orwell"],
-        correctAnswer: 1
-    },
-    {
-        question: "What is the chemical symbol for water?",
-        options: ["H2O", "CO2", "O2", "NaCl"],
-        correctAnswer: 1
-    },
-    {
-        question: "Who discovered penicillin?",
-        options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Joseph Lister"],
+        question: "Which artist painted 'The Persistence of Memory' featuring melting clocks?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Salvador Dali", "Leonardo da Vinci"],
         correctAnswer: 2
     },
     {
-        question: "In which year did Christopher Columbus reach the Americas?",
-        options: ["1492", "1500", "1607", "1776"],
+        question: "What is the main ingredient in guacamole?",
+        options: ["Tomato", "Avocado", "Onion", "Cilantro"],
         correctAnswer: 1
     },
     {
-        question: "What is the capital city of France?",
-        options: ["Berlin", "Rome", "Madrid", "Paris"],
-        correctAnswer: 4
+        question: "Who is the Norse god of thunder in mythology?",
+        options: ["Loki", "Odin", "Thor", "Freya"],
+        correctAnswer: 2
+    },
+    {
+        question: "Which chemical element has the symbol 'Fe' on the periodic table?",
+        options: ["Iron", "Gold", "Silver", "Copper"],
+        correctAnswer: 0
+    },
+    {
+        question: "In which year did the first manned moon landing occur?",
+        options: ["1965", "1969", "1975", "1981"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who wrote 'The Canterbury Tales' in the late 14th century?",
+        options: ["Geoffrey Chaucer", "William Shakespeare", "John Milton", "Jane Austen"],
+        correctAnswer: 0
     }
 ];
+
 
 
 updateUI();
