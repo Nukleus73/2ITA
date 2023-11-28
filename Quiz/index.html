@@ -11,12 +11,21 @@
     </head>
 
     <body>
+        <div id="dropdownMenu">
+            <ion-icon id="menuButton" class="button" name="menu-outline" onclick="dropMenu()"></ion-icon>
+            <div id="dropdown">
+                <ion-icon id="volumeButton" class="button" name="volume-high-outline" onclick="muteSound()"></ion-icon>
+                <ion-icon id="darkTheme" class="button" name="contrast-outline" onclick="darkTheme()"></ion-icon>
+            </div>
+        </div>
         <main>
             <div id="progressBar">
                 <div id="bar"></div>
             </div>
-            <h4>Question <span id="current">1</span>/<span id="total">13</span></h4>
-            <h1 id="question"></h1>
+            <div class="text">
+                <h4>Question <span id="current">1</span>/<span id="total">13</span></h4>
+                <h1 id="question"></h1>
+            </div>
             <div id="quiz-container">
                 <div class="option" onclick="checkAnswer(this)">
                     <h3>A</h3>
@@ -36,15 +45,12 @@
                 </div>
             </div>
             <p id="questionsRight">12/24</p>
-            <ion-icon id="volumeButton" name="volume-high-outline" onclick="muteSound()"></ion-icon>
         </main>
         <audio id="audioImitation" src="The Imitation Game.mp3"></audio>
         <audio id="lose" src="lose.mp3"></audio>
         <audio id="win" src="win.mp3"></audio>
-        <script src="sound.js"></script>
-        <ion-icon id="menuButton" name="menu-outline"></ion-icon>
-       
-
+        
+        <script src="dropdown.js"></script>
         <script src="game.js"></script>
     </body>
 </html>

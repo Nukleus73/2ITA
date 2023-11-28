@@ -18,7 +18,7 @@ function checkAnswer(selectedOption) {
     currentQuestion++;
     //  dersom quizen er ferdig, si ifra. Dersom ikke, fortsett
     setTimeout(() => {
-        selectedOption.style.backgroundColor = "var(--background)";
+        selectedOption.style.backgroundColor = "var(--varBackground)";
 
         if (currentQuestion < questions.length) {
             updateUI();
@@ -103,8 +103,8 @@ const questions = [
     },
     {
         question: "Which supernatural item grants its wielder the power to end lives simply by writing names?",
-        options: ["Reaper's Diary", "Soul Notebook", "Lethal Journal", "Name Enigma"],
-        correctAnswer: 2
+        options: ["Reaper's Diary", "Soul Notebook", "Lethal Journal", "Death Note"],
+        correctAnswer: 3
     },
     {
         question: "What family of demon slayers battles against evil creatures in 'Demon Slayer'?",
@@ -127,17 +127,17 @@ const questions = [
         correctAnswer: 1
     },
     {
-        question: "In 'Attack on Titan,' what is the name of the elite squad known for their unique vertical maneuvering equipment?",
+        question: "In 'Attack on Titan,' what is the name of the elite squad known for their maneuvering equipment?",
         options: ["Thunder Spears", "Scout Regiment", "Survey Corps", "Garrison Unit"],
         correctAnswer: 2
     },
     {
-        question: "What alchemical ability sets Edward Elric apart from other practitioners in 'Fullmetal Alchemist'?",
+        question: "What ability sets Edward Elric apart from other alchemists in 'Fullmetal Alchemist'?",
         options: ["Metal Control", "Alchemy Mastery", "Magic Hands", "No Transmutation Circle"],
         correctAnswer: 3
     },
     {
-        question: "Who is the mysterious and powerful antagonist in 'My Hero Academia' known for his strategic mind and quirk erasing bullets?",
+        question: "Who is the antagonist in 'My Hero Academia' known for his quirk erasing bullets?",
         options: ["All For One", "Shigaraki Tomura", "Overhaul", "Stain the Hero Killer"],
         correctAnswer: 2
     },

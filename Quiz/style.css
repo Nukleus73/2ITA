@@ -2,11 +2,9 @@
 
 /* farger */
 :root {
-    --text: #1c0d26;
-    --background: #ffffff;
-    --primary: #d48b82;
-    --secondary: #e5b9b3;
-    --accent: #3b9eab;
+    --varText: #061318;
+    --varBackground: #d6ecf5;
+    --varAccent: #c45b31;
   }
 /* alle objekter */
 *,
@@ -19,70 +17,61 @@
 
 /* markert tekst */
 ::selection {
-    background-color: var(--accent);
-}
-
-/* scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #3AAFB9bb;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent);
+    background-color: var(--varAccent);
 }
 
 /* stilsetting */
 body {
   height: 100vh;
-  background-image: linear-gradient(var(--secondary), var(--primary));
+  background-color: var(--varBackground);
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Poppins', sans-serif;
+  transition-duration: .3s;
 }
 
 main {
-  background-color:var(--primary);
-  background-image:
-  radial-gradient(circle at 100% 150%, var(--primary) 24%, var(--secondary) 24%, var(--secondary) 28%, var(--primary) 28%, var(--primary) 36%, var(--secondary) 36%, var(--secondary) 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, var(--primary) 24%, var(--secondary) 24%, var(--secondary) 28%, var(--primary) 28%, var(--primary) 36%, var(--secondary) 36%, var(--secondary) 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, var(--secondary) 10%, var(--primary) 10%, var(--primary) 23%, var(--secondary) 23%, var(--secondary) 30%, var(--primary) 30%, var(--primary) 43%, var(--secondary) 43%, var(--secondary) 50%, var(--primary) 50%, var(--primary) 63%, var(--secondary) 63%, var(--secondary) 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, var(--secondary) 5%, var(--primary) 5%, var(--primary) 15%, var(--secondary) 15%, var(--secondary) 20%, var(--primary) 20%, var(--primary) 29%, var(--secondary) 29%, var(--secondary) 34%, var(--primary) 34%, var(--primary) 44%, var(--secondary) 44%, var(--secondary) 49%, transparent 49%, transparent),
-  radial-gradient(circle at 0    50%, var(--secondary) 5%, var(--primary) 5%, var(--primary) 15%, var(--secondary) 15%, var(--secondary) 20%, var(--primary) 20%, var(--primary) 29%, var(--secondary) 29%, var(--secondary) 34%, var(--primary) 34%, var(--primary) 44%, var(--secondary) 44%, var(--secondary) 49%, transparent 49%, transparent);
-  background-size: 100px 50px;
+  background-color:var(--varAccent);
+  background-image: radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%),
+  radial-gradient(closest-side, transparent 98%, rgba(0,0,0,.3) 99%);
+  background-size:80px 80px;
+  background-position:0 0, 40px 40px;
 
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 140vmin;
+  width: 130vmin;
   padding: 10vmin;
-  box-shadow: 0 0px 15px 3px var(--primary);
+  box-shadow: 0 0px 15px 3px var(--varText);
 }
 
 #progressBar {
   position: absolute;
   top: 0;
-  background-color: var(--secondary);
+  background-color: var(--varBackground);
   height: 2vmin;
   width: 100%;
 }
 
 #progressBar #bar {
-  background-color: var(--primary);
+  background-color: var(--varAccent);
   height: 100%;
   width: 0;
   transition-duration: 0.5s;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+  border-radius: 5px;
+  background-color: var(--varBackground);
+  border: 3px solid var(--varAccent);
+  color: var(--varText);
 }
 
 h1 {
@@ -92,7 +81,7 @@ h1 {
 #quiz-container {
   display:flex;
   flex-direction: column;
-  margin-top:10vh;
+  margin-top:4vh;
   align-items: center;
 }
 
@@ -104,15 +93,16 @@ h1 {
   margin:2vh;
   height:9vh;
   width:55vh;
-  background-color: var(--background);
+  background-color: var(--varBackground);
   border-radius: 10px;
-  box-shadow: 0 0px 5px 1px var(--text);
+  box-shadow: 0 0px 5px 1px var(--varText);
   transition-duration: 0.3s;
+  color: var(--varText);
 }
 
 .option h3{
-  color:var(--background);
-  background-color:var(--accent);
+  color:var(--varBackground);
+  background-color:var(--varAccent);
   display:inline-flex;
   align-items:center;
   justify-content: center;
@@ -124,9 +114,10 @@ h1 {
 }
 
 .option:hover{
-  background-color:rgb(228, 227, 227);
-  box-shadow: 0 0px 10px 2px var(--text);
+  background-color: var(--varBackground);
+  box-shadow: 0 0px 10px 2px var(--varText);
   cursor:pointer;
+  opacity: .9;
   scale: 1.05;
 }
 
@@ -138,44 +129,53 @@ h1 {
   margin: 5rem;
   width: 8rem;
   height: 8rem;
-  background-color: var(--accent);
-  color: var(--background);
+  background-color: var(--varAccent);
+  color: var(--varBackground);
   border-radius: 50%;
   font-size: 2rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0px 5px 1px var(--text);
+  box-shadow: 0 0px 5px 1px var(--varText);
   display: none;
 }
 
-#volumeButton {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin: 1rem;
-  font-size: 2rem;
-  transition-duration: .2s;
-}
-
-#volumeButton:hover {
-  scale: 1.1;
-  cursor: pointer;
-}
-
-#menuButton {
+#dropdownMenu {
   position:absolute;
   top:0;
   right: 0;
-  margin: 2rem;
-  font-size: 2.3rem;
-  transition-duration: .2s;
 }
 
-#menuButton:hover, #menuButton:focus{
+#menuButton {
+  margin: 2rem;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+  font-size: 2.5rem;
+}
+
+#dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition-duration: .3s;
+  opacity: 0;
+}
+
+.button {
+  margin: 1rem 2rem;
+  font-size: 2rem;
+  transition-duration: .2s;
+  color: var(--varText);
+}
+
+.button:hover{
   scale: 1.1;
   cursor: pointer;
+}
+
+.button:active {
+  scale: .7;
 }
 
 
