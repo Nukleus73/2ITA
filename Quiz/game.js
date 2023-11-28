@@ -8,9 +8,11 @@ function checkAnswer(selectedOption) {
 
     if (selectedOption.lastElementChild.textContent === questions[currentQuestion].options[correctAnswerIndex]) {
         selectedOption.style.backgroundColor = "rgb(120, 255, 120)";
+        document.querySelector("#win").play()
         score++
     } else {
         selectedOption.style.backgroundColor = "rgb(255, 100, 100)";
+        document.querySelector("#lose").play()
     }
 
     currentQuestion++;
@@ -58,12 +60,6 @@ function updateProgressBar() {
     const progress = (currentQuestion / questions.length) * 100;
     progressBar.style.width = `${progress}%`;
 }
-
-const menu = [
-    {
-        options: ["Quiz 1", "Quiz 2", "Quiz 3"],
-    },
-];
 
 const questions = [
     {
