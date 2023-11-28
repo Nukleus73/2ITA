@@ -1,44 +1,58 @@
+//  definerer hvilket spørsmål du er på
 let currentQuestion = 0;
 
+//  når et svar er valgt, hent ut det riktige svaret, og sjekk om det stemmer
 function checkAnswer(selectedOption) {
     const correctAnswerIndex = questions[currentQuestion].correctAnswer;
 
     if (selectedOption.lastElementChild.textContent === questions[currentQuestion].options[correctAnswerIndex]) {
-        alert("Riktig svar!");
+        selectedOption.style.backgroundColor = "rgb(120, 255, 120)";
     } else {
-        alert("Feil svar. Prøv igjen!");
-        return; // Ikke gå videre til neste spørsmål ved feil svar
+        selectedOption.style.backgroundColor = "rgb(255, 100, 100)";
     }
-
+    // dersom svaret er riktig, oppdater spørsmålslisten
     currentQuestion++;
-    if (currentQuestion < questions.length) {
-        updateUI();
-        updateProgressBar();
-    } else {
-        alert("Quiz ferdig!");
-        resetQuiz();
-    }
+    //  dersom quizen er ferdig, si ifra. Dersom ikke, fortsett
+    setTimeout(() => {
+        selectedOption.style.backgroundColor = "var(--background)";
+
+        if (currentQuestion < questions.length) {
+            updateUI();
+            updateProgressBar();
+        } else {
+            alert("Quiz ferdig!");
+            resetQuiz();
+        }
+    }, 2000);
 }
 
+//  oppdater elementene på siden
 function updateUI() {
     const questionElement = document.getElementById("question");
     const options = document.querySelectorAll(".option");
+    const current = document.querySelector("#current");
+    const total = document.querySelector("#total");
 
     questionElement.textContent = questions[currentQuestion].question;
     options.forEach((option, index) => {
         option.lastElementChild.textContent = questions[currentQuestion].options[index];
     });
+
+    current.innerHTML = currentQuestion + 1
+    total.innerHTML = questions.length
 }
 
+//  resetter hele quizen
 function resetQuiz() {
     currentQuestion = 0;
     updateUI();
     updateProgressBar(); // Reset progress bar
 }
 
+//  resetter progressbaren basert på hvilket spørsmål vi er på
 function updateProgressBar() {
     const progressBar = document.getElementById("bar");
-    const progress = ((currentQuestion + 1) / questions.length) * 100;
+    const progress = (currentQuestion / questions.length) * 100;
     progressBar.style.width = `${progress}%`;
 }
 

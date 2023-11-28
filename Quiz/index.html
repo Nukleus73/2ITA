@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
         <title>Quiz</title>
         <!-- ionicon -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -16,7 +15,7 @@
             <div id="progressBar">
                 <div id="bar"></div>
             </div>
-            <h4>Spørsmål 1/13</h4>
+            <h4>Spørsmål <span id="current">1</span>/<span id="total">13</span></h4>
             <h1 id="question"></h1>
             <div id="quiz-container">
                 <div class="option" onclick="checkAnswer(this)">
@@ -38,6 +37,8 @@
             </div>
             <ion-icon id="volumeButton" name="volume-high-outline" onclick="muteSound()"></ion-icon>
         </main>
+        <audio id="audioImitation" src="The Imitation Game.mp3"></audio>
+        <script src="muteSound.js"></script>
         <ion-icon id="menuButton" name="menu-outline"></ion-icon>
        
 
