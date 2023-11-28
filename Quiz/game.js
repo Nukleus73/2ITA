@@ -62,125 +62,156 @@ function updateProgressBar() {
 
 const questions = [
     {
-        question: "Who harbors the powerful Nine-Tailed Fox in the hidden village of Konoha?",
-        options: ["Sasuke's family", "Hidden Leaf elders", "Naruto Uzumaki", "Kakashi's sensei"],
-        correctAnswer: 2
-    },
-    {
-        question: "What ancient artifact fuels Goku's quest for strength in 'Dragon Ball Z'?",
-        options: ["The Spirit Crystal", "The Mystic Orb", "Kamehameha", "The Dragon Balls"],
+        question: "In Greek mythology, who is the god of the sea?",
+        options: ["Zeus", "Hades", "Poseidon", "Apollo"],
         correctAnswer: 3
     },
     {
-        question: "Which brilliant high school detective solves crimes while hiding his true identity?",
-        options: ["The Silent Sleuth", "Detective Conundrum", "Shinichi Kudo", "Mysterious Mind"],
-        correctAnswer: 2
-    },
-    {
-        question: "In a world where superpowers are the norm, who inherits 'One For All' in 'My Hero Academia'?",
-        options: ["Endeavor's son", "Shoto Todoroki", "Deku", "The Stealthy Hero"],
-        correctAnswer: 2
-    },
-    {
-        question: "Humanity fights for survival against giant creatures in what anime?",
-        options: ["Guardians of the Wall", "Attack on Titan", "Colossal Struggle", "Titanic Assault"],
+        question: "Which scientist formulated the laws of motion and universal gravitation?",
+        options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
         correctAnswer: 1
     },
     {
-        question: "Students must assassinate their alien teacher in what peculiar classroom setting?",
-        options: ["Killer Homeroom", "Assassination Classroom", "Dangerous Lessons", "Classroom X"],
-        correctAnswer: 1
-    },
-    {
-        question: "What virtual reality MMORPG traps players in a life-or-death game?",
-        options: ["Alfheim Adventures", "Gun Gale Online", "Sword Art Online", "Virtual Reality Wars"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which hero can defeat any opponent with a single punch in 'One Punch Man'?",
-        options: ["Invincible Fighter", "The Bald Avenger", "Saitama", "Fist of Justice"],
-        correctAnswer: 2
-    },
-    {
-        question: "Which supernatural item grants its wielder the power to end lives simply by writing names?",
-        options: ["Reaper's Diary", "Soul Notebook", "Lethal Journal", "Death Note"],
+        question: "What is the capital city of Australia?",
+        options: ["Sydney", "Melbourne", "Canberra", "Perth"],
         correctAnswer: 3
     },
     {
-        question: "What family of demon slayers battles against evil creatures in 'Demon Slayer'?",
-        options: ["Slayer Clan", "Kamado Clan", "Hashira Alliance", "The Demon Hunters"],
+        question: "Which novel begins with the line 'Call me Ishmael'?",
+        options: ["Moby-Dick", "Pride and Prejudice", "1984", "The Great Gatsby"],
         correctAnswer: 1
     },
     {
-        question: "In a world of espionage, which family is hiding a spy in 'Spy x Family'?",
-        options: ["Family X", "Infiltrator Clan", "Espionage Union", "Twilight Family"],
+        question: "Who painted the famous 'Starry Night'?",
+        options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the chemical symbol for gold?",
+        options: ["Gd", "Au", "Ag", "Fe"],
+        correctAnswer: 2
+    },
+    {
+        question: "Which planet is known as the 'Red Planet'?",
+        options: ["Mars", "Jupiter", "Venus", "Saturn"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who wrote 'Romeo and Juliet'?",
+        options: ["William Shakespeare", "Jane Austen", "Charles Dickens", "Mark Twain"],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the largest mammal in the world?",
+        options: ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+        correctAnswer: 2
+    },
+    {
+        question: "In which year did World War II end?",
+        options: ["1945", "1939", "1941", "1950"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who developed the theory of relativity?",
+        options: ["Isaac Newton", "Galileo Galilei", "Albert Einstein", "Nikola Tesla"],
         correctAnswer: 3
     },
     {
-        question: "Brothers Edward and Alphonse seek the Philosopher's Stone in what anime?",
-        options: ["Metal Manipulators", "Alchemy Quest", "Fullmetal Alchemist", "Philosopher's Pursuit"],
+        question: "What is the powerhouse of the cell?",
+        options: ["Nucleus", "Mitochondria", "Endoplasmic Reticulum", "Golgi Apparatus"],
         correctAnswer: 2
     },
     {
-        question: "In a dystopian future, what technology measures a person's psychological state in 'Psycho-Pass'?",
-        options: ["Mind Scanner", "Sibyl System", "Psycho-Detector", "Emotion Gauge"],
+        question: "Which country is known as the 'Land of the Rising Sun'?",
+        options: ["China", "Japan", "South Korea", "Vietnam"],
+        correctAnswer: 2
+    },
+    {
+        question: "Who painted the 'Mona Lisa'?",
+        options: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso", "Claude Monet"],
+        correctAnswer: 2
+    },
+    {
+        question: "Which element has the chemical symbol 'O'?",
+        options: ["Osmium", "Oxygen", "Oganesson", "Osirium"],
+        correctAnswer: 2
+    },
+    {
+        question: "What is the currency of Japan?",
+        options: ["Won", "Ringgit", "Yuan", "Yen"],
+        correctAnswer: 4
+    },
+    {
+        question: "Who wrote 'The Great Gatsby'?",
+        options: ["F. Scott Fitzgerald", "Ernest Hemingway", "Jane Austen", "George Orwell"],
         correctAnswer: 1
     },
     {
-        question: "In 'Attack on Titan,' what is the name of the elite squad known for their maneuvering equipment?",
-        options: ["Thunder Spears", "Scout Regiment", "Survey Corps", "Garrison Unit"],
-        correctAnswer: 2
-    },
-    {
-        question: "What ability sets Edward Elric apart from other alchemists in 'Fullmetal Alchemist'?",
-        options: ["Metal Control", "Alchemy Mastery", "Magic Hands", "No Transmutation Circle"],
+        question: "What is the capital city of Brazil?",
+        options: ["Rio de Janeiro", "Sao Paulo", "Brasilia", "Buenos Aires"],
         correctAnswer: 3
     },
     {
-        question: "Who is the antagonist in 'My Hero Academia' known for his quirk erasing bullets?",
-        options: ["All For One", "Shigaraki Tomura", "Overhaul", "Stain the Hero Killer"],
+        question: "Which planet is known as the 'Blue Planet'?",
+        options: ["Mars", "Earth", "Jupiter", "Saturn"],
         correctAnswer: 2
     },
     {
-        question: "What is the primary goal of the Public Safety Bureau in the dystopian world of 'Psycho-Pass'?",
-        options: ["Crime Prevention", "Thought Control", "Criminal Rehabilitation", "Enforcing Martial Law"],
-        correctAnswer: 0
-    },
-    {
-        question: "In 'Demon Slayer,' what is the name of the Water Hashira known for his calm demeanor and powerful swordsmanship?",
-        options: ["Tengen Uzui", "Sanemi Shinazugawa", "Giyu Tomioka", "Kanao Tsuyuri"],
-        correctAnswer: 2
-    },
-    {
-        question: "What is the name of the organization in 'Spy x Family' that hires Twilight, a telepathic spy?",
-        options: ["Twilight Agency", "Westalian Intelligence", "Mission Confidential", "Espionage Syndicate"],
+        question: "Who is the author of 'To Kill a Mockingbird'?",
+        options: ["Harper Lee", "J.K. Rowling", "George Orwell", "Ernest Hemingway"],
         correctAnswer: 1
     },
     {
-        question: "Which character in 'Sword Art Online' is known as the 'Black Swordsman' and wields dual swords?",
-        options: ["Kirito", "Asuna", "Klein", "Sinon"],
-        correctAnswer: 0
+        question: "What is the square root of 144?",
+        options: ["10", "12", "14", "16"],
+        correctAnswer: 2
     },
     {
-        question: "In 'Dragon Ball,' what item must be gathered to summon the eternal dragon, Shenron?",
-            options: ["Power Crystals", "Chaos Emeralds", "Dragon Balls", "Eternal Gems"],
-            correctAnswer: 2
+        question: "Which gas makes up the majority of Earth's atmosphere?",
+        options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Helium"],
+        correctAnswer: 2
     },
     {
-        question: "Who is the creator of the Death Note in the anime 'Death Note'?",
-        options: ["Ryuk", "Shinigami King", "Light Yagami", "Watari"],
-        correctAnswer: 0
+        question: "Who is the Norse god of thunder?",
+        options: ["Odin", "Loki", "Thor", "Freya"],
+        correctAnswer: 3
     },
     {
-        question: "In 'Naruto,' what is the name of the ninja village where Naruto Uzumaki was born?",
-        options: ["Hidden Leaf Village", "Hidden Mist Village", "Hidden Sand Village", "Hidden Cloud Village"],
-        correctAnswer: 0
+        question: "What is the speed of light in a vacuum?",
+        options: ["299,792 kilometers per second", "300,000 kilometers per second", "299,792 miles per second", "300,000 miles per second"],
+        correctAnswer: 1
     },
     {
-        question: "What is the name of the protagonist in 'Assassination Classroom' who is a smiley-faced, octopus-creature?",
-        options: ["Koro Sensei", "Nagisa Shiota", "Karma Akabane", "Irina Jelavic"],
-        correctAnswer: 0
+        question: "Which planet is known as the 'Giant of the Solar System'?",
+        options: ["Jupiter", "Saturn", "Uranus", "Neptune"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who wrote 'The Catcher in the Rye'?",
+        options: ["J.D. Salinger", "F. Scott Fitzgerald", "Ernest Hemingway", "George Orwell"],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the chemical symbol for water?",
+        options: ["H2O", "CO2", "O2", "NaCl"],
+        correctAnswer: 1
+    },
+    {
+        question: "Who discovered penicillin?",
+        options: ["Marie Curie", "Alexander Fleming", "Louis Pasteur", "Joseph Lister"],
+        correctAnswer: 2
+    },
+    {
+        question: "In which year did Christopher Columbus reach the Americas?",
+        options: ["1492", "1500", "1607", "1776"],
+        correctAnswer: 1
+    },
+    {
+        question: "What is the capital city of France?",
+        options: ["Berlin", "Rome", "Madrid", "Paris"],
+        correctAnswer: 4
     }
 ];
+
 
 updateUI();
