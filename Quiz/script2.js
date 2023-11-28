@@ -1,5 +1,6 @@
 //  definerer hvilket spørsmål du er på
 let currentQuestion = 0;
+let score = 0;
 
 //  når et svar er valgt, hent ut det riktige svaret, og sjekk om det stemmer
 function checkAnswer(selectedOption) {
@@ -7,10 +8,11 @@ function checkAnswer(selectedOption) {
 
     if (selectedOption.lastElementChild.textContent === questions[currentQuestion].options[correctAnswerIndex]) {
         selectedOption.style.backgroundColor = "rgb(120, 255, 120)";
+        score++
     } else {
         selectedOption.style.backgroundColor = "rgb(255, 100, 100)";
     }
-    // dersom svaret er riktig, oppdater spørsmålslisten
+
     currentQuestion++;
     //  dersom quizen er ferdig, si ifra. Dersom ikke, fortsett
     setTimeout(() => {
@@ -20,10 +22,10 @@ function checkAnswer(selectedOption) {
             updateUI();
             updateProgressBar();
         } else {
-            alert("Quiz ferdig!");
+            alert("Din poengsum ble:" + score);
             resetQuiz();
         }
-    }, 2000);
+    }, 1000);
 }
 
 //  oppdater elementene på siden
@@ -45,6 +47,7 @@ function updateUI() {
 //  resetter hele quizen
 function resetQuiz() {
     currentQuestion = 0;
+    score = 0;
     updateUI();
     updateProgressBar(); // Reset progress bar
 }
@@ -55,6 +58,12 @@ function updateProgressBar() {
     const progress = (currentQuestion / questions.length) * 100;
     progressBar.style.width = `${progress}%`;
 }
+
+const menu = [
+    {
+        options: ["Quiz 1", "Quiz 2", "Quiz 3"],
+    },
+];
 
 const questions = [
     {
