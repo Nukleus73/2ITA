@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeMirror JavaScript Editor</title>
+  <title>2ITA Webdesign Course</title>
+
   <!-- Include CodeMirror CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
   <!-- Include CodeMirror JavaScript -->
@@ -12,21 +13,65 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/edit/closebrackets.js"></script>
   <!-- Include JavaScript mode for CodeMirror -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.js"></script>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- style -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- JSON file fetcher -->
+  <script src="./script/fetchJSON.js"></script>
 </head>
 <body>
+  <nav>
+    <a href="">
+      <img class="navIcon" src="./.media/vsc-logo.svg" alt="">
+      <p>Visual Studio</p>
+    </a>
+    <a href="">
+      <ion-icon class="navIcon" name="logo-css3"></ion-icon>
+      <p>CSS</p>
+    </a>
+    <a href="">
+      <ion-icon class="navIcon" name="logo-nodejs"></ion-icon>
+      <p>Javascript</p>
+    </a>
+    <a href="">
+      <img class="navIcon" src="./.media/php-logo.svg" alt="">
+      <p>PHP</p>
+    </a>
+  </nav>
 
-  <!-- Test for CodeMirror
-  <textarea id="code-editor"></textarea>
-
+  <main>
+    <!-- Her går CSS, JS PHP og VSC sidene -->
+    <div class="course" id="course-JS">
+      <!-- Her legges hver modul i kurset -->
+      <div class="module">
+        <div class="instructions">
+          <!-- Her går de spesifikke instruksjonene -->
+        </div>
+        <div class="testArea">
+          <div class="buttonBar">
+            <button>Hint</button>
+            <button>Tilbake</button>
+            <button>Fram</button>
+          </div>
+          <textarea id="code-editor"><!-- Her skrives koden til oppgavene --></textarea>
+          <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
+        </div>
+      </div>
+    </div>
+  </main>
   <script>
     // Initialize CodeMirror on the textarea
     var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
-      mode: "javascript",           // Set the mode to JavaScript
-      theme: "default",             // You can change the theme as needed
-      lineNumbers: true,            // Display line numbers
-      autofocus: true,              // Automatically focus on the editor
-      matchBrackets: true,          // Enable bracket matching
-      autoCloseBrackets: true        // Automatically close brackets
+      mode: "javascript",         
+      theme: "default",      
+      lineNumbers: true,
+      autofocus: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
     });
 
     // You can add more configuration options based on your req uirements
@@ -36,28 +81,6 @@
 
     // Example: Get code content
     // var codeContent = editor.getValue();
-  </script> -->
-
-  <nav>
-    <a href="">Visual Studio</a>
-    <a href="">CSS</a>
-    <a href="">Javascript</a>
-    <a href="">PHP</a>
-  </nav>
-  <main>
-    <!-- Her går CSS, JS PHP og VSC sidene -->
-    <div id="course-JS">
-      <!-- Her legges hver modul i kurset -->
-      <div class="module">
-        <div class="instructions">
-          <!-- Her går de spesifikke instruksjonene -->
-        </div>
-        <div class="testArea">
-          <textarea id=""><!-- Her skrives koden til oppgavene --></textarea>
-          <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
-        </div>
-      </div>
-    </div>
-  </main>
+  </script>
 </body>
 </html>

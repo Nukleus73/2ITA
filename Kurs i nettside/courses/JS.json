@@ -1,0 +1,69 @@
+{
+    "course": {
+      "title": "JavaScript Mastery Course",
+      "description": "A comprehensive course to master JavaScript programming.",
+      "modules": [
+        {
+          "title": "Module 1: Introduction to JavaScript",
+          "lessons": [
+            {
+              "title": "Getting Started with JavaScript",
+              "duration": "1 hour",
+              "content": "Introduction to the basics of JavaScript programming."
+            },
+            {
+              "title": "Variables and Data Types",
+              "duration": "1.5 hours",
+              "content": "Learn about variables, data types, and basic operations in JavaScript."
+            }
+          ]
+        },
+        {
+          "title": "Module 2: Control Flow and Functions",
+          "lessons": [
+            {
+              "title": "Conditional Statements",
+              "duration": "1.5 hours",
+              "content": "Explore if statements, switch statements, and other conditional constructs."
+            },
+            {
+              "title": "Functions and Scope",
+              "duration": "2 hours",
+              "content": "Understand functions, function expressions, and variable scope in JavaScript."
+            }
+          ]
+        },
+        {
+          "title": "Module 3: Object-Oriented Programming in JavaScript",
+          "lessons": [
+            {
+              "title": "Introduction to Objects",
+              "duration": "2 hours",
+              "content": "Learn about objects, properties, and methods in JavaScript."
+            },
+            {
+              "title": "Constructor Functions and Prototypes",
+              "duration": "2.5 hours",
+              "content": "Explore constructor functions, prototypes, and inheritance."
+            }
+          ]
+        },
+        {
+          "title": "Module 4: Asynchronous JavaScript",
+          "lessons": [
+            {
+              "title": "Callbacks and Promises",
+              "duration": "2 hours",
+              "content": "Understand asynchronous programming with callbacks and promises."
+            },
+            {
+              "title": "Async/Await and Fetch API",
+              "duration": "2.5 hours",
+              "content": "Explore modern asynchronous JavaScript with async/await and Fetch API."
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
