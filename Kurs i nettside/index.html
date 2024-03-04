@@ -81,6 +81,9 @@
 
     // Example: Get code content
     // var codeContent = editor.getValue();
+    readJSON('./courses/JS.json', (error, data) => {
+    console.log('JSON data:', data);
+});
   </script>
 </body>
 </html>
