@@ -1,14 +1,20 @@
 /* COLORS */
 
 :root {
-    /* #31333B */
-    --black: 49, 51, 59;
-    /* #34353A */
-    --lightBlack: 52, 53, 58;
-    /* #F9F9F9 */
-    --white: 249, 249, 249;
-    /* #5C80BC */
-    --blue: 92, 128, 188;
+    /* #070F2B */
+    --black: 7, 15, 43;
+    /* #1B1A55 */
+    --darkBlue: 27, 26, 85;
+    /* #FBFAF5 */
+    --white: 251, 250, 245;
+    /* #59A5D8 */
+    --accentCSS: 89, 165, 216;
+    /* #E2C346 */
+    --accentJS: 226, 195, 70;
+    /* #9395D3 */
+    --accentPHP: 147, 149, 211;
+    /* #188FA7 */
+    --accentVSC: 24, 143, 167;
   }
 
 /* DEFAULT OBJECTS - Same for every app */
