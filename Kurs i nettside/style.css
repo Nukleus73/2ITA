@@ -200,9 +200,3 @@ main {
     height: 100%;
     width: 50%;
 }
-
-.testArea textarea,
-.testArea iframe {
-    height: 100%;
-    width: 50%;
-}
