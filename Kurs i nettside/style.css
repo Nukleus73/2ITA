@@ -10,6 +10,8 @@
     --darkBlue: 27, 26, 85;
     /* #FBFAF5 */
     --white: 251, 250, 245;
+    /* main variable for color */
+    --accentMain: 24, 143, 167;
     /* #59A5D8 */
     --accentCSS: 89, 165, 216;
     /* #E2C346 */
@@ -31,7 +33,7 @@
 }
 
 ::selection {
-    background-color: rgba(var(--blue), .5);
+    background-color: rgba(var(--accentMain), .5);
 }
 
 /* scrollbar */
@@ -44,12 +46,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(var(--blue));
+  background-color: rgb(var(--accentMain));
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(var(--blue), .7);
+  background-color: rgba(var(--accentMain), .7);
 }
 
 html {
@@ -79,7 +81,7 @@ h3 span,
 h3 span,
 h4 span,
 h5 span {
-    color: rgb(var(--blue));
+    color: rgb(var(--accentMain));
     font-size: 130%;
 }
 
@@ -103,7 +105,7 @@ p {
 }
 
 p span {
-    color: rgb(var(--blue));
+    color: rgb(var(--accentMain));
     font-weight: 600;
 }
 
@@ -111,26 +113,26 @@ p span {
 
 .invertedButton {
     display: block;
-    color: rgb(var(--blue));
+    color: rgb(var(--accentMain));
     text-decoration: none;
     font-weight: 800;
     width: fit-content;
     border-radius: 5px;
     padding: .5rem 1rem;
     margin-top: 1rem;
-    border: 2px solid rgb(var(--blue));
+    border: 2px solid rgb(var(--accentMain));
     transition-duration: .2s;
 }
 
 .invertedButton:hover {
-    background-color: rgb(var(--blue));
+    background-color: rgb(var(--accentMain));
     color: rgb(var(--black));
     scale: 1.08;
 }
 
 .button {
     display: block;
-    background-color: rgb(var(--blue));
+    background-color: rgb(var(--accentMain));
     color: rgb(var(--black));
     text-decoration: none;
     font-weight: 800;
@@ -156,7 +158,6 @@ body {
 
 nav {
     width: 100%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,17 +166,16 @@ nav {
 nav a {
     width: 100%;
     text-decoration: none;
-    padding: 2rem 0;
+    padding: 1rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color: aqua;
 }
 
 .navIcon {
-    height: 3rem;
-    font-size: 3rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+    margin: .5rem;
 }
 
 main {
