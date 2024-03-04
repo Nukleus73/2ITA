@@ -54,8 +54,8 @@
         <div class="testArea">
           <div class="buttonBar">
             <button>Hint</button>
-            <button>Tilbake</button>
-            <button>Fram</button>
+            <button onclick="tilbake()">Tilbake</button>
+            <button onclick="fram()">Fram</button>
           </div>
           <textarea id="code-editor"><!-- Her skrives koden til oppgavene --></textarea>
           <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
@@ -74,6 +74,7 @@
       autoCloseBrackets: true,
     });
 
+
     // You can add more configuration options based on your req uirements
 
     // Example: Set initial code content
@@ -83,7 +84,10 @@
     // var codeContent = editor.getValue();
     readJSON('./courses/JS.json', (error, data) => {
     console.log('JSON data:', data);
+  
 });
+
+
   </script>
 </body>
 </html>
