@@ -59,8 +59,9 @@ html {
 }
 
 body {
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Plus Jakarta', 'Sans';
     background-color: rgb(var(--black));
+    color: rgb(var(--white));
 }
 
 h1,
@@ -68,10 +69,10 @@ h2,
 h3,
 h4,
 h5,
-a,
-p {
+a {
     color: rgb(var(--white));
-    font-family: 'Sentient', serif;
+    font-family: 'Gambetta', 'Serif';
+
     width: fit-content;
 }
 
@@ -201,11 +202,13 @@ main {
 
 .testArea {
     height: 100%;
-    width: 70%;
+    width: 100%;
+    display: flex;
+    position: relative;
 }
 
-.testArea textarea,
-.testArea iframe {
-    height: 100%;
-    width: 50%;
+.buttonBar {
+    position: absolute;
+    width: 100%;
 }
+
