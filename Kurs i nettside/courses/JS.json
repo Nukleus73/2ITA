@@ -1,58 +1,41 @@
 {
-  "course": {
-    "title": "Introduction to JavaScript",
-    "description": "A comprehensive course covering the basics of JavaScript programming language.",
-    "modules": [
+  "kurs": {
+    "tittel": "Programmeringskurs",
+    "intro": "Velkommen til vårt programmeringskurs. Dette kurset vil dekke grunnleggende og avanserte konsepter innenfor ulike programmeringsspråk.",
+    "leksjoner": [
       {
-        "title": "Module 1: Getting Started",
-        "description": "Introduction to JavaScript and setting up the development environment.",
-        "lessons": [
+        "tittel": "Innføring i Programmering",
+        "intro": "Denne leksjonen gir en oversikt over grunnleggende programmeringskonsepter.",
+        "manus": "manus til Thomas her.",
+        "video": "https://eksempel.com/video1",
+        "oppgaver": [
           {
-            "title": "Lesson 1: Introduction to JavaScript",
-            "duration": "1 hour",
-            "content": "Basic introduction to JavaScript programming language."
+            "tittel": "Variabler og Datatyper",
+            "oppgave": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen.",
+            "riktig_svar": "console.log(navnet);"
           },
           {
-            "title": "Lesson 2: Setting up Development Environment",
-            "duration": "30 minutes",
-            "content": "Instructions on setting up IDEs like Visual Studio Code for JavaScript development."
+            "tittel": "Betingelser",
+            "oppgave": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'.",
+            "riktig_svar": "if (tall > 10) { console.log('Større enn 10'); } else { console.log('Mindre eller lik 10'); }"
           }
         ]
       },
       {
-        "title": "Module 2: Data Types and Variables",
-        "description": "Understanding data types, variables, and data manipulation in JavaScript.",
-        "lessons": [
+        "tittel": "Avanserte Konsepter",
+        "intro": "Denne leksjonen utforsker mer avanserte emner innenfor programmering.",
+        "manus": "manus til Thomas her.",
+        "video": "https://eksempel.com/video2",
+        "oppgaver": [
           {
-            "title": "Lesson 1: Data Types",
-            "duration": "1.5 hours",
-            "content": "Explanation of primitive and reference data types in JavaScript."
+            "tittel": "Funksjoner",
+            "oppgave": "Lag en funksjon som tar to tall som argumenter og returnerer deres sum.",
+            "riktig_svar": "function leggSammen(a, b) { return a + b; }"
           },
           {
-            "title": "Lesson 2: Variables and Constants",
-            "duration": "1 hour",
-            "content": "Understanding variables, constants, and their usage in JavaScript."
-          }
-        ]
-      },
-      {
-        "title": "Module 3: Control Flow and Functions",
-        "description": "Learn about control flow statements, loops, and functions in JavaScript.",
-        "lessons": [
-          {
-            "title": "Lesson 1: Conditional Statements",
-            "duration": "1 hour",
-            "content": "Understanding if, else if, and switch statements in JavaScript."
-          },
-          {
-            "title": "Lesson 2: Loops",
-            "duration": "1 hour",
-            "content": "Explanation of for, while, and do-while loops in JavaScript."
-          },
-          {
-            "title": "Lesson 3: Functions",
-            "duration": "2 hours",
-            "content": "Introduction to functions, parameters, return values, and function expressions in JavaScript."
+            "tittel": "Objekter",
+            "oppgave": "Opprett et objekt kalt 'person' med egenskapene 'navn' og 'alder'. Skriv ut verdien av 'navn' fra objektet.",
+            "riktig_svar": "console.log(person.navn);"
           }
         ]
       }

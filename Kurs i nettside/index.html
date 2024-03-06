@@ -7,6 +7,8 @@
 
   <!-- Include CodeMirror CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+  <!-- CodeMirror Ambiance theme -->
+  <link rel="stylesheet" href="https://codemirror.net/5/theme/ayu-mirage.css">
   <!-- Include CodeMirror JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.js"></script>
   <!-- Include autoCloseBrackets addon -->
@@ -26,7 +28,54 @@
 <body>
   <nav>
     <a href="">
-      <img class="navIcon" src="./.media/vscode-alt.png" alt="">
+      <?xml version="1.0" encoding="UTF-8"?>
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 930.68 930.68">
+        <defs>
+          <style>
+            .cls-1 {
+              letter-spacing: 0em;
+            }
+
+            .cls-2 {
+              letter-spacing: -.06em;
+            }
+
+            .cls-3 {
+              fill: none;
+            }
+
+            .cls-3, .cls-4 {
+              stroke: #000;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 25px;
+            }
+
+            .cls-4, .cls-5 {
+              fill: #000;
+            }
+
+            .cls-6 {
+              fill: #fff;
+              stroke-width: 0px;
+            }
+
+            .cls-5 {
+              font-family: ArialRoundedMTBold, 'Arial Rounded MT Bold';
+              font-size: 221px;
+            }
+          </style>
+        </defs>
+        <circle class="cls-6" cx="465.34" cy="465.34" r="465.34"/>
+        <polyline class="cls-3" points="187.05 546.55 47.33 464.99 187.05 383.44"/>
+        <polyline class="cls-3" points="743.63 383.79 883.35 465.34 743.63 546.89"/>
+        <line class="cls-4" x1="418.21" y1="326.01" x2="335.03" y2="599.6"/>
+        <text class="cls-5" transform="translate(198.34 539.96)"><tspan x="0" y="0">2</tspan></text>
+        <text class="cls-5" transform="translate(435.73 533.37)"><tspan class="cls-2" x="0" y="0">T</tspan><tspan class="cls-1" x="124.2" y="0">A</tspan></text>
+      </svg>
+    </a>
+    <a href="">
+      <img class="navIcon" src="./.media/vsc.svg" alt="">
       <p>Visual Studio</p>
     </a>
     <a href="">
@@ -38,36 +87,35 @@
       <p>Javascript</p>
     </a>
     <a href="">
-      <img class="navIcon" src="./.media/php.png" alt="">
+      <img class="navIcon" src="./.media/php.svg" alt="">
       <p>PHP</p>
+    </a>
+    <a>
+      <ion-icon class="navIcon" name="menu-outline"></ion-icon>
     </a>
   </nav>
 
   <main>
     <!-- Her går CSS, JS PHP og VSC sidene -->
-    <div class="course" id="course-JS">
+    <div class="courses">
       <!-- Her legges hver modul i kurset -->
-      <div class="module">
-        <div class="instructions">
-          <!-- Her går de spesifikke instruksjonene -->
-        </div>
-        <div class="testArea">
-          <div class="aBar">
-            <a>Hint</a>
-            <a onclick="tilbake()">Tilbake</a>
-            <a onclick="fram()">Fram</a>
-          </div>
-          <textarea id="code-editor"><!-- Her skrives koden til oppgavene --></textarea>
-          <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
-        </div>
-      </div>
+      <div class="course"></div>
     </div>
+    <textarea id="code-editor"><!-- Her skrives koden til oppgavene --></textarea>
+    <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
   </main>
+
+  <div id="courseNav">
+    <a href="" class="button">Back</a>
+    <a href="" class="invertedButton">Next</a>
+    <h4>2/10</h4>
+  </div>
+
   <script>
     // Initialize CodeMirror on the textarea
     var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
       mode: "javascript",         
-      theme: "default",      
+      theme: "ayu-mirage",      
       lineNumbers: true,
       autofocus: true,
       matchBrackets: true,
