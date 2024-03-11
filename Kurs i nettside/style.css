@@ -221,7 +221,8 @@ main {
     width: 100%;
     flex: 1;
     padding:30px;
-    overflow-y:scroll;
+    overflow-y: auto;
+    height:600px;
 }
 
 .CodeMirror {
