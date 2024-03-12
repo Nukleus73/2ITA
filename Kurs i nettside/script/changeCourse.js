@@ -4,6 +4,11 @@ function changeCourse(course) {
     let variableValue;
 
     const navLinks = document.querySelectorAll(".courseButton");
+    navLinks.forEach(link => {
+        if (link.classList.contains("active")) {
+            link.classList.remove("active");
+        }
+    });
 
     document.querySelector(".courses").innerHTML = "";
 
@@ -12,7 +17,7 @@ function changeCourse(course) {
             // Retrieve the value of the specified CSS variable
             variableValue = style.getPropertyValue(`--accentVSC`).trim();
 
-            navLinks[0].focus();
+            navLinks[0].classList.add("active")
 
             //  henter .json filen og genererer et kurs i #course
             JSON_CMS('./courses/VSC.json', document.querySelector('.courses'))
@@ -22,6 +27,8 @@ function changeCourse(course) {
             // Retrieve the value of the specified CSS variable
             variableValue = style.getPropertyValue(`--accentCSS`).trim();
 
+            navLinks[1].classList.add("active")
+
             //  henter .json filen og genererer et kurs i #course
             JSON_CMS('./courses/CSS.json', document.querySelector('.courses'))
             break;
@@ -30,7 +37,7 @@ function changeCourse(course) {
             // Retrieve the value of the specified CSS variable
             variableValue = style.getPropertyValue(`--accentJS`).trim();
 
-            navLinks[2].focus();
+            navLinks[2].classList.add("active")
 
             JSON_CMS('./courses/JS.json', document.querySelector('.courses'))
             break;
@@ -38,6 +45,8 @@ function changeCourse(course) {
         case "PHP":
             // Retrieve the value of the specified PHP variable
             variableValue = style.getPropertyValue(`--accentPHP`).trim();
+
+            navLinks[3].classList.add("active")
 
             JSON_CMS('./courses/PHP.json', document.querySelector('.courses'))
             break;

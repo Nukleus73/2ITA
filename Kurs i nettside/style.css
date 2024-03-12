@@ -192,21 +192,21 @@ nav a {
 }
 
 #vsc:hover * .navIcon,
-#vsc:focus * .navIcon {
+#vsc.active * .navIcon {
     fill: rgb(var(--accentVSC)) !important;
 }
 
 #css:hover > .navIcon,
-#css:focus > .navIcon {
+#css.active > .navIcon {
     fill: rgb(var(--accentCSS));
 }
 
-#js:focus > .navIcon,
+#js.active > .navIcon,
 #js:hover > .navIcon {
     fill: rgb(var(--accentJS));
 }
 
-#php:focus > .navIcon,
+#php.active > .navIcon,
 #php:hover > .navIcon {
     fill: rgb(var(--accentPHP));
 }
