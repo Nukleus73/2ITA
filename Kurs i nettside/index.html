@@ -6,17 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>2ITA Webdesign Course</title>
 
-  <!-- Include CodeMirror CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
-  <!-- CodeMirror Ambiance theme -->
-  <link rel="stylesheet" href="https://codemirror.net/5/theme/ayu-mirage.css">
-  <!-- Include CodeMirror JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.js"></script>
-  <!-- Include autoCloseBrackets addon -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/addon/edit/closebrackets.js"></script>
-  <!-- Include JavaScript mode for CodeMirror -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.js"></script>
-
   <!-- Ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -128,19 +117,15 @@
     <div class="courses" lang="no">Velg et kurs for å starte.
       <!-- Her går CSS, JS PHP og VSC sidene -->
     </div>
-    <div class="consoleWrapper">
-      <textarea id="code-editor"><!-- Her skrives koden til oppgavene --></textarea>
-      <a href="" class="button" id="run">Run</a>
-    </div>
-    <iframe src="" frameborder="0"><!-- Her går output til koden --></iframe>
   </main>
 
   <div id="courseNav">
-    <a href="" class="button">Back</a>
-    <a href="" class="invertedButton">Next</a>
-    <h4>2/10</h4>
+    <a onclick="lesson(-1)" class="button">Back</a>
+    <a onclick="lesson(1)" class="invertedButton">Next</a>
+    <h4><span>-</span>/<span>-</span></h4>
   </div>
 
+  <script src="./script/lessonsControls.js"></script>
   <script src="./script/codeMirrorSettings.js"></script>
 </body>
 

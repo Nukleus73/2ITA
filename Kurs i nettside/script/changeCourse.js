@@ -52,6 +52,15 @@ function changeCourse(course) {
             break;
     };
 
+    setTimeout(() => {
+        //  start med den første leksjonen
+        document.querySelectorAll(".lesson")[0].style.display = "block";
+
+        //  oppdater kapittellisten
+        document.querySelectorAll("#courseNav h4 span")[1].innerHTML = document.querySelectorAll(".lesson").length
+        document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
+    }, 20);
+
     // Set the value of variable --blue to another value (in this case "lightblue")
     root.style.setProperty('--accentMain', variableValue);
 }

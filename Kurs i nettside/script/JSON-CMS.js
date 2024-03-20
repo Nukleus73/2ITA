@@ -1,32 +1,28 @@
 function JSON_CMS(JSON_File, sendToObject) {
-    // Read JSON data and insert it into the courses div
+    // henter ut .JSON filen og bruker den i funksjonen
     readJSON(JSON_File, (error, data) => {
 
-        // Access data and format it as needed
-        var coursesDiv = sendToObject;
+        // gjør dataen tilgjenelig
         var coursesHTML = ''; 
+        var course = data;
 
-        // Assuming data is an object with kurs property containing kurs objects
-        var kurs = data.kurs;
-
-        // Generate HTML for kurs
-        coursesHTML += `<h2>${kurs.tittel}</h2>`;
-        coursesHTML += `<p>${kurs.intro}</p>`;
+        // Generate HTML for course
+        coursesHTML += `<h2>${course.tittel}</h2>`;
+        coursesHTML += `<p>${course.intro}</p>`;
 
         // Loop through leksjoner array
-        kurs.leksjoner.forEach(leksjon => {
+        course.leksjoner.forEach(leksjon => {
           // Generate HTML for each leksjon
-          coursesHTML += `<div class="leksjon">
+          coursesHTML += `<div class="lesson" style="display: none;">
                             <h3>${leksjon.tittel}</h3>
                             <p>${leksjon.intro}</p>
                             <video width="320" height "240" controls src=".media/leksjon_1.mp4"></video>
                             `;
                             
           
-          // Loop through oppgaver array
           leksjon.oppgaver.forEach(oppgave => {
             // Generate HTML for each oppgave
-            coursesHTML += `<div class="oppgave">
+            coursesHTML += `<div class="task">
                               <h4>${oppgave.tittel}</h4>
                               <p>${oppgave.oppgave}</p>
                             </div>`;
@@ -37,6 +33,6 @@ function JSON_CMS(JSON_File, sendToObject) {
         });
 
         // Insert formatted HTML into the courses div
-        coursesDiv.innerHTML = coursesHTML;
+        sendToObject.innerHTML = coursesHTML;
       });
 }
