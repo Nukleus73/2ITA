@@ -1,43 +1,82 @@
 {
-    "kurs": {
-      "tittel": "Programmeringskurs",
-      "intro": "Velkommen til vårt programmeringskurs. Dette kurset vil dekke grunnleggende og avanserte konsepter innenfor ulike programmeringsspråk.",
-      "leksjoner": [
+  "tittel": "Visual Studio Kurs",
+  "intro": "Velkommen til vårt kurs om Visual Studio. Dette kurset vil dekke grunnleggende og avanserte konsepter for effektivt arbeid i Visual Studio.",
+  "leksjoner": [
+    {
+      "tittel": "Tastatursnarveier",
+      "intro": "Denne leksjonen vil introdusere deg for viktige tastatursnarveier i Visual Studio.",
+      "shortcuts": [
         {
-          "tittel": "Innføring i Programmering",
-          "intro": "Denne leksjonen gir en oversikt over grunnleggende programmeringskonsepter.",
-          "bilde": "src='.media/leksjon_1.mp4'",
-          "oppgaver": [
-            {
-              "tittel": "Variabler og Datatyper",
-              "oppgave": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen.",
-              "riktig_svar": "console.log(navnet);"
-            },
-            {
-              "tittel": "Betingelser",
-              "oppgave": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'.",
-              "riktig_svar": "if (tall > 10) { console.log('Større enn 10'); } else { console.log('Mindre eller lik 10'); }"
-            }
-          ]
+          "kommando": "Ctrl + S",
+          "funksjon": "Lagre gjeldende fil."
         },
         {
-          "tittel": "Avanserte Konsepter",
-          "intro": "Denne leksjonen utforsker mer avanserte emner innenfor programmering.",
-          "video": "https://eksempel.com/video2",
-          "oppgaver": [
-            {
-              "tittel": "Funksjoner",
-              "oppgave": "Lag en funksjon som tar to tall som argumenter og returnerer deres sum.",
-              "riktig_svar": "function leggSammen(a, b) { return a + b; }"
-            },
-            {
-              "tittel": "Objekter",
-              "oppgave": "Opprett et objekt kalt 'person' med egenskapene 'navn' og 'alder'. Skriv ut verdien av 'navn' fra objektet.",
-              "riktig_svar": "console.log(person.navn);"
-            }
-          ]
+          "kommando": "Ctrl + F",
+          "funksjon": "Søk etter tekst i gjeldende fil."
+        },
+        {
+          "kommando": "Ctrl + H",
+          "funksjon": "Erstatt tekst i gjeldende fil."
+        },
+        {
+          "kommando": "Ctrl + Z",
+          "funksjon": "Angre siste handling."
+        },
+        {
+          "kommando": "Ctrl + Y",
+          "funksjon": "Gjenta forrige handling."
+        },
+        {
+          "kommando": "Ctrl + P",
+          "funksjon": "Åpne Hurtigsøk for filer."
+        },
+        {
+          "kommando": "Ctrl + Tab",
+          "funksjon": "Bytt mellom åpne filer."
+        },
+        {
+          "kommando": "Alt + Shift + O",
+          "funksjon": "Fjerner alle imports som ikke er i bruk i koden."
+        },
+        {
+          "kommando": "Ctrl + Shift + P",
+          "funksjon": "Åpne kommandoprompten for Visual Studio."
+        },
+        {
+          "kommando": "Ctrl + Shift + K",
+          "funksjon": "Slett linjen."
+        },
+        {
+          "kommando": "Ctrl + B",
+          "funksjon": "Åpne/skjul sidepanelet."
+        },
+        {
+          "kommando": "Shift + 1 + Enter",
+          "funksjon": "Skriver HTML-strukturen automatisk."
+        }
+      ]
+    },
+    {
+      "tittel": "Extensions",
+      "intro": "Denne leksjonen vil lære deg hvordan du administrerer utvidelser i Visual Studio.",
+      "extensions": [
+        {
+          "navn": "GitHub Extension Pack",
+          "beskrivelse": "Inneholder verktøy for å jobbe med GitHub-repositorier direkte fra Visual Studio."
+        },
+        {
+          "navn": "Live Share",
+          "beskrivelse": "Tillater samarbeid i sanntid med andre utviklere."
+        },
+        {
+          "navn": "Live Server",
+          "beskrivelse": "Lar deg kjøre en lokal webserver slik at nettsiden din oppdaterer seg automatisk hver gang du lagrer."
+        },
+        {
+          "navn": "Prettier",
+          "beskrivelse": "Formaterer kode automatisk for å følge stilregler, slik at koden er mer leselig."
         }
       ]
     }
-  }
-  
+  ]
+}
