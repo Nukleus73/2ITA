@@ -13,6 +13,7 @@ function toggleSettings() {
 
 let toggle = true;
 
+// function for toggling between dark/light mode
 function toggleMode() {
     const root = document.documentElement;
     const style = getComputedStyle(root);
@@ -35,6 +36,11 @@ function toggleMode() {
         root.style.setProperty('--tetriaryMain', whiteBlack);
     }
 }
+
+// if the user has light mode, run toggleMode() once
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    toggleMode();
+  }
 
 var englishTrue = false;
 

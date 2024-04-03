@@ -15,7 +15,7 @@
   <!-- style -->
   <link rel="stylesheet" href="./style.css">
   <!-- JSON file fetcher -->
-  <script src="./script/readJSON.js"></script>
+  <script src="./script/fetchJSON.js"></script>
   <script src="./script/jsonToHTML.js"></script>
   <script src="./script/changeCourse.js"></script>
 </head>
@@ -94,7 +94,7 @@
         </defs>
       </svg>
       <!-- SVG SLUTT -->
-      <p>Visual Studio</p>
+      <p>VS Code</p>
     </a>
     <a href="#"  class="courseButton" id="css" onclick="changeCourse('CSS')">
       <ion-icon class="navIcon" name="logo-css3"></ion-icon>
@@ -133,11 +133,10 @@
         <h4><span>-</span>/<span>-</span></h4>
         <a onclick="lesson(1)" class="invertedButton"><ion-icon name="arrow-forward-outline"></ion-icon></a>
       </div>
+      <div id="lessonList"></div>
     </div>
     <div id="courseWrapper">
-      <div class="courses" lang="no">Velg et kurs for å starte.
-        <!-- Her går CSS, JS PHP og VSC sidene -->
-      </div>
+      <div class="courses" lang="no">Velg et kurs for å starte.</div>
     </div>
   </main>
 

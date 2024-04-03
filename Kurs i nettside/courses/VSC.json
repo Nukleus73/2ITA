@@ -1,55 +1,4 @@
-{
-  "tittel": "Visual Studio Kurs",
-  "intro": "Velkommen til vårt kurs om Visual Studio. Dette kurset vil dekke grunnleggende og avanserte konsepter for effektivt arbeid i Visual Studio.",
-  "leksjoner": [
-    {
-      "tittel": "Tastatursnarveier",
-      "intro": "Denne leksjonen vil introdusere deg for viktige tastatursnarveier i Visual Studio.",
-      "shortcuts": [
-        {
-          "kommando": "Ctrl + S",
-          "funksjon": "Lagre gjeldende fil."
-        },
-        {
-          "kommando": "Ctrl + F",
-          "funksjon": "Søk etter tekst i gjeldende fil."
-        },
-        {
-          "kommando": "Ctrl + H",
-          "funksjon": "Erstatt tekst i gjeldende fil."
-        },
-        {
-          "kommando": "Ctrl + Z",
-          "funksjon": "Angre siste handling."
-        },
-        {
-          "kommando": "Ctrl + Y",
-          "funksjon": "Gjenta forrige handling."
-        },
-        {
-          "kommando": "Ctrl + P",
-          "funksjon": "Åpne Hurtigsøk for filer."
-        },
-        {
-          "kommando": "Ctrl + Tab",
-          "funksjon": "Bytt mellom åpne filer."
-        },
-        {
-          "kommando": "Alt + Shift + O",
-          "funksjon": "Fjerner alle imports som ikke er i bruk i koden."
-        },
-        {
-          "kommando": "Ctrl + Shift + P",
-          "funksjon": "Åpne kommandoprompten for Visual Studio."
-        },
-        {
-          "kommando": "Ctrl + Shift + K",
-          "funksjon": "Slett linjen."
-        },
-        {
-          "kommando": "Ctrl + B",
-          "funksjon": "Åpne/skjul sidepanelet."
-        },
+
         {
           "kommando": "Shift + 1 + Enter",
           "funksjon": "Skriver HTML-strukturen automatisk."
@@ -80,3 +29,8 @@
     }
   ]
 }
+
++ bruk av shift og control
++ format document
++ emmet wrap
++ inspect

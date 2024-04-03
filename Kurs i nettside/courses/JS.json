@@ -1,28 +1,47 @@
 {
-  "tittel": "<span>Programmering</span>skurs",
-  "intro": "Velkommen til vårt programmeringskurs. Dette kurset vil dekke grunnleggende og avanserte konsepter innenfor ulike programmeringsspråk.",
-  "leksjoner": [
+  "title": "Visual Studio Code",
+  "intro": "Velkommen til vårt programmeringskurs. Dette kurset vil dekke hurtigtaster, utvidelser og triks innenfor utviklingsverktøyet VS Code.",
+  "lessons": [
     {
-      "tittel": "Innføring i Programmering",
-      "intro": "Denne leksjonen gir en oversikt over grunnleggende programmeringskonsepter.",
-      "video": "src='.media/leksjon_1.mp4'",
-      "oppgaver": [
+      "title": "Grunnleggende hurtigtaster",
+      "texts": [
+      {
+        "text": "Visual Studio Code kommer med en mengde hurtigtaster, og bruken av disse gjør det <span>lettere</span> og <span>raskere</span> å utvikle applikasjoner. Mange av de hurtigtastene man har i nettlesere i dag, er også i VS Code, og gjør det samme. La oss nå gå gjennom noen eksempler:"
+      },
+      {
+        "text": "<span>Ctrl + Z</span>:&nbsp&nbsp&nbsp Angre siste handling (denne bør alle kjenne til)"
+      },
+      {
+        "text": "<span>Ctrl + Shift + Z</span>:&nbsp&nbsp&nbsp Gjenta siste handling"
+      },
+      {
+        "text": "<span>Ctrl + C</span>:&nbsp&nbsp&nbsp Gjenta siste handling"
+      },
+      {
+        "text": "<span>Ctrl + V</span>:&nbsp&nbsp&nbsp Gjenta siste handling"
+      },
+      {
+        "text": "<span>Ctrl + X</span>:&nbsp&nbsp&nbsp Gjenta siste handling"
+      }
+      ],
+      "video": "./media/leksjon_1.mp4",
+      "images": [
         {
-          "oppgave": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen."},
-        {
-          "oppgave": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'."}
-      ]
-    },
-    {
-      "tittel": "Avanserte Konsepter",
-      "intro": "Denne leksjonen utforsker mer avanserte emner innenfor programmering.",
-      "video": "https://eksempel.com/video2",
-      "oppgaver": [
-        {
-          "oppgave": "Lag en funksjon som tar to tall som argumenter og returnerer deres sum."
+          "image": "./media/leksjon_1.jpg"
         },
         {
-          "oppgave": "Opprett et objekt kalt 'person' med egenskapene 'navn' og 'alder'. Skriv ut verdien av 'navn' fra objektet."
+          "image": "./media/leksjon_1.jpg"
+        },
+        {
+          "image": "./media/leksjon_1.jpg"
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen."
+        },
+        {
+          "task": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'."
         }
       ]
     }

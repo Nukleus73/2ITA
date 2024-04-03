@@ -1,86 +1,87 @@
-function jsonToHTML(JSON_File, sendToObject) {
-    // henter ut .JSON filen og bruker den i funksjonen
-    readJSON(JSON_File, (error, data) => {
+//  funksjon for å konvertere en json fil til html kode i et bestemt format.
+function jsonToHTML(jsonPath, parentElement) {
 
-        // lager variabelen course
-        var course = ''; 
+  //  async = vent på alt med "await", så gjør resten av koden
+  (async () => {
+    //  hent ut .JSON filen
+    const course = await fetchJSON(jsonPath);
 
-        // Generate HTML for course
-        course += `<h2>${data.tittel}</h2>`;
-        course += `<p>${data.intro}</p>`;
+    //  logg hentingen
+    console.log(`[jsonToHTML.js]: Successfully fetched ${course.title}`);
 
-        // Loop through leksjoner array
-        data.leksjoner.forEach(leksjon => {
-          // Generate HTML for each leksjon
-          course += `<div class="lesson" style="display: none;">
-                            <h3>${leksjon.tittel}</h3>
-                            <p>${leksjon.intro}</p>
-                            <video width="320" height "240" controls src=".media/leksjon_1.mp4"></video>
-                            `;
-                            
-          
-          leksjon.oppgaver.forEach(oppgave => {
-            // Generate HTML for each oppgave
-            course += `<div class="task">
-                              <h4>${oppgave.tittel}</h4>
-                              <p>${oppgave.oppgave}</p>
-                            </div>`;
-          });
+    course.lessons.forEach(lesson => {
+      let lessonTitle = document.createElement("h5");
+      lessonTitle.innerHTML = `${lesson.title}`;
+      document.querySelector("#lessonList").appendChild(lessonTitle)
+    });
 
-          // Close leksjon div
-          course += `</div>`;
+    //  hent objektet som alle elmentene skal ligge i
+    let courseContainer = parentElement;
+
+    // lag en "h1" tag med tittelen, fyll den og send den til siden
+    let title = document.createElement("h1");
+    title.innerHTML = `<span>${course.title}</span>`;
+    courseContainer.appendChild(title);
+
+    // lag en "h5" tag med intro, fyll den og send den til siden
+    let intro = document.createElement("h5");
+    intro.innerHTML = `${course.intro}`;
+    courseContainer.appendChild(intro);
+
+    //  for hver leksjon
+    course.lessons.forEach((lesson) => {
+
+      // lag en "h3" tag med tittel, fyll den og send den til siden
+      let title = document.createElement("h3");
+      title.innerHTML = `${lesson.title}`;
+      courseContainer.appendChild(title);
+
+      //  om det eksisterer bilder i json filen
+      if (lesson.texts) {
+        //  for hvert bilde
+        lesson.texts.forEach(text => {
+        // lag en "img" tag med bildet, fyll den og send den til siden
+          let tex = document.createElement("p");
+          tex.innerHTML = text.text;
+          courseContainer.appendChild(tex);
         });
+      }
 
-        // Insert formatted HTML into the courses div
-        sendToObject.innerHTML = course;
-      });
-}
+      // om det eksisterer en video i json filen
+      if (lesson.video) {
+        // lag en "video" tag med video, fyll den og send den til siden
+        let video = document.createElement("video");
+        video.src = lesson.video;
+        video.controls = true;
+        courseContainer.appendChild(video);
+      }
 
+      //  om det eksisterer bilder i json filen
+      if (lesson.images) {
+        //  for hvert bilde
+        lesson.images.forEach(image => {
+        // lag en "img" tag med bildet, fyll den og send den til siden
+          let img = document.createElement("img");
+          img.src = image.image;
+          courseContainer.appendChild(img);
+        });
+      }
 
-function JSON_CMS(JSON_File, sendToObject) {
-  // henter ut .JSON filen og bruker den i funksjonen
-  readJSON(JSON_File, (error, data) => {
+      //  om det eksisterer oppgaver i json filen
+      if (lesson.tasks) {
+        let taskCounter = 0;
+        //  for hvert oppgave
+        lesson.tasks.forEach(task => {
+          taskCounter++
 
-      // gjør dataen tilgjenelig
-      var coursesHTML = ''; 
-      var course = data;
+        // lag en "p" tag med oppgaven, fyll den og send den til siden
+          let tas = document.createElement("p");
+          tas.innerHTML = `<span>Oppgave ${taskCounter}</span>: ${task.task}`;
+          courseContainer.appendChild(tas);
+        });
+      }
 
-      // Generate HTML for course
-      coursesHTML += `<h2>${course.tittel}</h2>`;
-      coursesHTML += `<p>${course.intro}</p>`;
-
-      // Loop through leksjoner array
-      course.leksjoner.forEach(leksjon => {
-          // Generate HTML for each leksjon
-          coursesHTML += `<div class="lesson" style="display: none;">
-                              <h3>${leksjon.tittel}</h3>
-                              <p>${leksjon.intro}</p>`;
-
-          if (leksjon.shortcuts) {
-              // Generate HTML for shortcuts
-              coursesHTML += `<ul>`;
-              leksjon.shortcuts.forEach(shortcut => {
-                  coursesHTML += `<li>${shortcut.kommando}: ${shortcut.funksjon}</li>`;
-              });
-              coursesHTML += `</ul>`;
-          }
-
-          if (leksjon.extensions) {
-              // Generate HTML for extensions
-              coursesHTML += `<ul>`;
-              leksjon.extensions.forEach(extension => {
-                  coursesHTML += `<li>${extension.navn}: ${extension.beskrivelse}</li>`;
-              });
-              coursesHTML += `</ul>`;
-          }
-
-          // Close leksjon div
-          coursesHTML += `</div>`;
-      });
-
-      // Insert formatted HTML into the courses div
-      sendToObject.innerHTML = coursesHTML;
-  });
-}
-
-
+    });
+    
+  })();
+};

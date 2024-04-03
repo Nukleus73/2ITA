@@ -67,6 +67,7 @@ function changeCourse(course) {
             document.querySelectorAll("#courseNav h4 span")[0].innerHTML = "-";
         }
     }, 30);
+    document.querySelector("#lessonList").innerHTML = ''
 
     // Set the value of variable --blue to another value (in this case "lightblue")
     root.style.setProperty('--accentMain', variableValue);
