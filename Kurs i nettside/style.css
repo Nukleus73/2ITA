@@ -4,12 +4,17 @@
 /* COLORS */
 
 :root {
+    --primaryMain: 21, 20, 31;
+    --secondaryMain: 246, 245, 240;
+    --tetriaryMain: 30, 30, 54;
     /* #1B1A55 */
     --black: 21, 20, 31;
-    /* #747274 */
-    --lightBlack: 30, 30, 54;
     /* #FBFAF5 */
     --white: 246, 245, 240;
+    /* #747274 */
+    --lightBlack: 30, 30, 54;
+    /* ##D0D0D0 */
+    --blackWhite: 208, 208, 208;
     /* main variable for color */
     --accentMain: 24, 143, 167;
     /* #59A5D8 */
@@ -60,7 +65,7 @@ html {
 
 body {
     font-family: 'Plus Jakarta Sans', 'Sans';
-    background-color: rgb(var(--black));
+    background-color: rgb(var(--primaryMain));
     color: rgb(var(--white));
     transition-duration: .2s;
 }
@@ -70,7 +75,7 @@ h2,
 h3,
 h4,
 h5 {
-    color: rgb(var(--white));
+    color: rgb(var(--secondaryMain));
     width: fit-content;
 }
 
@@ -103,7 +108,7 @@ h4 {
 }
 
 p {
-    color: rgb(var(--white));
+    color: rgb(var(--secondaryMain));
     font-size: 1.1rem;
 }
 
@@ -124,13 +129,18 @@ p span {
     font-size: .8rem;
     width: fit-content;
     border-radius: 5px;
-    padding: .5rem 1rem;
+    padding: .25rem .5rem;
     border: 2px solid rgb(var(--accentMain));
     transition-duration: .2s;
+}
+.invertedButton ion-icon {
+    font-size: 1.5rem;
 }
 
 .invertedButton:hover {
     scale: 1.08;
+    background-color: rgb(var(--accentMain));
+    color: rgb(var(--black));
 }
 
 .button {
@@ -143,16 +153,15 @@ p span {
     font-size: .8rem;
     width: fit-content;
     border-radius: 5px;
-    padding: .5rem 1rem;
+    padding: .25rem .5rem;
     border: 2px solid rgb(var(--accentMain));
-    transition-duration: .2s;
-
- 
+    transition-duration: .2s; 
     background-color: rgb(var(--accentMain));
     color: rgb(var(--black));
-    margin: 0 2rem;
-    padding: .5rem 1rem;
     transition-duration: .2s;
+}
+.button ion-icon {
+    font-size: 1.5rem;
 }
 
 .button:hover {
@@ -191,10 +200,25 @@ nav a {
     height: 2.5rem;
     width: 2.5rem;
     font-size: 2.5rem;
-    color: rgb(var(--white));
-    fill: rgb(var(--white));
+    color: rgb(var(--secondaryMain));
+    fill: rgb(var(--secondaryMain));
     margin: .5rem;
     transition-duration: .2s;
+}
+
+#menuIcon {
+    position: relative;
+    margin-left: 1rem;
+    transition-duration: .5s;
+}
+#settingsIcon {
+    position: relative;
+    margin-right: 1rem;
+    transition-duration: .5s;
+}
+
+#logo {
+    cursor: auto;
 }
 
 #vsc:hover * .navIcon,
@@ -226,8 +250,10 @@ main {
 #lessons {
     height: 100%;
     width: 20%;
-    background-color: rgb(var(--lightBlack));
-    border-right: 1px solid rgba(var(--white), .3);
+    background-color: rgb(var(--tetriaryMain));
+    border-right: 1px solid rgba(var(--secondaryMain), .3);
+    overflow: hidden;
+    transition-duration: .4s;
 }
 
 #courseWrapper {
@@ -236,6 +262,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
+    transition-duration: .4s;
 }
 
 .courses {
@@ -248,18 +275,56 @@ main {
 }
 
 #courseNav {
-   position: absolute;
+   position: relative;
    width: 100%;
    display: flex;
-   justify-content: end;
+   justify-content: space-between;
+   align-items: center;
    padding: 1rem;
-   background-color: rgb(var(--black));
-   box-shadow: 0 0 10px 3px rgb(var(--black));
-}
+ }
 
 #courseNav h4 {
+    position: relative;
+    margin: 0 1rem;
+}
+
+#settingsBar {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 55px;
+    right: 40px;
+    background-color: rgb(var(--tetriaryMain));
+    box-shadow: 0 0 7px 1px rgba(var(--black), .3);
+    padding: .5rem;
+    border-radius: 5px;
+    border: 1.5px solid rgb(var(--secondaryMain));
+    transition-duration: .2s;
+    opacity: 0;
+    z-index: 1;
+}
+
+#settingsBar a {
+    color: rgb(var(--secondaryMain));
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#settingsBar a ion-icon {
+    margin: .5rem;
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .courseButton p {
+        display: none;
+    }
+
+    nav {
+        padding: 0 0rem;
+    }
+    
+    .navIcon {
+        height: 2rem;
+        width: 2rem;
+    }
 }

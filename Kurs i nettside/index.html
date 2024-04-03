@@ -10,6 +10,8 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+  <link rel="shortcut icon" href="./.media/2ITAlogo.png" type="image/x-icon">
+
   <!-- style -->
   <link rel="stylesheet" href="./style.css">
   <!-- JSON file fetcher -->
@@ -20,10 +22,10 @@
 
 <body>
   <nav>
-    <a id="logo">
-      <img src="./.media/2ITAlogo.png" alt="" class="navIcon">
+    <a href="#" id="menuIcon" onclick="toggleSidebar()">
+      <ion-icon class="navIcon" name="menu-outline"></ion-icon>
     </a>
-    <a class="courseButton" id="vsc" onclick="changeCourse('VSC')">
+    <a href="#"  class="courseButton" id="vsc" onclick="changeCourse('VSC')">
       <!-- SVG FIL TIL VISUAL STUDIO CODE -->
       <svg class="navIcon" width="100" height="100" viewBox="0 0 100 100" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +96,18 @@
       <!-- SVG SLUTT -->
       <p>Visual Studio</p>
     </a>
-    <a class="courseButton" id="css" onclick="changeCourse('CSS')">
+    <a href="#"  class="courseButton" id="css" onclick="changeCourse('CSS')">
       <ion-icon class="navIcon" name="logo-css3"></ion-icon>
       <p>CSS</p>
     </a>
-    <a class="courseButton" id="js" onclick="changeCourse('JS')">
+    <a id="logo">
+      <img src="./.media/2ITAlogo.png" alt="" class="navIcon">
+    </a>
+    <a href="#"  class="courseButton" id="js" onclick="changeCourse('JS')">
       <ion-icon class="navIcon" name="logo-nodejs"></ion-icon>
       <p>Javascript</p>
     </a>
-    <a class="courseButton" id="php" onclick="changeCourse('PHP')">
+    <a href="#"  class="courseButton" id="php" onclick="changeCourse('PHP')">
       <!-- SVG TIL PHP -->
       <svg class="navIcon" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="150px"
         height="150px">
@@ -112,26 +117,33 @@
       <!-- SVG SLUTT -->
       <p>PHP</p>
     </a>
-    <a>
-      <ion-icon class="navIcon" name="menu-outline"></ion-icon>
-    </a>
+    <a href="#"  id="settingsIcon" onclick="toggleSettings()">
+      <ion-icon class="navIcon" name="cog-outline"></ion-icon>
+   </a>
+   <div id="settingsBar">
+    <a href="#" onclick="toggleMode()"><ion-icon name="contrast-outline"></ion-icon>Switch mode</a>
+    <a href="#"><ion-icon name="language-outline"></ion-icon>Change language</a>
+  </div>
   </nav>
 
   <main>
-    <div id="lessons"></div>
+    <div id="lessons">
+      <div id="courseNav">
+        <a onclick="lesson(-1)" class="button"><ion-icon name="arrow-back-outline"></ion-icon></a>
+        <h4><span>-</span>/<span>-</span></h4>
+        <a onclick="lesson(1)" class="invertedButton"><ion-icon name="arrow-forward-outline"></ion-icon></a>
+      </div>
+    </div>
     <div id="courseWrapper">
       <div class="courses" lang="no">Velg et kurs for å starte.
         <!-- Her går CSS, JS PHP og VSC sidene -->
-      </div>
-      <div id="courseNav">
-        <a onclick="lesson(-1)" class="button">Back</a>
-        <a onclick="lesson(1)" class="invertedButton">Next</a>
-        <h4><span>-</span>/<span>-</span></h4>
       </div>
     </div>
   </main>
 
   <script src="./script/changeLesson.js"></script>
+  <script src="./script/toggleSidebar.js"></script>
+  <script src="./script/toggleSettings.js"></script>
 </body>
 
 </html>
