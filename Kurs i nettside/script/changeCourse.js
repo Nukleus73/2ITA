@@ -20,7 +20,7 @@ function changeCourse(course) {
             navLinks[0].classList.add("active")
 
             //  henter .json filen og genererer et kurs i #course
-            JSON_CMS('./courses/VSC.json', document.querySelector('.courses'))
+            jsonToHTML('./courses/VSC.json', document.querySelector('.courses'))
             break;
 
         case "CSS":
@@ -30,7 +30,7 @@ function changeCourse(course) {
             navLinks[1].classList.add("active")
 
             //  henter .json filen og genererer et kurs i #course
-            JSON_CMS('./courses/CSS.json', document.querySelector('.courses'))
+            jsonToHTML('./courses/CSS.json', document.querySelector('.courses'))
             break;
 
         case "JS":
@@ -39,7 +39,7 @@ function changeCourse(course) {
 
             navLinks[2].classList.add("active")
 
-            JSON_CMS('./courses/JS.json', document.querySelector('.courses'))
+            jsonToHTML('./courses/JS.json', document.querySelector('.courses'))
             break;
 
         case "PHP":
@@ -48,18 +48,25 @@ function changeCourse(course) {
 
             navLinks[3].classList.add("active")
 
-            JSON_CMS('./courses/PHP.json', document.querySelector('.courses'))
+            jsonToHTML('./courses/PHP.json', document.querySelector('.courses'))
             break;
     };
 
     setTimeout(() => {
         //  start med den første leksjonen
-        document.querySelectorAll(".lesson")[0].style.display = "block";
+        if (document.querySelectorAll(".lesson").length) {
+            document.querySelectorAll(".lesson")[0].style.display = "block";
 
-        //  oppdater kapittellisten
-        document.querySelectorAll("#courseNav h4 span")[1].innerHTML = document.querySelectorAll(".lesson").length
-        document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
-    }, 20);
+            //  oppdater kapittellisten
+            document.querySelectorAll("#courseNav h4 span")[1].innerHTML = document.querySelectorAll(".lesson").length
+            document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
+        }
+        else {
+            //  om det ikke er noe kapittel, er den blank
+            document.querySelectorAll("#courseNav h4 span")[1].innerHTML = "-"
+            document.querySelectorAll("#courseNav h4 span")[0].innerHTML = "-";
+        }
+    }, 30);
 
     // Set the value of variable --blue to another value (in this case "lightblue")
     root.style.setProperty('--accentMain', variableValue);

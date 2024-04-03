@@ -4,10 +4,10 @@
 /* COLORS */
 
 :root {
-    /* #070F2B */
-    --black: 7, 15, 43;
     /* #1B1A55 */
-    --darkBlue: 21, 20, 31;
+    --black: 21, 20, 31;
+    /* #747274 */
+    --lightBlack: 30, 30, 54;
     /* #FBFAF5 */
     --white: 246, 245, 240;
     /* main variable for color */
@@ -70,7 +70,6 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Plus Jakarta Sans', 'Sans';
     color: rgb(var(--white));
     width: fit-content;
 }
@@ -168,7 +167,7 @@ nav {
     width: 100%;
     display: flex;
     padding: 0 1rem;
-    height: 10vh;
+    height: 5rem;
     justify-content: space-between;
     align-items: center;
     border-bottom: 4px solid rgb(var(--accentMain));
@@ -216,28 +215,42 @@ nav a {
 
 main {
     width: 100%;
-    height: 80vh;
+    height: 100%;
     display: flex;
-    background-color: rgb(var(--darkBlue));
+}
+
+#lessons {
+    height: 100%;
+    width: 20%;
+    background-color: rgb(var(--lightBlack));
+    border-right: 1px solid rgba(var(--white), .3);
+}
+
+#courseWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .courses {
-    height: 100%;
     width: 100%;
     flex: 1;
     padding: 0 1rem;
     overflow-y: scroll;
     hyphens: auto;
+    max-width: 800px;
 }
 
 #courseNav {
-    display: flex;
-    width: 100%;
-    padding: .5rem;
-    height: 10vh;
-    justify-content: end;
-    align-items: center;
-    position: relative;
+   position: absolute;
+   width: 100%;
+   display: flex;
+   justify-content: end;
+   padding: 1rem;
+   background-color: rgb(var(--black));
+   box-shadow: 0 0 10px 3px rgb(var(--black));
 }
 
 #courseNav h4 {
