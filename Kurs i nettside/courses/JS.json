@@ -5,36 +5,24 @@
     {
       "tittel": "Innføring i Programmering",
       "intro": "Denne leksjonen gir en oversikt over grunnleggende programmeringskonsepter.",
-      "manus": "manus til Thomas her.",
       "video": "src='.media/leksjon_1.mp4'",
       "oppgaver": [
         {
-          "tittel": "Variabler og Datatyper",
-          "oppgave": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen.",
-          "riktig_svar": "console.log(navnet);"
-        },
+          "oppgave": "Opprett en variabel kalt 'navn' og tilordne det ditt eget navn. Skriv deretter ut verdien av variabelen."},
         {
-          "tittel": "Betingelser",
-          "oppgave": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'.",
-          "riktig_svar": "if (tall > 10) { console.log('Større enn 10'); } else { console.log('Mindre eller lik 10'); }"
-        }
+          "oppgave": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'."}
       ]
     },
     {
       "tittel": "Avanserte Konsepter",
       "intro": "Denne leksjonen utforsker mer avanserte emner innenfor programmering.",
-      "manus": "manus til Thomas her.",
       "video": "https://eksempel.com/video2",
       "oppgaver": [
         {
-          "tittel": "Funksjoner",
-          "oppgave": "Lag en funksjon som tar to tall som argumenter og returnerer deres sum.",
-          "riktig_svar": "function leggSammen(a, b) { return a + b; }"
+          "oppgave": "Lag en funksjon som tar to tall som argumenter og returnerer deres sum."
         },
         {
-          "tittel": "Objekter",
-          "oppgave": "Opprett et objekt kalt 'person' med egenskapene 'navn' og 'alder'. Skriv ut verdien av 'navn' fra objektet.",
-          "riktig_svar": "console.log(person.navn);"
+          "oppgave": "Opprett et objekt kalt 'person' med egenskapene 'navn' og 'alder'. Skriv ut verdien av 'navn' fra objektet."
         }
       ]
     }
