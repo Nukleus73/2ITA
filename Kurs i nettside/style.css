@@ -130,8 +130,6 @@ p span {
 }
 
 .invertedButton:hover {
-    background-color: rgb(var(--accentMain));
-    color: rgb(var(--black));
     scale: 1.08;
 }
 
@@ -139,13 +137,19 @@ p span {
     display: block;
     height: fit-content;
     cursor: pointer;
-    background-color: rgb(var(--accentMain));
-    color: rgb(var(--black));
+    color: rgb(var(--accentMain));
     text-decoration: none;
     font-weight: 800;
     font-size: .8rem;
     width: fit-content;
     border-radius: 5px;
+    padding: .5rem 1rem;
+    border: 2px solid rgb(var(--accentMain));
+    transition-duration: .2s;
+
+ 
+    background-color: rgb(var(--accentMain));
+    color: rgb(var(--black));
     margin: 0 2rem;
     padding: .5rem 1rem;
     transition-duration: .2s;
