@@ -1,9 +1,22 @@
-- Samle og formattere VSC
-- Endre stil på det ferdige krusproduktet
-- fikse knapper i sidebaren
+- Lage kurs til inspeksjonsverktøyet
+    - Musepekeren
+    - Mobilmodus
+    - Stilsetting
+        - med :hov og rendering (malerkosten på samme linje)
+        - enkel endring; flex, rotasjon
+    - Konsoll
+        - console.log
 
-- Samle og formattere JS
-- Samle og formattere PHP
-- Samle og formattere CSS
+- Lage kurs til github-integrering
+    - Installere Git
+    - Initialize repo
+    - Add remote
+    - Pull from remote
+        - Commit; hvordan funker det?
+        - Extra: Git graph
+
+- Samle og formattere JS-kurs
+- Samle og formattere PHP-kurs
+- Samle og formattere CSS-kurs
 
 - Change language

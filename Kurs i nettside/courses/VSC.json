@@ -1,36 +1,172 @@
-
+{
+  "lessons": [
+    {
+      "title": "Grunnleggende hurtigtaster",
+      "texts": [
         {
-          "kommando": "Shift + 1 + Enter",
-          "funksjon": "Skriver HTML-strukturen automatisk."
+          "text": "Utviklingsprogrammet Visual Studio Code kommer med en mengde hurtigtaster, og bruken av disse gjør det <span>lettere</span> og <span>raskere</span> å utvikle applikasjoner. Mange av de hurtigtastene man har i nettlesere i dag, er også i VS Code, og gjør det samme. La oss nå gå gjennom noen eksempler:"
+        },
+        {
+          "text": "<span>Ctrl + Z</span>:&nbsp&nbsp&nbsp Angre siste handling (denne bør alle kjenne til)."
+        },
+        {
+          "text": "<span>Ctrl + Shift + Z</span>:&nbsp&nbsp&nbsp Gjenta siste handling."
+        },
+        {
+          "text": "<span>Ctrl + C</span>:&nbsp&nbsp&nbsp Uten markering kopierer hele linjen, med markering kopierer markert tekst."
+        },
+        {
+          "text": "<span>Ctrl + V</span>:&nbsp&nbsp&nbsp Uten markering limer inn hele linjen, med markering limer inn markert tekst."
+        },
+        {
+          "text": "<span>Ctrl + X</span>:&nbsp&nbsp&nbsp Uten markering klipper ut hele linjen, med markering limer inn markert tekst."
+        },
+        {
+          "text": "Så har vi hurtigtaster som er innebygd i de fleste programvarer. Disse kan du finne i tekstbehandlingsprogrammer og nettlesere, og nesten alltid på samme tast:"
+        },
+        {
+          "text": "<span>Ctrl + S</span>:&nbsp&nbsp&nbsp Lagre den aktive filen."
+        },
+        {
+          "text": "<span>Ctrl + W</span>:&nbsp&nbsp&nbsp Lukker den aktive filen."
+        },
+        {
+          "text": "<span>Ctrl + Shift + T</span>:&nbsp&nbsp&nbsp Åpner den siste aktive filen."
+        },
+        {
+          "text": "<span>Ctrl + N</span>:&nbsp&nbsp&nbsp Åpner en ny, tom fil."
+        },
+        {
+          "text": "<span>Ctrl + Tab</span>:&nbsp&nbsp&nbsp Blar gjennom åpne faner."
+        },
+        {
+          "text": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Lar deg søke etter filer."
+        },
+        {
+          "text": "<span>Ctrl + Shift + P</span>:&nbsp&nbsp&nbsp VS Codes konsoll. Her kan du kjøre en rekke kommandoer."
+        },
+        {
+          "text": "En ESSENSIELL kommando er <span>Shift + 1 + Enter</span>, som, i en tom .html-fil oppretter grunnstrukturen i HTML. Dette forenkler prosessen med å lage nye sider."
+        }
+      ],
+      "images": [
+        {
+          "image": "hotkeyKeyboard.jpg",
+          "caption": "Bilde av Girl with red hat på Unsplash"
         }
       ]
     },
     {
-      "tittel": "Extensions",
-      "intro": "Denne leksjonen vil lære deg hvordan du administrerer utvidelser i Visual Studio.",
-      "extensions": [
+      "title": "Avanserte hurtigtaster",
+      "texts": [
         {
-          "navn": "GitHub Extension Pack",
-          "beskrivelse": "Inneholder verktøy for å jobbe med GitHub-repositorier direkte fra Visual Studio."
+          "text": "I tillegg til de aller mest grunnleggende hurtigtastene, er det andre praktiske metoder som er nyttig å lære seg. Dette er følgende taster:"
         },
         {
-          "navn": "Live Share",
-          "beskrivelse": "Tillater samarbeid i sanntid med andre utviklere."
+          "text": "<span>Ctrl + K + C</span>:&nbsp&nbsp&nbsp Uten markering kommenterer hele linjen, med markering kommenterer markert tekst."
         },
         {
-          "navn": "Live Server",
-          "beskrivelse": "Lar deg kjøre en lokal webserver slik at nettsiden din oppdaterer seg automatisk hver gang du lagrer."
+          "text": "<span>Ctrl + K + U</span>:&nbsp&nbsp&nbsp Uten markering fjerner kommentarer på hele linjen, med markering fjerner kommentarer på markert tekst."
         },
         {
-          "navn": "Prettier",
-          "beskrivelse": "Formaterer kode automatisk for å følge stilregler, slik at koden er mer leselig."
+          "text": "<span>Alt + Z</span>:&nbsp&nbsp&nbsp Word Wrap: Holder teksten innenfor vinduet, uten overflow."
+        },
+        {
+          "text": "<span>Sift + ALt + F</span>:&nbsp&nbsp&nbsp Formatterer filen slik at alt av indentering og linjer blir likt. Kjekt etter å ha brukt chatGPT."
+        },
+        {
+          "text": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Emmet Wrap: Pakker markert tekst inn i en HTML-tag. Må søkes etter med tilhørende hurtigtast."
+        },
+        {
+          "text": "<span>Ctrl + K + Z</span>:&nbsp&nbsp&nbsp Zen Mode: Åpner VS Code i fullskjerm, uten menyer. MERK: du går ut av programmet ved dobbeltrykk av Esc."
+        }
+      ],
+      "images": [
+        {
+          "image": "medWordWrap.jpg",
+          "caption": "Med Word Wrap."
+        },
+        {
+          "image": "utenWordWrap.jpg",
+          "caption": "Uten Word Wrap."
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Lær deg å benytte kommentering med hurtigtaster."
+        },
+        {
+          "task": "Prøv å naviger VS Code uten bruk av musepekeren."
+        }
+      ]
+    },
+    {
+      "title": "Utvidelser i VS Code",
+      "texts": [
+        {
+          "text": "Visual Studio Code tillater at man kan installere utvidelser. Dette gjør man ved å trykke på 'Extentions' i VS Code, søke og laste ned. Med disse kan endre fargene på programmet, ordne at man kan jobbe sammen på applikasjoner, ta skjermbilder av kode, og mer. Her er de essensielle:"
+        },
+        {
+          "text": "<span>Live Server</span> åpner nettsiden din i en lokal webserver, slik at den oppdaterer seg hver gang man lagrer en fil."
+        },
+        {
+          "text": "<span>Live Share</span> gjør det mulig for flere personer å jobbe på en fil i sanntid."
+        },
+        {
+          "text": "<span>Vue Theme</span> er et av mange temaene i VS Code som endrer fargepaletten i programmet. Noen andre er Tokyo Midnight, feppz! og 2077 theme"
+        },
+        {
+          "text": "<span>CodeSnap</span> lar deg ta skjermbilder av koden ved å bruke hurtigtast Ctrl + Shift + P, deretter skrive CodeSnap og markere koden du vil ta bilde av."
+        },
+        {
+          "text": "<span>VSC Pets</span> lar deg ta ditt favorittdyr med inn i skjermen! Du kan ha alt fra katter, til slanger, til skilpadder. De trenger heller ikke mat eller vann."
+        }
+      ],
+      "images": [
+        {
+          "image": "extentionExample.png",
+          "caption": "Vue Theme fra mariorodeghiero."
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Finn ditt favorittema i VS Code."
+        }
+      ]
+    },
+    {
+      "title": "Bonus: Hvordan bruke Undersøk-verktøyet",
+      "texts": [
+        {
+          "text": "Når man jobber med feilsøking i utvikling, er 'inspect tool' noe av det mest praktiske verktøyet man har. Det gjør det mulig å se hvorfor elementer oppfører seg som de gjør, og endre det på klientsiden. Mange av dere har sikkert funnet og lekt dere med dette tidligere."
+        },
+        {
+          "text": "<span>Live Server</span> åpner nettsiden din i en lokal webserver, slik at den oppdaterer seg hver gang man lagrer en fil."
+        },
+        {
+          "text": "<span>Live Share</span> gjør det mulig for flere personer å jobbe på en fil i sanntid."
+        },
+        {
+          "text": "<span>Vue Theme</span> er et av mange temaene i VS Code som endrer fargepaletten i programmet."
+        },
+        {
+          "text": "<span>CodeSnap</span> lar deg ta skjermbilder av koden ved å bruke hurtigtast Ctrl + Shift + P, deretter skrive CodeSnap og markere koden du vil ta bilde av."
+        },
+        {
+          "text": "<span>VSC Pets</span> lar deg ta ditt favorittdyr med inn i skjermen! Du kan ha alt fra katter, til slanger, til skilpadder. De trenger heller ikke mat eller vann."
+        }
+      ],
+      "images": [
+        {
+          "image": "inspectTool.jpg",
+          "caption": "Inspeksjon av elementer hjelp av musepekeren."
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Finn ditt favorittema i VS Code."
         }
       ]
     }
   ]
 }
-
-+ bruk av shift og control
-+ format document
-+ emmet wrap
-+ inspect

@@ -1,0 +1,106 @@
+{
+    "lessons": [
+      {
+        "title": "Grunnleggende hurtigtaster",
+        "texts": [
+          {
+            "text": "Utviklingsprogrammet Visual Studio Code kommer med en mengde hurtigtaster, og bruken av disse gjør det <span>lettere</span> og <span>raskere</span> å utvikle applikasjoner. Mange av de hurtigtastene man har i nettlesere i dag, er også i VS Code, og gjør det samme. La oss nå gå gjennom noen eksempler:"
+          },
+          {
+            "text": "<span>Ctrl + Z</span>:&nbsp&nbsp&nbsp Angre siste handling (denne bør alle kjenne til)."
+          },
+          {
+            "text": "<span>Ctrl + Shift + Z</span>:&nbsp&nbsp&nbsp Gjenta siste handling."
+          },
+          {
+            "text": "<span>Ctrl + C</span>:&nbsp&nbsp&nbsp Uten markering kopierer hele linjen, med markering kopierer markert tekst."
+          },
+          {
+            "text": "<span>Ctrl + V</span>:&nbsp&nbsp&nbsp Uten markering limer inn hele linjen, med markering limer inn markert tekst."
+          },
+          {
+            "text": "<span>Ctrl + X</span>:&nbsp&nbsp&nbsp Uten markering klipper ut hele linjen, med markering limer inn markert tekst."
+          },
+          {
+            "text": "Så har vi hurtigtaster som er innebygd i de fleste programvarer. Disse kan du finne i tekstbehandlingsprogrammer og nettlesere, og nesten alltid på samme tast:"
+          },
+          {
+            "text": "<span>Ctrl + S</span>:&nbsp&nbsp&nbsp Lagre den aktive filen."
+          },
+          {
+            "text": "<span>Ctrl + W</span>:&nbsp&nbsp&nbsp Lukker den aktive filen."
+          },
+          {
+            "text": "<span>Ctrl + Shift + T</span>:&nbsp&nbsp&nbsp Åpner den siste aktive filen."
+          },
+          {
+            "text": "<span>Ctrl + N</span>:&nbsp&nbsp&nbsp Åpner en ny, tom fil."
+          },
+          {
+            "text": "<span>Ctrl + Tab</span>:&nbsp&nbsp&nbsp Blar gjennom åpne faner."
+          },
+          {
+            "text": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Lar deg søke etter filer."
+          },
+          {
+            "text": "<span>Ctrl + Shift + P</span>:&nbsp&nbsp&nbsp VS Codes konsoll. Her kan du kjøre en rekke kommandoer."
+          },
+          {
+            "text": "En ESSENSIELL kommando er <span>Shift + 1 + Enter</span>, som, i en tom .html-fil oppretter grunnstrukturen i HTML. Dette forenkler prosessen med å lage nye sider."
+          }
+        ],
+        "images": [
+          {
+            "image": "hotkeyKeyboard.jpg",
+            "caption": "Med Word Wrap."
+          }
+        ]
+      },
+      {
+        "title": "Avanserte hurtigtaster",
+        "texts": [
+          {
+            "text": "I tillegg til de aller mest grunnleggende hurtigtastene, er det andre praktiske metoder som er nyttig å lære seg. Dette er følgende taster:"
+          },
+          {
+            "text": "<span>Ctrl + K + C</span>:&nbsp&nbsp&nbsp Uten markering kommenterer hele linjen, med markering kommenterer markert tekst"
+          },
+          {
+            "text": "<span>Ctrl + K + U</span>:&nbsp&nbsp&nbsp Uten markering fjerner kommentarer på hele linjen, med markering fjerner kommentarer på markert tekst"
+          },
+          {
+            "text": "<span>Alt + Z</span>:&nbsp&nbsp&nbsp Word Wrap: Holder teksten innefor vinduet, uten overflow."
+          },
+          {
+            "text": "<span>Sift + ALt + F</span>:&nbsp&nbsp&nbsp Formatterer filen slik at alt av indentering og linjer blir likt. Kjekt etter å ha brukt chatGPT."
+          },
+          {
+            "text": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Emmet Wrap: Pakker markert tekst inn i en HTML-tag. Må søkes etter med tilhørende hurtigtast."
+          },
+          {
+            "text": "<span>Ctrl + K + Z</span>:&nbsp&nbsp&nbsp Åpner VS Code i fullskjerm, uten menyer. MERK: du går ut av programmet ved dobbeltrykk av Esc."
+          }
+        ],
+        "video": "./media/leksjon_1.mp4",
+        "images": [
+          {
+            "image": "./media/leksjon_1.jpg"
+          },
+          {
+            "image": "./media/leksjon_1.jpg"
+          },
+          {
+            "image": "./media/leksjon_1.jpg"
+          }
+        ],
+        "tasks": [
+          {
+            "task": "Prøv å navigere deg gjennom "
+          },
+          {
+            "task": "Lag en if-setning som sjekker om et tall er større enn 10. Skriv ut 'Større enn 10' hvis betingelsen er sann, ellers skriv ut 'Mindre eller lik 10'."
+          }
+        ]
+      }
+    ]
+  }

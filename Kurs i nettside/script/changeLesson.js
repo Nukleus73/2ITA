@@ -21,8 +21,18 @@ function lesson(direction) {
 
     lessons.forEach(lesson => {
         lesson.style.display = "none"
+        const style = document.createElement('style');
+
+        
+        style.textContent = `
+          #lessonList h5::after {
+            transform: scaleX(0);
+          }
+        `;
+        document.head.appendChild(style);
     });
     lessons[currentLesson].style.display = "block"
+    document.querySelectorAll("#lessonList h5")[currentLesson].style.transform = "scaleX(1)"
 
     //  oppdater kapittellisten
     document.querySelectorAll("#courseNav h4 span")[0].innerHTML = currentLesson + 1;

@@ -25,7 +25,7 @@
     --accentPHP: 147, 149, 211;
     /* #188FA7 */
     --accentVSC: 24, 143, 167;
-  }
+}
 
 /* DEFAULT OBJECTS - Same for every app */
 
@@ -43,20 +43,20 @@
 
 /* scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+    background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(var(--accentMain));
-  border-radius: 10px;
+    background-color: rgb(var(--accentMain));
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(var(--accentMain), .7);
+    background-color: rgba(var(--accentMain), .7);
 }
 
 html {
@@ -77,6 +77,7 @@ h4,
 h5 {
     color: rgb(var(--secondaryMain));
     width: fit-content;
+    margin: 1rem 0;
 }
 
 h1 span,
@@ -122,6 +123,11 @@ p span {
     font-weight: 600;
 }
 
+figcaption {
+    color: rgb(var(--secondaryMain));
+    font-size: .8rem;
+}
+
 video {
     width: 100%;
     padding: 2rem;
@@ -141,6 +147,7 @@ video {
     border: 2px solid rgb(var(--accentMain));
     transition-duration: .2s;
 }
+
 .invertedButton ion-icon {
     font-size: 1.5rem;
 }
@@ -163,11 +170,12 @@ video {
     border-radius: 5px;
     padding: .25rem .5rem;
     border: 2px solid rgb(var(--accentMain));
-    transition-duration: .2s; 
+    transition-duration: .2s;
     background-color: rgb(var(--accentMain));
     color: rgb(var(--black));
     transition-duration: .2s;
 }
+
 .button ion-icon {
     font-size: 1.5rem;
 }
@@ -226,6 +234,7 @@ nav a p {
     margin-left: 1rem;
     transition-duration: .5s;
 }
+
 #settingsIcon {
     position: relative;
     margin-right: 1rem;
@@ -241,18 +250,18 @@ nav a p {
     fill: rgb(var(--accentVSC)) !important;
 }
 
-#css:hover > .navIcon,
-#css.active > .navIcon {
+#css:hover>.navIcon,
+#css.active>.navIcon {
     fill: rgb(var(--accentCSS));
 }
 
-#js.active > .navIcon,
-#js:hover > .navIcon {
+#js.active>.navIcon,
+#js:hover>.navIcon {
     fill: rgb(var(--accentJS));
 }
 
-#php.active > .navIcon,
-#php:hover > .navIcon {
+#php.active>.navIcon,
+#php:hover>.navIcon {
     fill: rgb(var(--accentPHP));
 }
 
@@ -271,19 +280,29 @@ main {
     border-right: 1px solid rgba(var(--secondaryMain), .3);
     transition-duration: .4s;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #lessonList {
     width: 100%;
     height: 100%;
-    display: flex;
     padding: 1rem;
     padding-top: 0;
-    flex-direction: column;
-    align-items: center;
+}
+
+#lessonList h5 {
+    font-size: 1rem;
+}
+
+#lessonList h5:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #019fb6;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+#lessonList h5:hover:after {
+    transform: scaleX(1);
 }
 
 #courseWrapper {
@@ -301,17 +320,38 @@ main {
     flex: 1;
     padding: 0 1rem;
     hyphens: auto;
-    max-width: 800px;
+    max-width: 1000px;
+}
+
+.lesson {
+    display: none;
+}
+
+.lesson figure {
+    width: 30%;
+    float: right;
+    padding: 1rem;
+    position: relative;
+}
+
+.lesson img {
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 6px 2px rgba(var(--black), .4);
+}
+
+.lesson p {
+    margin: 1.5rem 0;
 }
 
 #courseNav {
-   position: relative;
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 1rem;
- }
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
 
 #courseNav h4 {
     position: relative;
@@ -352,9 +392,13 @@ main {
     nav {
         padding: 0 0rem;
     }
-    
+
     .navIcon {
         height: 2rem;
         width: 2rem;
+    }
+
+    .lesson img {
+        width: 100%;
     }
 }
