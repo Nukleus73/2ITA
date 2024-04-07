@@ -1,74 +1,79 @@
 function changeCourse(course) {
-    const root = document.documentElement;
-    const style = getComputedStyle(root);
-    let variableValue;
+  //  nar du bytter kurs, skal leksjoner ga til null
+  currentLesson = 0;
 
-    const navLinks = document.querySelectorAll(".courseButton");
-    navLinks.forEach(link => {
-        if (link.classList.contains("active")) {
-            link.classList.remove("active");
-        }
-    });
+  const root = document.documentElement;
+  const style = getComputedStyle(root);
+  let variableValue;
 
-    document.querySelector(".courses").innerHTML = "";
+  const navLinks = document.querySelectorAll(".courseButton");
+  navLinks.forEach((link) => {
+    if (link.classList.contains("active")) {
+      link.classList.remove("active");
+    }
+  });
 
-    switch (course) {
-        case "VSC":
-            // Retrieve the value of the specified CSS variable
-            variableValue = style.getPropertyValue(`--accentVSC`).trim();
+  document.querySelector(".courses").innerHTML = "";
 
-            navLinks[0].classList.add("active")
+  switch (course) {
+    case "VSC":
+      // Retrieve the value of the specified CSS variable
+      variableValue = style.getPropertyValue(`--accentVSC`).trim();
 
-            //  henter .json filen og genererer et kurs i #course
-            jsonToHTML('./courses/VSC.json', document.querySelector('.courses'))
-            break;
+      navLinks[0].classList.add("active");
 
-        case "CSS":
-            // Retrieve the value of the specified CSS variable
-            variableValue = style.getPropertyValue(`--accentCSS`).trim();
+      //  henter .json filen og genererer et kurs i #course
+      jsonToHTML("./courses/VSC.json", document.querySelector(".courses"));
+      break;
 
-            navLinks[1].classList.add("active")
+    case "CSS":
+      // Retrieve the value of the specified CSS variable
+      variableValue = style.getPropertyValue(`--accentCSS`).trim();
 
-            //  henter .json filen og genererer et kurs i #course
-            jsonToHTML('./courses/CSS.json', document.querySelector('.courses'))
-            break;
+      navLinks[1].classList.add("active");
 
-        case "JS":
-            // Retrieve the value of the specified CSS variable
-            variableValue = style.getPropertyValue(`--accentJS`).trim();
+      //  henter .json filen og genererer et kurs i #course
+      jsonToHTML("./courses/CSS.json", document.querySelector(".courses"));
+      break;
 
-            navLinks[2].classList.add("active")
+    case "JS":
+      // Retrieve the value of the specified CSS variable
+      variableValue = style.getPropertyValue(`--accentJS`).trim();
 
-            jsonToHTML('./courses/JS.json', document.querySelector('.courses'))
-            break;
+      navLinks[2].classList.add("active");
 
-        case "PHP":
-            // Retrieve the value of the specified PHP variable
-            variableValue = style.getPropertyValue(`--accentPHP`).trim();
+      jsonToHTML("./courses/JS.json", document.querySelector(".courses"));
+      break;
 
-            navLinks[3].classList.add("active")
+    case "PHP":
+      // Retrieve the value of the specified PHP variable
+      variableValue = style.getPropertyValue(`--accentPHP`).trim();
 
-            jsonToHTML('./courses/PHP.json', document.querySelector('.courses'))
-            break;
-    };
+      navLinks[3].classList.add("active");
 
-    setTimeout(() => {
-        //  start med den første leksjonen
-        if (document.querySelectorAll(".lesson").length) {
-            document.querySelectorAll(".lesson")[0].style.display = "block";
+      jsonToHTML("./courses/PHP.json", document.querySelector(".courses"));
+      break;
+  }
 
-            //  oppdater kapittellisten
-            document.querySelectorAll("#courseNav h4 span")[1].innerHTML = document.querySelectorAll(".lesson").length
-            document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
-        }
-        else {
-            //  om det ikke er noe kapittel, er den blank
-            document.querySelectorAll("#courseNav h4 span")[1].innerHTML = "-"
-            document.querySelectorAll("#courseNav h4 span")[0].innerHTML = "-";
-        }
-    }, 30);
-    document.querySelector("#lessonList").innerHTML = ''
+  setTimeout(() => {
+    //  start med den første leksjonen
+    if (document.querySelectorAll(".lesson").length) {
+      document.querySelectorAll(".lesson")[0].style.display = "block";
 
-    // Set the value of variable --blue to another value (in this case "lightblue")
-    root.style.setProperty('--accentMain', variableValue);
+      //  oppdater kapittellisten
+      document.querySelectorAll("#courseNav h4 span")[1].innerHTML =
+        document.querySelectorAll(".lesson").length;
+      document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
+    } else {
+      //  om det ikke er noe kapittel, er den blank
+      document.querySelectorAll("#courseNav h4 span")[1].innerHTML = "-";
+      document.querySelectorAll("#courseNav h4 span")[0].innerHTML = "-";
+    }
+
+    document.querySelectorAll("#lessonList h5")[0].classList.add("active");
+  }, 30);
+  document.querySelector("#lessonList").innerHTML = "";
+
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  root.style.setProperty("--accentMain", variableValue);
 }

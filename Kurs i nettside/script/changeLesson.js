@@ -21,18 +21,19 @@ function lesson(direction) {
 
     lessons.forEach(lesson => {
         lesson.style.display = "none"
-        const style = document.createElement('style');
-
         
-        style.textContent = `
-          #lessonList h5::after {
-            transform: scaleX(0);
-          }
-        `;
-        document.head.appendChild(style);
     });
     lessons[currentLesson].style.display = "block"
-    document.querySelectorAll("#lessonList h5")[currentLesson].style.transform = "scaleX(1)"
+
+
+    let titles = document.querySelectorAll("#lessonList h5");
+    titles.forEach(title => {
+        if (title.classList.contains("active")) {
+            title.classList.remove("active");
+        }
+    });
+    titles[currentLesson].classList.add("active")
+
 
     //  oppdater kapittellisten
     document.querySelectorAll("#courseNav h4 span")[0].innerHTML = currentLesson + 1;
