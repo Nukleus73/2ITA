@@ -244,6 +244,10 @@ nav a p {
   transition-duration: 0.5s;
 }
 
+#toggleMode {
+  transition-duration: 0.5s;
+}
+
 #logo {
   cursor: auto;
 }

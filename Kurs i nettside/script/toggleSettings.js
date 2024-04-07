@@ -26,6 +26,7 @@ function toggleMode() {
         root.style.setProperty('--primaryMain', white);
         root.style.setProperty('--secondaryMain', black);
         root.style.setProperty('--tetriaryMain', blackWhite);
+        document.querySelector('#toggleMode ion-icon').style.transform = "rotate(180deg)"
     }
     else {
         toggle = !toggle
@@ -33,6 +34,7 @@ function toggleMode() {
         root.style.setProperty('--primaryMain', black);
         root.style.setProperty('--secondaryMain', white);
         root.style.setProperty('--tetriaryMain', whiteBlack);
+        document.querySelector('#toggleMode ion-icon').style.transform = "rotate(0deg)"
     }
 }
 

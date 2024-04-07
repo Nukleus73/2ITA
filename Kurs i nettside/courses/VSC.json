@@ -158,6 +158,44 @@
           "task": "Få en nettside responsiv på iPhone XR, iPad mini og Samsung Galaxy S8+"
         }
       ]
+    },
+    {
+      "title": "Bonus: Github-integrering",
+      "content": [
+        {
+          "image": "github.jpg",
+          "caption": "Dashboard til Github",
+          "landscape": true
+        },
+        {
+          "paragraph": "GitHub er en nettside og plattform som lar folk samarbeide på utviklingsprosjekter. På GitHub kan brukere <span>lagre og dele kode, spore endringer</span> og jobbe sammen med andre utviklere over hele verden. Det er et viktig verktøy for å utvikle programvare og dele kunnskap innenfor teknologifeltet."
+        },
+        {
+          "paragraph": "For å laste ned og bruke github, må du;"
+        },
+        {
+          "paragraph": "- Først installere Git på datamaskinen din. Besøk Git-nettstedet og last ned riktig versjon for ditt operativsystem. Følg deretter installasjonsinstruksjonene."
+        },
+        {
+          "paragraph": "- Åpne Visual Studio Code. Naviger til 'Source Control' -> 'Initialize Repository'. Velg mappen der du vil lagre repoet. Dette initialiserer et tomt Git-repository lokalt i VS Code."
+        },
+        {
+          "paragraph": "- I github, opprett en bruker. Deretter lag et nytt repository. Når du oppretter den, husk en .README file for å se om installasjoen fungerer."
+        },
+        {
+          "image": "gitGraph.jpg",
+          "caption": "Git Graph"
+        },
+        {
+          "paragraph": "- I VS Code, for å koble ditt repository til VS Code, velger du de tre prokkene under 'Source Control' -> 'Pull, Push' -> 'Push from...' og velger det repositoriet du har laget. Det kan være at du må logge inn med din Github-bruker i et dialogvindu eller i konsollen."
+        },
+        {
+          "paragraph": "Så er det fullt mulig å lage filer som du vil. Når du vil laste filene opp, navigerer du til 'Source Control', skriver en passende melding om arbidet i input-området og trykker 'commit'. Deretter vil endringene bli lastet opp i Github."
+        },
+        {
+          "paragraph": "Et praktisk hjelpemiddel for Github er Git Graph; en utvidelse for VS Code. Dette visualiserer alle 'commits' i en graf og gjør det lett å se hva som er gjort, spesielt når det er mange på et prosjekt."
+        }
+      ]
     }
   ]
 }
