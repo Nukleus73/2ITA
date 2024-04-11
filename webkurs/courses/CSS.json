@@ -1,0 +1,511 @@
+{
+  "lessons": [
+    {
+      "title": "CSS Velgere",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "CSS velgere er den viktigste delen av css, grunnen til dette er at dette er hvordan css vet hvilken elementer som skal endres på. Disse er derfor det du kommer til å bruke mest av i css."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "De viktigste velgerne som brukes mest er Id, Klasse og Element taggene. Id brukes for å <span>referere til et spesifikt element</span>. Vi lager de med å bruke hashtag «#»."
+            },
+            {
+              "code": "#para1 {text-align: center; color: red;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Klasse bruker vi til å <span>referere til flere enn et element.</span> Vi lager de med å bruke punktum «.». Id velgeren blir satt over klasse velgeren så endringene i elementene tar alltid fra id først."
+            },
+            {
+              "code": ".center {text-align: center; color: red;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi kan også <span>endre på selve html-elementet.</span>"
+            },
+            {
+              "code": "h1 {text-align: center; color: red;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Hvis vi vill endre <span>flere html-elementer på en gang</span>, kan vi gruppere dem. Dette lager mindre rot i koden."
+            },
+            {
+              "code": "h1,| h2,| p {text-align: center; color: red;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Hvis du vill <span>endre på alle html-elementene</span> på en gang uten å skrive ned alle, kan vi bruke den Universelle velgeren."
+            },
+            {
+              "code": "* {text-align: center; color: red;}"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "N/A"
+        },
+        {
+          "task": "N/A"
+        }
+      ]
+    },
+    {
+      "title": "Skrifttyper",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Introduksjon: Denne leksjonen gir en oversikt over hvordan du kan bruke forskjellige <span>skrifttyper (fonts)</span> i CSS. Det finnes mange måter å bruke skrifttyper på. Vi har innebygde og skrifttyper man kan importere."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi har mange innebygde skrifttyper. Fire eksempler på dette er: <span>Times, Helvetica, Arial og Courier</span>. For å bruke disse må vi bruke denne linjen med kode i stilarket:"
+            },
+            {
+              "code": "h1 { font-family: Arial;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å <span>importere skrifttyper</span> må du først finne en nettside og en skrifttype du liker. I dette tilfellet kommer forklaringen til å være om nettsiden <span>Google Fonts</span>. Velg fonten ved å trykke på 'Get font' og deretter 'Get Embed Code'. På siden kan du velge å bruke enten en lenke eller import. I dette eksemplet bruker vi import, men det er samme metode for å legge den inn. I stilarket skal lenken bli kopiert inn rett over alt innholdet."
+            },
+            {
+              "image": "fonts.png",
+              "caption": "'Chillax' fra Fontshare",
+              "landscape": true
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Importer en Sans-serif fra font-siden Fontshare.com og sett den til alle h-tagger."
+        }
+      ]
+    },
+    {
+      "title": "Flexbox",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Flexbox er et kraftig verktøy for å lage <span>responsive oppsett</span> i webdesign."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Egenskapen flex-direction <span>definerer i hvilken retning</span> beholderen ønsker å stable flex-elementene."
+            },
+            {
+              "image": "flex2.png",
+              "caption": "Elementene er stablet nedover, som display: block;"
+            },
+            {
+              "code": ".flex-container {display: flex;flex-direction: column;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å <span>sentrere både horisontalt og vertikalt</span> samtidig, kan vi bruke align-items: center; og justify-content: center;, som plasserer elementene både vertikalt og horisontalt i midten av beholderen."
+            },
+            {
+              "image": "flex3.png",
+              "caption": "Elementene er sentrert midt i containeren."
+            },
+            {
+              "code": ".flex-container {display: flex;align-items: center;justify-content: center;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Egenskapen flex-grow spesifiserer hvor mye et flex-element vil <span>vokse i forhold til resten</span> av flex-elementene."
+            },
+            {
+              "image": "flex4.png",
+              "caption": "Elementene får en størrelse basert på flex-grow."
+            },
+            {
+              "code": ".flex-container {display: flex;flex-grow: 1;}"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "N/A"
+        },
+        {
+          "task": "N/A"
+        }
+      ]
+    },
+    {
+      "title": "Animasjoner",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Animasjoner med keyframes i CSS er en kraftig metode for å <span>skape bevegelse eller endringer i et element over tid</span>. Ved å definere et navn for animasjonen og angivelse av varighet, kan vi programmere ulike steg eller endringer som skal skje i elementet gjennom animasjonen. Dette gir oss fullstendig kontroll over hvordan elementet beveger seg eller endres visuelt på nettsiden vår."
+            },
+            {
+              "image": "animasjon.gif",
+              "caption": "Kan du se de forskjellige delene som er animert her?"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Deretter kan vi skrive koden til animasjonen, vi skriver @keyframes [NAME] { } får å gjøre det til en animasjons kode og referere til alle elementene som har navnet i seg. Innenfor parentesene skriver vi hvor langt gjennom animasjonen den skal ha kommet før den endrer på css elementet med prosent. Etter den har gjennomført hele kodesnuten går den tilbake til det den var før animasjonen.",
+              "bound": true
+            },
+            {
+              "code": "div { width: 100px; height: 100px; background-color: red; animation-name: example; animation-duration: 4s; };@keyframes example { 0% {background-color: red;} 25% {background-color: yellow;} 50% {background-color: blue;} 100% {background-color: green;}"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "N/A"
+        },
+        {
+          "task": "N/A"
+        }
+      ]
+    },
+    {
+      "title": "Sentrering",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Denne leksjonen gir en oversikt over hvordan du bruker <span>sentrering i CSS for å sentrere elementer</span>. Vi starter med å vise hvordan man sentrerer et objekt horisontalt med bruk av `margin` og `auto`. Dette er mest nyttig for å sentrere blokkelementer som div. Følgende kode er et eksempel på dette:"
+            },
+            {
+              "code": "margin: 0 auto;width: 50%;<span>Setter venstre og høyre margin til auto </span>|"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>Sentrere vertikalt og horisontalt</span> derimot krever litt mer. Vi trenger å bruke `position: absolute` og `transform: translate(-50%, -50%)`. Dette er nyttig for å sentrere absoluttposisjonerte elementer, for eksempel modale vinduer eller pop-ups. Vi bruker følgende kode:"
+            },
+            {
+              "code": "position: absolute; <span>Absoluttposisjonering</span>| top: 50%; <span>Plasser toppen på 50% av foreldreelementet</span>| left: 50%; <span>Plasser venstre side på 50% av foreldreelementet</span>| transform: translate(-50%, -50%); <span>Flytt elementet tilbake med halvparten av sin egen bredde og høyde</span>"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Gjør slik at en tekst innenfor et element blir sentrert inni et annet element."
+        },
+        {
+          "task": "Sentrer et objekt horizontalt."
+        }
+      ]
+    },
+    {
+      "title": "Seletorer",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Denne leksjonen er mest relevant for <span>knapper og linker</span>, de fire 'reaksjonene' du kommer til å lære er: link, :visited, :hover og :active. Vi kommer hovedsakelig til å vise med farger og lenker, men det er mulig å bruke mange andre funksjoner også. Se: linken under for mer informasjon om dette."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/cssref/sel_hover.php",
+              "tag": "CSS :hover Selector (w3schools.com)"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å endre på en <span>lenkes standardfarge</span> kan vi bruke følgende kode:"
+            },
+            {
+              "code": "a:link {color: green; <style> Endrer fargen på lenken.</style>}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å få en lenke til å <span>reagere når musepekeren er over</span>, bruker vi følgende kode:"
+            },
+            {
+              "code": "a:visited {color: green; <style> Endrer fargen på lenkene som har blitt besøkt. </style>}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For en lenke der <span>du trykker og den reagerer</span>, bruker du følgende kode:"
+            },
+            {
+              "code": "a:hover {color: red; <style> Endrer fargen når musepekeren er over lenken. </style>}"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Få et element til å skalere to ganger sin størrelse når musen er over. Tenk over hvorfor dette kan være et problem."
+        },
+        {
+          "task": "Endre fargen på en link til rosa."
+        }
+      ]
+    },
+    {
+      "title": "Praktisk CSS",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Etter som du fortsetter å utvikle kode, kommer du flere ganger til å ta med deg kode fra tidligere prosjekter. Dette kan være kode som fikser vanlige silsettingsproblemer, endrer farger, eller er lik dine preferanser. Her er den <span>stilsettingen som vi har samlet opp</span>. I de følgene eksemplene har vi tatt eksempler fra denne nettsiden. Om du ønsker å se mer, er hele nettsiden publisert på Github."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Det første, og kanskje mest praktiske tipset er <span>fargevariabler</span>. Dette gjøres ved å lage variabler i CSS som lagrer tallene i fargekoden RGB. Det er også mulig å lagre HEX-verdier. Fordelen med RGB overfor HEX er at det er lettere å legge til gjennomsiktighet i elementet (RGBA). Dette kan hentes ut ved hjelp av funksjonen var(), og navnet på variablen."
+            },
+            {
+              "code": ":root {-- primary: 21, 20, 31;-- secondary: 246, 245, 240;-- accent: 30, 30, 54;.element {background-color: rgb(var( -- accent));}.gjennomsiktigElement {background-color: rgba(var( -- accent)), .5;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/css/css3_variables.asp",
+              "tag": "W3 Schools - CSS Variables"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Noen objekter i HTML kommer med standard margin og padding. For å <span>fikse mange feil og problemer</span> som kan følge med dette, legger vi til 'border-box' for å inkludere padding og border i størrelsen til elementene."
+            },
+            {
+              "code": "*,|*:: before,|*:: after {padding: 0;margin: 0;box-sizing: border-box;"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/css/css3_box-sizing.asp",
+              "tag": "W3 Schools - Box Sizing"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Om man <span>markerer tekst</span> på en hvilken som helst side, vil teksten få en farge. Dette kan endres på i CSS. I dette eksempelet har makrert tekst på nettsiden, accentfargen fra en variablel. Prøv å marker denne teksten for å se det i aksjon."
+            },
+            {
+              "code": ":: selection {background-color: rgba(var( -- accentMain), 0.5);"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/cssref/sel_selection.php",
+              "tag": "W3 Schools - Selection"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Et triks for å få nettsiden din til å se proffesjonell ut, er å <span>endre scrollbaren</span>. I dette tilfellet er scrollbaren gitt accentfargen og en rund kant. Når du har musen over, blir den litt mørkere."
+            },
+            {
+              "code": "::- webkit-scrollbar {width: 5px;::- webkit-scrollbar-track {background: transparent;::- webkit-scrollbar-thumb {background-color: rgb(var( -- accentMain));border-radius: 10px;}::- webkit-scrollbar-thumb:hover {background-color: rgba(var( -- accentMain), 0.7);"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp",
+              "tag": "W3 Schools - How to Create a Custom Scrollbar"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Om man har <span>linker som går til forskjellige deler</span> av nettsiden, kan man styre bevegelsen går. Det vanlige er å sette det til 'smooth'."
+            },
+            {
+              "code": "html {scroll-behavior: smooth;}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/css/css3_smooth.asp",
+              "tag": "W3 Schools - Smooth Scrolling"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Legg til en markering på nettsiden din i denne fargen."
+        },
+        {
+          "task": "Endre utseendet på scrollbaren din til å være en annen farge."
+        }
+      ]
+    },
+    {
+      "title": "Hvordan lage moderne nettsider",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Å lage gode nettsider trenger ikke å være vanskelig. Kanskje du synes at du ikke er så flink til å designe noe, eller at nettsider er utenfor din komfortsone. Det er mange som føler det slik, men det er faktisk enklere enn du tror. Enhver moderne nettside har omtrent den samme stilen, og dette gjør den lettere å få responsiv. Det er noe vi kan benytte oss av."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med å åpne Google, og søker etter 'modern website design'. Forskjellige nettsider har forskjellige bruksområder, og det tar nok litt tid å finne den riktige. Vi tar et eksempel på denne. Det er en reisenettside som viser fram flotte reisemål, og ser sånn passe vanskelig ut, perfekt for vårt formål. Noen vil kanskje si at det ikke er lov å kopiere andres design, men om vi gjør noen strategiske endringer, så er det lov i læringsøyemed.<br><br>Det første vi gjør, er å dissekere nettsiden inn i hver sin del. Dette gjør det lettere å se hvilke elementer som ligger hvor. Vi ser klart at det er fem seksjoner; en navbar, et banner, to avsnitt og en kontaktseksjon. La oss nå gå gjennom alle disse og prøve å gjenskape siden."
+            },
+            {
+              "image": "eksempelNettside.png"
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med den første seksjonen, navbaren. Som vi kan se, har den ikke så mye annet enn en logo og noen linker til andre sider. Om vi gir navbaren 'display: flex;' og logoen 'margin-right: auto;', så ser vi at det begynner å ta form. Med litt justering av margin og padding på elementene, samt en accentfarge på den siste linken, begynner det å likne på noe."
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med den andre seksjonen,"
+            },
+            {
+              "code": ""
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med den tredje seksjonen,"
+            },
+            {
+              "code": ""
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med den fjerde seksjonen,"
+            },
+            {
+              "code": ""
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Vi starter med den femte seksjonen,"
+            },
+            {
+              "code": ""
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "Det er ogsa mye annet pa siden som pavirker hvordan den ser ut."
+            },
+            {
+              "code": ""
+            },
+            {
+              "image": "eksempelNettside.png"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

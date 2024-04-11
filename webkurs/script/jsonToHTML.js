@@ -92,19 +92,39 @@ function jsonToHTML(jsonPath, parentElement) {
 
             let codeLetters = element.code.split(''); // Split code into lines
             let finishedLetters = '';
-            // Indentation level tracker
-
+            
             // Loop through each letter of the code
             codeLetters.forEach(letter => {
-              if (letter == '{' || letter == ';') {
-                letter += '<br>';
+              if (letter == ';' || letter == '{') {
+                if (element.textCompile) {
+                  letter += '\n';
+                }
+                else {
+                  letter += '<br>';
+
+                }
               }
               if (letter == '|') {
-                letter = '<br>';
+                if (element.textCompile) {
+                  letter = '\n';
+                }
+                else {
+                  letter = '<br>';
+
+                }
               }
+
               finishedLetters += letter
             });
-            code.innerHTML = finishedLetters
+            
+            if (element.textCompile) {
+              code.innerText = finishedLetters
+            }
+            else {
+              code.innerHTML = finishedLetters
+              console.log("elementCOmpiled!")
+            }
+
             section.appendChild(code);
           }
 
