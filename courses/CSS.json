@@ -304,7 +304,7 @@
                 {
                     "section": [
                         {
-                            "paragraph": "Etter som dere fortsetter å utvikle kode, kommer dere flere ganger til å ta med dere kode fra tidligere prosjekter. Dette kan være kode som fikser vanlige silsettingsproblemer, endrer farger, eller er lik dine preferanser. Her er den <span>stilsettingen som vi har samlet opp</span>. I de følgene eksemplene har vi tatt eksempler fra denne nettsiden. Om du ønsker å se mer, er hele nettsiden publisert på Github."
+                            "paragraph": "Etter som du fortsetter å utvikle kode, kommer du flere ganger til å ta med deg kode fra tidligere prosjekter. Dette kan være kode som fikser vanlige silsettingsproblemer, endrer farger, eller er lik dine preferanser. Her er den <span>stilsettingen som vi har samlet opp</span>. I de følgene eksemplene har vi tatt eksempler fra denne nettsiden. Om du ønsker å se mer, er hele nettsiden publisert på Github."
                         }
                     ]
                 },
@@ -406,6 +406,43 @@
                 {
                     "task": "Endre utseendet på scrollbaren din til å være en annen farge."
                 }
+            ]
+        },
+        {
+            "title": "Hvordan lage moderne nettsider",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "Å lage gode nettsider trenger ikke være vanskelig. Kanskje du syntes at du ikke er så flink til å designe noe, eller at nettsider er utenfor din komfortsone. Det er mange som føler det slik, men det er faktisk enklere enn du tror. Enhver moderne nettside har omtrent den samme stilen, og dette gjør den lettere å få responsiv. Det er også noe vi kan benytte oss av."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Vi starter med å åpne google, og søke etter en moderne nettsidedesign. Forskjellige nettsider har forskjellig bruk, og det tar nok litt tid å finne den riktige. Vi tar eksempel i denne. Det er en reisenettside som viser fram flotte reisemål, og ser sånn passe vanskelig ut, perfekt for vårt formål."
+                        },
+                        {
+                            "image": "eksempelNettside.png"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Det første vi gjør, er å dissekere nettsiden inn i hver sin del. Dette gjør det lettere å se hvilke elementer som ligger hvor. Vi ser klart at det er fire hovedseksjoner; et banner, to paragrafer og en kontaktseksjon.<br>Dessuten, med unntak av banneret, er bakgrunnen en uklar suppe av oransj og sort. Vi kan annta at det er et bilde av noe høst, med egenskapen 'filter: blur();'"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "masse tekst aaa"
+                        }
+                    ]
+                }
+                
             ]
         }
     ]
