@@ -1,0 +1,370 @@
+{
+    "lessons": [
+        {
+            "title": "Grunnleggende hurtigtaster",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "Utviklingsprogrammet Visual Studio Code kommer med en mengde hurtigtaster, og bruken av disse gjør det <span>lettere</span> og <span>raskere</span> å utvikle applikasjoner. Mange av de hurtigtastene man har i nettlesere i dag, er også i VS Code, og gjør det samme. La oss nå gå gjennom noen eksempler:"
+                        },
+                        {
+                            "image": "hotkeyKeyboard.jpg",
+                            "caption": "Bilde av Girl with red hat på Unsplash"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + Z</span>:&nbsp&nbsp&nbsp Angre siste handling (denne bør alle kjenne til)."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + Shift + Z</span>:&nbsp&nbsp&nbsp Gjenta siste handling."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + C</span>:&nbsp&nbsp&nbsp Uten markering kopierer hele linjen, med markering kopierer markert tekst."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + V</span>:&nbsp&nbsp&nbsp Uten markering limer inn hele linjen, med markering limer inn markert tekst."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + X</span>:&nbsp&nbsp&nbsp Uten markering klipper ut hele linjen, med markering limer inn markert tekst."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Så har vi hurtigtaster som er innebygd i de fleste programvarer. Disse kan du finne i tekstbehandlingsprogrammer og nettlesere, og nesten alltid på samme tast:"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + S</span>:&nbsp&nbsp&nbsp Lagre den aktive filen."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + W</span>:&nbsp&nbsp&nbsp Lukker den aktive filen."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + Shift + T</span>:&nbsp&nbsp&nbsp Åpner den siste aktive filen."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + N</span>:&nbsp&nbsp&nbsp Åpner en ny, tom fil."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + Tab</span>:&nbsp&nbsp&nbsp Blar gjennom åpne faner."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Lar deg søke etter filer."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + Shift + P</span>:&nbsp&nbsp&nbsp VS Codes konsoll. Her kan du kjøre en rekke kommandoer."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "En ESSENSIELL kommando er <span>Shift + 1 + Enter</span>, som, i en tom .html-fil oppretter grunnstrukturen i HTML. Dette forenkler prosessen med å lage nye sider."
+                        }
+                    ]
+                }
+            ],
+            "tasks": [
+                {
+                    "task": "Lær deg å benytte kommentering med hurtigtaster."
+                },
+                {
+                    "task": "Prøv å naviger VS Code uten bruk av musepekeren."
+                }
+            ]
+        },
+        {
+            "title": "Avanserte hurtigtaster",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "I tillegg til de aller mest grunnleggende hurtigtastene, er det andre praktiske metoder som er nyttig å lære seg. Dette er følgende taster:"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + K + C</span>:&nbsp&nbsp&nbsp Uten markering kommenterer hele linjen, med markering kommenterer markert tekst."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + K + U</span>:&nbsp&nbsp&nbsp Uten markering fjerner kommentarer på hele linjen, med markering fjerner kommentarer på markert tekst."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Alt + Z</span>:&nbsp&nbsp&nbsp Word Wrap: Holder teksten innenfor vinduet, uten overflow."
+                        },
+                        {
+                            "image": "medWordWrap.jpg",
+                            "caption": "Med Word Wrap."
+                        },
+                        {
+                            "image": "utenWordWrap.jpg",
+                            "caption": "Uten Word Wrap."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Sift + ALt + F</span>:&nbsp&nbsp&nbsp Formatterer filen slik at alt av indentering og linjer blir likt. Kjekt etter å ha brukt chatGPT."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + P</span>:&nbsp&nbsp&nbsp Emmet Wrap: Pakker markert tekst inn i en HTML-tag. Må søkes etter med tilhørende hurtigtast."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Ctrl + K + Z</span>:&nbsp&nbsp&nbsp Zen Mode: Åpner VS Code i fullskjerm, uten menyer. MERK: du går ut av programmet ved dobbeltrykk av Esc."
+                        }
+                    ]
+                }
+            ],
+            "tasks": [
+                {
+                    "task": "Lær deg å benytte kommentering med hurtigtaster."
+                },
+                {
+                    "task": "Prøv å naviger VS Code uten bruk av musepekeren."
+                }
+            ]
+        },
+        {
+            "title": "Utvidelser i VS Code",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "Visual Studio Code tillater at man kan installere utvidelser. Dette gjør man ved å trykke på 'Extentions' i VS Code, søke og laste ned. Med disse kan endre fargene på programmet, ordne at man kan jobbe sammen på applikasjoner, ta skjermbilder av kode, og mer. Her er de essensielle:"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Live Server</span> åpner nettsiden din i en lokal webserver, slik at den oppdaterer seg hver gang man lagrer en fil."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Live Share</span> gjør det mulig for flere personer å jobbe på en fil i sanntid."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>Vue Theme</span> er et av mange temaene i VS Code som endrer fargepaletten i programmet. Noen andre er Tokyo Midnight, feppz! og 2077 theme."
+                        },
+                        {
+                            "image": "extentionExample.png",
+                            "caption": "Vue Theme fra mariorodeghiero.",
+                            "landscape": true
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>CodeSnap</span> lar deg ta skjermbilder av koden ved å bruke hurtigtast Ctrl + Shift + P, deretter skrive CodeSnap og markere koden du vil ta bilde av."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "<span>VSC Pets</span> lar deg ta ditt favorittdyr med inn i skjermen! Du kan ha alt fra katter, til slanger, til skilpadder. De trenger heller ikke mat eller vann."
+                        }
+                    ]
+                }
+            ],
+            "tasks": [
+                {
+                    "task": "Finn ditt favorittema i VS Code."
+                }
+            ]
+        },
+        {
+            "title": "Bonus: Hvordan bruke Undersøk-verktøyet",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "Når man jobber med feilsøking i utvikling, er 'inspect tool' noe av det mest praktiske verktøyet man har. Det gjør det mulig å se <span>hvorfor elementer oppfører seg som de gjør</span>, og endre det på klientsiden. Mange av dere har sikkert funnet og lekt dere med dette tidligere."
+                        },
+                        {
+                            "image": "inspectTool.jpg",
+                            "caption": "Inspeksjon av elementer hjelp av musepekeren.",
+                            "landscape": true
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Mobilmodus lar deg simulere hvordan nettsiden vil se ut og oppføre seg på en mobil enhet, som en smarttelefon eller nettbrett. Dette er spesielt nyttig for å <span>teste responsiv design</span> og sikre at nettsiden ser bra ut på forskjellige skjermstørrelser. I mobilmodus kan du endre visningsstørrelsen og orienteringen til nettleservinduet for å etterligne ulike mobile enheter."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Stilsettingverktøyet gir deg muligheten til å endre utseendet til elementer på nettsiden ved å manipulere CSS-stiler direkte i nettleseren. Du kan <span>eksperimentere med ulike stiler</span>, som farger, størrelser, marginer og padding, og se endringene umiddelbart på nettsiden. I tillegg til å justere grunnleggende stiler, kan du også bruke avanserte funksjoner som ':hover' for å simulere hvordan elementene vil se ut når musepekeren er over."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Konsollverktøyet gir deg tilgang til nettleserens JavaScript-konsoll, hvor du kan kjøre JavaScript-kode direkte med nettsiden. En av de mest brukte funksjonene i konsollen er 'console.log', som lar deg skrive ut meldinger eller variabler til konsollen. Dette er nyttig for <span>feilsøking av JavaScript-kode</span>, da det gir deg muligheten til å inspisere variabler og resultater i sanntid, og identifisere eventuelle feil eller problemer i koden."
+                        }
+                    ]
+                }
+            ],
+            "tasks": [
+                {
+                    "task": "Neste gang du utvikler en applikasjon og må feilsøke, prøv å feilsøke ved å konsoll-logge variabler."
+                },
+                {
+                    "task": "Få en nettside responsiv på iPhone XR, iPad mini og Samsung Galaxy S8+"
+                }
+            ]
+        },
+        {
+            "title": "Bonus: Github-integrering",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "paragraph": "GitHub er en nettside og plattform som lar folk samarbeide på utviklingsprosjekter. På GitHub kan brukere <span>lagre og dele kode, spore endringer</span> og jobbe sammen med andre utviklere over hele verden. Det er et viktig verktøy for å utvikle programvare og dele kunnskap innenfor teknologifeltet."
+                        },
+                        {
+                            "image": "github.jpg",
+                            "caption": "Dashboard til Github",
+                            "landscape": true
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "For å laste ned og bruke github, må du;"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "- Først installere Git på datamaskinen din. Besøk Git-nettstedet og last ned riktig versjon for ditt operativsystem. Følg deretter installasjonsinstruksjonene."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "- Åpne Visual Studio Code. Naviger til 'Source Control' -> 'Initialize Repository'. Velg mappen der du vil lagre repoet. Dette initialiserer et tomt Git-repository lokalt i VS Code."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "- I github, opprett en bruker. Deretter lag et nytt repository. Når du oppretter den, husk en .README file for å se om installasjoen fungerer."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "- I VS Code, for å koble ditt repository til VS Code, velger du de tre prokkene under 'Source Control' -> 'Pull, Push' -> 'Push from...' og velger det repositoriet du har laget. Det kan være at du må logge inn med din Github-bruker i et dialogvindu eller i konsollen."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Så er det fullt mulig å lage filer som du vil. Når du vil laste filene opp, navigerer du til 'Source Control', skriver en passende melding om arbidet i input-området og trykker 'commit'. Deretter vil endringene bli lastet opp i Github."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Et praktisk hjelpemiddel for Github er Git Graph; en utvidelse for VS Code. Dette visualiserer alle 'commits' i en graf og gjør det lett å se hva som er gjort, spesielt når det er mange på et prosjekt."
+                        },
+                        {
+                            "image": "gitGraph.jpg",
+                            "caption": "Git Graph",
+                            "landscape": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

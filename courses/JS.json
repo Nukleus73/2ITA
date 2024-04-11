@@ -1,0 +1,116 @@
+{
+    "lessons": [
+        {
+            "title": "Hva er Javascript?",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "video": "video.mp4"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "JavaScript er et kraftig programmeringsspråk som brukes til å lage interaktive og dynamiske nettsider. Det fungerer sammen med HTML og CSS ved å legges til i HTML-filen eller linkes til separat. HTML brukes til å strukturere innholdet på nettsiden, CSS brukes til å style det, og <span>JavaScript legger til funksjonalitet</span> som interaktivitet og dynamiske elementer. Sammen utgjør disse tre språkene grunnlaget for moderne webutvikling, og lar utviklere skape engasjerende og responsive nettsider."
+                        },
+                        {
+                            "image": "javascript.jpg",
+                            "caption": "Bilde av Gabriel Heinzer på Unsplash"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Variabler",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "video": "video.mp4"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "I koden kan man bruke <span>'let', 'const', og 'var' for å deklarere variabler</span>. Når man bruker 'let' deklarerer man variabler som kan endre seg innenfor sin egen blokk, for eksempel innenfor en funksjon. Variabelen eksisterer bare der den er deklarert. 'const' fungerer på samme måte som 'let', men variabelen kan ikke endres senere i koden. Når man bruker 'var' deklarerer man variabler som kan endre seg og som eksisterer i hele koden. Det er viktig å velge riktig type deklarasjon basert på om variabelen trenger å endres senere i koden eller ikke."
+                        },
+                        {
+                            "code": "<span>Variabel deklarert med let kan endres innenfor sin 'blokk' av kode</span>|let x = 5;console.log('let før endring:', x);x = 10;console.log('let etter endring:', x);}|<span>Variabel deklarert med const kan ikke endres</span>|const y = 15;console.log('const før endring:', y);|<span>y = 20; Dette vil gi en feilmelding</span>|console.log('const etter endring:', y);|<span>Variabel deklarert med var kan endres og eksisterer i hele koden</span>|var z = 25;console.log('var før endring:', z);z = 30;console.log('var etter endring:', z);",
+                            "space": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Verdier",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "video": "video.mp4"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "I programmering er det <span>8 hoveddatatyper</span> som brukes til å lagre ulike typer informasjon: '<span>number</span>' (tall), '<span>string</span>' (tekst), '<span>boolean</span>' (sann eller usann), '<span>undefined</span>' (udefinert verdi), '<span>null</span>' (tom verdi), '<span>big int</span>' (store tall som ikke kan representeres som vanlige tall), '<span>symbol</span>' (unike og urefererbar verdi) og '<span>object</span>' (samlinger av data og funksjoner)."
+                        },
+                        {
+                            "code": "let nummer = 42;|let tekst = 'Hei, verden!';|let erSann = true;let udefinertVerdi;|let tomVerdi = null;|let stortTall = 1234567890122345678901234567890n;|const unikVerdi = Symbol('beskrivelse');|let objekt = { navn: 'Ola Nordmann', alder: 30};",
+                            "space": true
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Disse <span>datatypene kan enten brukes direkte i koden eller lagres i variabler</span> for enkel tilgang og gjenbruk senere i programmet. For eksempel kan du lagre et tall i en variabel av typen 'number', eller en tekststreng i en variabel av typen 'string'.<br>Objekter kan sammenliknes med en bil. En bil inneholder verdier; navn, merke og farge, og har funksjoner; start, kjør, brems. Alle biler har de samme verdiene, men de er forskjellig fra bil til bil."
+                        },
+                        {
+                            "paragraph": "Det å forstå disse grunnleggende datatypene <span>er viktig for å kunne jobbe effektivt</span> med programmeringsspråk og behandle ulike typer informasjon på riktig måte i koden."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "If-statement",
+            "content": [
+                {
+                    "section": [
+                        {
+                            "video": "video.mp4"
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "If-setninger er grunnleggende i programmering for å <span>utføre kode basert på spesifikke regler</span>. Syntaxen for if-setninger er enkel: 'if ( kondisjon ) { kode som kjøres }'. Du kan også legge til en 'else { kode som kjøres }', som kjører dersom kondisjonen ikke er sann."
+                        },
+                        {
+                            "paragraph": "Ved å bruke 'else if' kan du legge til flere betingelser for å <span>sjekke ulike scenarier i rekkefølge</span>. Hvis ingen betingelser i 'if' eller 'else if' er sanne, blir koden i 'else' -blokken utført som en standard handling."
+                        }
+                    ]
+                },
+                {
+                    "section": [
+                        {
+                            "paragraph": "Når du sammenligner verdier, er det <span>viktig å bruke riktig antall likhetstegn</span>. Ett likhetstegn (=) brukes til tilordning, to likhetstegn (==) brukes til å sammenligne verdier uten hensyn til datatyper, mens tre likhetstegn (===) brukes til å sammenligne både verdier og datatyper. Du kan også kombinere flere betingelser ved hjelp av logiske operatorer som && (OG) og || (ELLER) for å lage mer komplekse if-setninger. Disse operatorene lar deg definere <span>nøyaktig hvilke betingelser som må være oppfylt</span> for at koden skal kjøre."
+                        },
+                        {
+                            "code": "<span>Eksempel på if-setning med ett likhetstegn (=) for tilordning</span>| let x = 5; if (x = 5) { console.log('Verdien av x er 5.'); };|<span>Eksempel på if-setning med to likhetstegn (==) for å sammenligne verdier uten hensyn til datatyper</span>| let y = '5'; if (y == 5) { console.log('Verdien av y er lik 5.');};|<span>Eksempel på if-setning med tre likhetstegn (===) for å sammenligne både verdier og datatyper</span> let z = 5; if (z === 5) { console.log('Verdien av z er 5, og datatypen er også lik.'); };",
+                            "space": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
