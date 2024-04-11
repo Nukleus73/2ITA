@@ -71,7 +71,7 @@ function changeCourse(course) {
     }
 
     document.querySelectorAll("#lessonList h5")[0].classList.add("active");
-  }, 30);
+  }, 50);
   document.querySelector("#lessonList").innerHTML = "";
 
   // Set the value of variable --blue to another value (in this case "lightblue")
