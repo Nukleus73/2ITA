@@ -39,7 +39,7 @@
                             "paragraph": "I koden kan man bruke <span>'let', 'const', og 'var' for å deklarere variabler</span>. Når man bruker 'let' deklarerer man variabler som kan endre seg innenfor sin egen blokk, for eksempel innenfor en funksjon. Variabelen eksisterer bare der den er deklarert. 'const' fungerer på samme måte som 'let', men variabelen kan ikke endres senere i koden. Når man bruker 'var' deklarerer man variabler som kan endre seg og som eksisterer i hele koden. Det er viktig å velge riktig type deklarasjon basert på om variabelen trenger å endres senere i koden eller ikke."
                         },
                         {
-                            "code": "<span>Variabel deklarert med let kan endres innenfor sin 'blokk' av kode</span>|let x = 5;console.log('let før endring:', x);x = 10;console.log('let etter endring:', x);}|<span>Variabel deklarert med const kan ikke endres</span>|const y = 15;console.log('const før endring:', y);|<span>y = 20; Dette vil gi en feilmelding</span>|console.log('const etter endring:', y);|<span>Variabel deklarert med var kan endres og eksisterer i hele koden</span>|var z = 25;console.log('var før endring:', z);z = 30;console.log('var etter endring:', z);",
+                            "code": "<span>Variabel deklarert med let kan endres innenfor sin 'blokk' av kode</span>|let x = 5;console.log('let før endring:', x);x = 10;console.log('let etter endring:', x);}||<span>Variabel deklarert med const kan ikke endres</span>|const y = 15;console.log('const før endring:', y);|<span>y = 20; Dette vil gi en feilmelding</span>|console.log('const etter endring:', y);|<span>Variabel deklarert med var kan endres og eksisterer i hele koden</span>|var z = 25;console.log('var før endring:', z);z = 30;console.log('var etter endring:', z);",
                             "space": true
                         }
                     ]
@@ -62,7 +62,7 @@
                             "paragraph": "I programmering er det <span>8 hoveddatatyper</span> som brukes til å lagre ulike typer informasjon: '<span>number</span>' (tall), '<span>string</span>' (tekst), '<span>boolean</span>' (sann eller usann), '<span>undefined</span>' (udefinert verdi), '<span>null</span>' (tom verdi), '<span>big int</span>' (store tall som ikke kan representeres som vanlige tall), '<span>symbol</span>' (unike og urefererbar verdi) og '<span>object</span>' (samlinger av data og funksjoner)."
                         },
                         {
-                            "code": "let nummer = 42;|let tekst = 'Hei, verden!';|let erSann = true;let udefinertVerdi;|let tomVerdi = null;|let stortTall = 1234567890122345678901234567890n;|const unikVerdi = Symbol('beskrivelse');|let objekt = { navn: 'Ola Nordmann', alder: 30};",
+                            "code": "let nummer = 42;|let tekst = 'Hei, verden!';|let erSann = true;let udefinertVerdi;|let tomVerdi = null;|let stortTall = 1234567890122345678901234567890n;|const unikVerdi = Symbol('beskrivelse');|let objekt = { navn: 'Ola Nordmann',| alder: 30|};",
                             "space": true
                         }
                     ]
