@@ -240,60 +240,85 @@
       ]
     },
     {
-      "title": "Selektorer",
+      "title": "CSS farger",
       "content": [
         {
           "section": [
             {
-              "paragraph": "Denne leksjonen er mest relevant for <span>knapper og linker</span>, de fire 'reaksjonene' du kommer til å lære er: link, :visited, :hover og :active. Vi kommer hovedsakelig til å vise med farger og lenker, men det er mulig å bruke mange andre funksjoner også. Se: linken under for mer informasjon om dette."
-            }
-          ]
-        },
-        {
-          "section": [
-            {
-              "link": "https://www.w3schools.com/cssref/sel_hover.php",
-              "tag": "CSS :hover Selector (w3schools.com)"
-            }
-          ]
-        },
-        {
-          "section": [
-            {
-              "paragraph": "For å endre på en <span>lenkes standardfarge</span> kan vi bruke følgende kode:"
+              "paragraph": " i html kan en farge ble spesifisert med å bruke farge navn. Noen eksempler på disse fargene er følgende:"
             },
             {
-              "code": "a:link {color: green; <style> Endrer fargen på lenken.</style>}"
+              "image": "fargenavn.png"
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "For å få en lenke til å <span>reagere når musepekeren er over</span>, bruker vi følgende kode:"
-            },
-            {
-              "code": "a:visited {color: green; <style> Endrer fargen på lenkene som har blitt besøkt. </style>}"
+              "paragraph": "<span>Bakgrunnsfarge</span> <br>Hvis vi vil farge bakgrunner på elementene våre bruker vi i stilarket følgende kode:Body {Background-color:Tomato;}Denne funksjonen kan bli brukt på alle elementer inkludert body og andre tagger."
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "For en lenke der <span>du trykker og den reagerer</span>, bruker du følgende kode:"
+              "paragraph": "<span>Tekst farge</span><br>Hvis du bare vil farge teksten og ikke bakgrunnen kan vi bruke denne koden i stilarket. Denne funksjonen kan bli brukt i body, H1 og andre tagger og elementer som har tekst i seg. "
             },
             {
-              "code": "a:hover {color: red; <style> Endrer fargen når musepekeren er over lenken. </style>}"
+              "code": "body { color: DodgerBlue}",
+              "textCompile": true,
+              "landscape": true
             }
           ]
-        }
-      ],
-      "tasks": [
-        {
-          "task": "Få et element til å skalere to ganger sin størrelse når musen er over. Tenk over hvorfor dette kan være et problem."
         },
         {
-          "task": "Endre fargen på en link til rosa."
+          "section": [
+            {
+              "paragraph": "<span>Ramme farge (Border Color)</span><br>Man kan også sette ramme farge, for å sette en farge på en ramme må vi i samme funksjon som vi lagde rammen skrive fargen. Eks:H1 {Border: 2px solid Tomato;}Vi ser at vi definerer border og skriver hvor tjukk denne rammen skal være i tillegg til stilen som i dette tilfelle er Solid. Fargen kommer til slutt og dette endrer rammen til fargen tomato."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>Farge verdier</span><br>I HTML kan vi spesifisere farger med bruk av RGB, RGBA, HEX, HSL, og HSLA verdier. RGB:rgb(255, 99, 71)RGBA (her viser vi også hvor mye gjennomsiktighet den er 0.5 = 50%):rgba (255, 99, 71, 0.5)HEX:#ff6347HSL:hsl (9, 100%, 64%)HSLA (her viser vi også hvor mye gjennomsiktighet den er 0.5 = 50%):hsla(9,100%, 64%, 0.5)eksempel på hvordan man bruker det i stilarket:"
+            },
+            {
+              "code": "h1 { background-color:#ff6347; }",
+              "textCompile": true,
+              "landscape": true
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>RGB farge verdier</span><br>Vi kan spesifisere en RGB-verdi med å bruke en standard formularRgb(rød, grønn, blå)Hver prarameter (rød, grønn, blå) definerer intensiteten av fargen med en verdi mellom 0 og 255. Dette betyr at det er sirka 16777216 farger du kan lage.  Eksempler av dette er:Derimot før å få grå farger er verdiene like for eksempel (240,240,240) eller (60,60,60) der de med parameteren 60 er de mørkeste og 240 er den lyseste. "
+            },
+            {
+              "image": "rgb.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>RGBA farge verdier</span><br>RGBA og RGB er nesten helt lik i forhold til den standard formularen, eneste forskjellen er at RGBA har en ny parameter som heter alpha. Rgba (red, green, blue, alpha)Alpha er en parameter som er et nummer mellom 0.0 til 1.0. Den viser hvor gjennomsiktig et element er, der 0.0 er helt gjennomsiktig mens 1.0 er ikke gjennomsiktig i det hele tatt. "
+            },
+            {
+              "image": "rgba.png"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>HTML Hex farger</span><br>En hexadecimal farge (Den har bare 6 tegn) er spesifisert med #RRGGBB. RR er rød, GG er grønn og BB er blå. Den har verdier fra 00 til ff der den høyeste verdien er ff og laveste er 00. Hvis vi bruker #ff0000 blir den helt rød. Derimot hvis vi bruker #0000ff blir den helt blå. Svart er #000000 mens hvit er #ffffff."
+            },
+            {
+              "image": "hex.png"
+            }
+          ]
         }
       ]
     },
@@ -374,8 +399,18 @@
         {
           "section": [
             {
-              "link": "https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp",
-              "tag": "W3 Schools - How to Create a Custom Scrollbar"
+              "paragraph": "Et annet triks er å benytte 'span' taggen for å <span>utheve viktig tekst</span>. Dette gjøres ofte ved å ha en accentfarge på teksten, og/eller ha teksten uthevet. Dette passer godt på tittler og tekst, for at brukeren skal finne det viktige i teksten så fort som mulig."
+            },
+            {
+              "code": "h1 span,| h2 span,| h3 span,| h3 span,| h4 span,| h5 span,| p span { color: rgb(var(--accentMain)); }"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/tags/tag_span.asp",
+              "tag": "W3 Schools - HTML <span> Tag"
             }
           ]
         },
@@ -413,95 +448,78 @@
         {
           "section": [
             {
-              "paragraph": "Å lage gode nettsider trenger ikke å være vanskelig. Kanskje du synes at du ikke er så flink til å designe noe, eller at nettsider er utenfor din komfortsone. Det er mange som føler det slik, men det er faktisk enklere enn du tror. Enhver moderne nettside har omtrent den samme stilen, og dette gjør den lettere å få responsiv. Det er noe vi kan benytte oss av."
+              "paragraph": "Å lage gode nettsider trenger ikke å være vanskelig. Kanskje du synes at du ikke er så flink til å designe noe, eller at nettsider er utenfor din komfortsone. Det er mange som føler det slik, men <span>det er faktisk enklere enn du tror</span>. Enhver moderne nettside har omtrent den samme stilen, og dette gjør den lettere å få responsiv. Det er noe vi kan benytte oss av. La oss nå benytte det vi har lært tidligere, og gjenskape en god nettside."
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "Vi starter med å åpne Google, og søker etter 'modern website design'. Forskjellige nettsider har forskjellige bruksområder, og det tar nok litt tid å finne den riktige. Vi tar et eksempel på denne. Det er en reisenettside som viser fram flotte reisemål, og ser sånn passe vanskelig ut, perfekt for vårt formål. Noen vil kanskje si at det ikke er lov å kopiere andres design, men om vi gjør noen strategiske endringer, så er det lov i læringsøyemed.<br><br>Det første vi gjør, er å dissekere nettsiden inn i hver sin del. Dette gjør det lettere å se hvilke elementer som ligger hvor. Vi ser klart at det er fem seksjoner; en navbar, et banner, to avsnitt og en kontaktseksjon. La oss nå gå gjennom alle disse og prøve å gjenskape siden."
+              "paragraph": "Vi starter med å åpne Google, og søker etter 'modern website design'. Forskjellige nettsider har forskjellige bruksområder, og det tar nok litt tid å finne den riktige. Vi tar et eksempel på denne. Det er en nettside som viser fram flotte reisemål, og ser sånn passe vanskelig ut, perfekt for vårt formål.<br><br>Det første vi gjør, er å <span>dissekere nettsiden inn i hver sin del</span>. Dette gjør det lettere å se hvilke elementer som ligger hvor. Vi ser klart at det er fem seksjoner; en navbar, et banner, to avsnitt og en kontaktseksjon."
             },
             {
               "image": "eksempelNettside.png"
             },
             {
-              "image": "eksempelNettside.png"
+              "image": "eksempelNettside2.png"
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "Vi starter med den første seksjonen, navbaren. Som vi kan se, har den ikke så mye annet enn en logo og noen linker til andre sider. Om vi gir navbaren 'display: flex;' og logoen 'margin-right: auto;', så ser vi at det begynner å ta form. Med litt justering av margin og padding på elementene, samt en accentfarge på den siste linken, begynner det å likne på noe."
+              "paragraph": "La oss starte med den første delen, navbaren. Den har ikke så mye annet enn en logo og noen lenker til andre sider. Hvis vi bruker '<span>display: flex</span>' på navbaren og setter '<span>margin-right: auto</span>' på logoen, begynner det å ta form. Med litt justering av margin og padding på elementene, samt en accentfarge på den siste lenken, begynner det å se bra ut."
             },
             {
-              "image": "eksempelNettside.png"
+              "code": "<nav>|<img src='' alt='Test' id='logo'>|<a href=''>Link 1</a>|<a href=''>Link 2</a>|<a href=''>Link 3</a>|<a href=''>Link 4</a>|<a href=''>Link 5</a>|<a href=''>Link 6</a>|</nav>",
+              "textCompile": true,
+              "landscape": true
+            },
+            {
+              "image": "eksempelNettside3.png",
+              "landscape": true
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "Vi starter med den andre seksjonen,"
+              "paragraph": "Den andre seksjonen gjør vi det samme med. Tekst og knappen er sentrert i midten av kontaineren, med teksten og knappen dyttet til høyre. Teksten har nok '<span>text-align: right</span>', mens kontaineren som holder tittel og knapp har '<span>flex-direction: column</span>' og '<span>align-items: flex-end</span>'. Samtidig kan vi også se at bakgrunnen er delt opp i tre, litt runde bokser. Den ene boksen er ca. 1/8-dels større enn de andre. Dette kan lett utføres ved å bruke '<span>flex-grow</span>', og fordele det deretter. Innholdet i boksene er litt lysere enn området rundt, og dette er nok gjort ved å benytte '<span>filter: brightness()</span>'."
             },
             {
-              "code": ""
-            },
-            {
-              "image": "eksempelNettside.png"
+              "image": "eksempelNettside4.png",
+              "landscape": true
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "Vi starter med den tredje seksjonen,"
+              "paragraph": "Når det gjelder den tredje seksjonen, ser vi at den er tilsynelatende avansert. Men om vi <span>ser på det som et rutenett</span>, ser vi at den er 4 deler høy, og 5 deler bred. Dette legger vi inn som regler i grid, ved at vi bestemmer selv hvor elementene skal være i forhold til hverandre. Ved å så legge til gap, har vi hele designet ferdig. Den samme prosessen kan gjentas for seksjonen under."
             },
             {
-              "code": ""
+              "code": ".container { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 8px; grid-auto-flow: row; grid-template-areas:| 'tekst tekst tekst bilde1 bilde2'| 'tekst tekst tekst bilde1 bilde2'| 'knapp knapp knapp knapp bilde2'; }",
+              "textCompile": true,
+              "landscape": true
             },
             {
-              "image": "eksempelNettside.png"
+              "image": "eksempelNettside5.png",
+              "landscape": true
             }
           ]
         },
         {
           "section": [
             {
-              "paragraph": "Vi starter med den fjerde seksjonen,"
+              "paragraph": "Bakgrunn, fargebruk og oversiktlig design. Hvis vi ser på nettsiden som en helhet, kan vi se at bakgrunnen ikke er en enkel farge, men heller et <span>stort uklart bilde</span> lagt over 'body'. I banneret er det gradvis en endring fra to bilder ved hjelp av '<span>mask-image: linear-gradient(black, transparent)</span>', som gjør et element gradvis gjennomsiktig.<br><br>Fargebruken er også viktig. På nettsiden er det valgt ut <span>tre hovedfarger</span>: sort for bakgrunn, hvit for tekst og orange for aksent. Dette skaper en helhetlig følelse og binder siden sammen. Bildene og fargene passer godt med aksentfargen, og det virker som de er redigert før de ble lagt inn på nettsiden.<br><br>Nettsiden er enkel og oversiktlig. Den har <span>ingen forstyrrende elementer</span> og er brukervennlig. Den ligner på andre nettsider på en god måte, noe som gjør det enkelt for brukerne å navigere. Designet er også responsivt, noe som er viktig med tanke på at over 60% av nettsidetrafikken kommer fra mobile enheter. Har du vurdert hvordan siden din ser ut for mobilbrukere?"
             },
             {
-              "code": ""
+              "image": "eksempelNettside.png",
+              "caption": "Kan du se hva som reklameres for her?"
             },
             {
-              "image": "eksempelNettside.png"
-            }
-          ]
-        },
-        {
-          "section": [
-            {
-              "paragraph": "Vi starter med den femte seksjonen,"
-            },
-            {
-              "code": ""
-            },
-            {
-              "image": "eksempelNettside.png"
-            }
-          ]
-        },
-        {
-          "section": [
-            {
-              "paragraph": "Det er ogsa mye annet pa siden som pavirker hvordan den ser ut."
-            },
-            {
-              "code": ""
-            },
-            {
-              "image": "eksempelNettside.png"
+              "image": "badWebsite.jpg",
+              "caption": "Hva med nå?"
             }
           ]
         }

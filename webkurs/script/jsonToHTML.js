@@ -122,7 +122,10 @@ function jsonToHTML(jsonPath, parentElement) {
             }
             else {
               code.innerHTML = finishedLetters
-              console.log("elementCOmpiled!")
+            }
+
+            if (element.landscape) {
+              code.classList.add("landscape");
             }
 
             section.appendChild(code);

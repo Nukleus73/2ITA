@@ -1,19 +1,13 @@
-<nav>
-    <img src="" alt="Test" id="logo">
-    <a href="">Link 1</a>
-    <a href="">Link 2</a>
-    <a href="">Link 3</a>
-    <a href="">Link 4</a>
-    <a href="">Link 5</a>
-    <a href="">Link 6</a>
-</nav>
-
 <style>
-    nav {
-        display: flex;
-    }
-
-    #logo {
-        margin-right: auto;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "tekst tekst tekst bilde1 bilde2"
+            "tekst tekst tekst bilde1 bilde2"
+            "knapp knapp knapp knapp  bilde2";
     }
 </style>
