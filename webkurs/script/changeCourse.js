@@ -61,17 +61,18 @@ function changeCourse(course) {
       document.querySelectorAll(".lesson")[0].style.display = "block";
 
       //  oppdater kapittellisten
-      document.querySelectorAll("#courseNav h4 span")[1].innerHTML =
+      document.querySelectorAll("#lessonNumber span")[1].innerHTML =
         document.querySelectorAll(".lesson").length;
-      document.querySelectorAll("#courseNav h4 span")[0].innerHTML = 1;
+      document.querySelectorAll("#lessonNumber span")[0].innerHTML = 1;
     } else {
       //  om det ikke er noe kapittel, er den blank
-      document.querySelectorAll("#courseNav h4 span")[1].innerHTML = "-";
-      document.querySelectorAll("#courseNav h4 span")[0].innerHTML = "-";
+      document.querySelectorAll("#lessonNumber span")[1].innerHTML = "-";
+      document.querySelectorAll("#lessonNumber span")[0].innerHTML = "-";
     }
 
-    document.querySelectorAll("#lessonList h5")[0].classList.add("active");
-  }, 50);
+    document.querySelectorAll("#lessonList a")[0].classList.add("active");
+  }, 100);
+
   document.querySelector("#lessonList").innerHTML = "";
 
   // Set the value of variable --blue to another value (in this case "lightblue")

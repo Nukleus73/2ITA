@@ -8,11 +8,18 @@ function jsonToHTML(jsonPath, parentElement) {
     //  logg hentingen
     console.log(`[jsonToHTML.js]: Successfully fetched (${jsonPath})`);
 
-    course.lessons.forEach((lesson) => {
-      let lessonTitle = document.createElement("h5");
+    let lessonNumber = 0;
+    course.lessons.forEach((lesson, index) => {
+      let lessonTitle = document.createElement("a");
       lessonTitle.innerHTML = `${lesson.title}`;
+      lessonTitle.href = "#";
+      lessonTitle.onclick = function (lessonIndex) {
+        return function() { 
+          changeLesson(lessonIndex);
+        };
+      }(index); // Immediately invoked function to create a closure
       document.querySelector("#lessonList").appendChild(lessonTitle);
-    });
+    });    
 
     //  for hver leksjon
     course.lessons.forEach((lesson) => {

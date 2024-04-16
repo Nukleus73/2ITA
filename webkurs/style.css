@@ -292,12 +292,15 @@ main {
     padding-top: 0;
 }
 
-#lessonList h5 {
+#lessonList a {
     font-size: 1rem;
+    display: block;
     margin: 1rem 0;
+    text-decoration: none;
+    color: rgb(var(--secondaryMain));
 }
 
-#lessonList h5:after {
+#lessonList a:after {
     display: block;
     content: "";
     border-bottom: solid 3px rgb(var(--accentMain));
@@ -307,7 +310,7 @@ main {
     transform-origin: 0% 100%;
 }
 
-#lessonList h5.active:after {
+#lessonList a.active:after {
     transform: scaleX(1);
 }
 
@@ -428,6 +431,10 @@ code.landscape {
 #settingsBar a ion-icon {
     margin: 0.5rem;
     font-size: 1.2rem;
+}
+
+#lessonNumber {
+    margin: 1rem auto 0 auto;
 }
 
 @media only screen and (max-width: 768px) {
