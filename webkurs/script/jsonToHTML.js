@@ -1,167 +1,125 @@
-//  funksjon for å konvertere en json fil til html kode i et bestemt format.
 function jsonToHTML(jsonPath, parentElement) {
-  //  async = vent på alt med "await", så gjør resten av koden
-  (async () => {
-    //  hent ut .JSON filen
-    const course = await fetchJSON(jsonPath);
+  return new Promise((resolve, reject) => {
+    // async function to fetch JSON and generate HTML
+    (async () => {
+      try {
+        const course = await fetchJSON(jsonPath);
+        console.log(`[jsonToHTML.js]: Successfully fetched (${jsonPath})`);
 
-    //  logg hentingen
-    console.log(`[jsonToHTML.js]: Successfully fetched (${jsonPath})`);
+        course.lessons.forEach((lesson, index) => {
+          let lessonTitle = document.createElement("a");
+          lessonTitle.innerHTML = `${lesson.title}`;
+          lessonTitle.href = "#";
+          lessonTitle.onclick = function (lessonIndex) {
+            return function() { 
+              changeLesson(lessonIndex);
+            };
+          }(index); // Immediately invoked function to create a closure
+          document.querySelector("#lessonList").appendChild(lessonTitle);
+        });    
 
-    let lessonNumber = 0;
-    course.lessons.forEach((lesson, index) => {
-      let lessonTitle = document.createElement("a");
-      lessonTitle.innerHTML = `${lesson.title}`;
-      lessonTitle.href = "#";
-      lessonTitle.onclick = function (lessonIndex) {
-        return function() { 
-          changeLesson(lessonIndex);
-        };
-      }(index); // Immediately invoked function to create a closure
-      document.querySelector("#lessonList").appendChild(lessonTitle);
-    });    
+        course.lessons.forEach((lesson) => {
+          let lessonContainer = document.createElement("div");
+          lessonContainer.classList.add("lesson");
+          let title = document.createElement("h3");
+          title.innerHTML = `${lesson.title}`;
+          lessonContainer.appendChild(title);
 
-    //  for hver leksjon
-    course.lessons.forEach((lesson) => {
-      //  lag en kontainer for leksjonen
-      let lessonContainer = document.createElement("div");
-      lessonContainer.classList.add("lesson");
-
-      // lag en "h3" tag med tittel, fyll den og send den til siden
-      let title = document.createElement("h3");
-      title.innerHTML = `${lesson.title}`;
-      lessonContainer.appendChild(title);
-
-      //  for hvert element i leksjonen
-      lesson.content.forEach((content) => {
-        let section = document.createElement("section")
-        content.section.forEach((element) => {
-
-          //  om elementet er et bilde
-          if (element.image) {
-            // lag en "figure" tag som en figur
-            let figure = document.createElement("figure");
-
-            // lag en "img" tag med bildet, fyll den og send den til siden
-            let img = document.createElement("img");
-            img.src = `./media/bilder/${element.image}`;
-            img.alt = element.caption;
-            figure.appendChild(img);
-
-            if (element.caption) {
-              // lag en "figcaption" tag med tekst, fyll den og send den til siden
-              let caption = document.createElement("figcaption");
-              caption.innerHTML = element.caption;
-              figure.appendChild(caption);
-            }
-
-            //  om bildet er et landskapsbilde, har det storre bredde
-            if (element.landscape) {
-              figure.classList.add("landscape");
-            }
-
-            section.appendChild(figure);
-          }
-
-          //  om innholdet er en tekst
-          if (element.paragraph) {
-            // lag en "p" tag med teksten, fyll den og send den til siden
-            let paragraph = document.createElement("p");
-            paragraph.innerHTML = element.paragraph;
-            section.appendChild(paragraph);
-          }
-
-          //  om innholdet er en link
-          if (element.link) {
-            // lag en "img" tag med bildet, fyll den og send den til siden
-            let link = document.createElement("a");
-            link.href = element.link;
-            link.target = "_blank"
-            link.innerHTML = element.tag;
-            section.appendChild(link);
-          }
-
-          // om det eksisterer en video i json filen
-          if (element.video) {
-            // lag en "video" tag med video, fyll den og send den til siden
-            let video = document.createElement("video");
-            video.src = element.video;
-            video.controls = true;
-            section.appendChild(video);
-          }
-
-          if (element.code) {
-            let code = document.createElement("code");
-
-            if (element.space) {
-                code.style.width = "100%";
-            }
-
-            let codeLetters = element.code.split(''); // Split code into lines
-            let finishedLetters = '';
-            
-            // Loop through each letter of the code
-            codeLetters.forEach(letter => {
-              if (letter == ';' || letter == '{') {
+          lesson.content.forEach((content) => {
+            let section = document.createElement("section")
+            content.section.forEach((element) => {
+              if (element.image) {
+                let figure = document.createElement("figure");
+                let img = document.createElement("img");
+                img.src = `./media/bilder/${element.image}`;
+                img.alt = element.caption;
+                figure.appendChild(img);
+                if (element.caption) {
+                  let caption = document.createElement("figcaption");
+                  caption.innerHTML = element.caption;
+                  figure.appendChild(caption);
+                }
+                if (element.landscape) {
+                  figure.classList.add("landscape");
+                }
+                section.appendChild(figure);
+              }
+              if (element.paragraph) {
+                let paragraph = document.createElement("p");
+                paragraph.innerHTML = element.paragraph;
+                section.appendChild(paragraph);
+              }
+              if (element.link) {
+                let link = document.createElement("a");
+                link.href = element.link;
+                link.target = "_blank"
+                link.innerHTML = element.tag;
+                section.appendChild(link);
+              }
+              if (element.video) {
+                let video = document.createElement("video");
+                video.src = element.video;
+                video.controls = true;
+                section.appendChild(video);
+              }
+              if (element.code) {
+                let code = document.createElement("code");
+                if (element.space) {
+                    code.style.width = "100%";
+                }
+                let codeLetters = element.code.split('');
+                let finishedLetters = '';
+                codeLetters.forEach(letter => {
+                  if (letter == ';' || letter == '{') {
+                    if (element.textCompile) {
+                      letter += '\n';
+                    }
+                    else {
+                      letter += '<br>';
+                    }
+                  }
+                  if (letter == '|') {
+                    if (element.textCompile) {
+                      letter = '\n';
+                    }
+                    else {
+                      letter = '<br>';
+                    }
+                  }
+                  finishedLetters += letter
+                });
                 if (element.textCompile) {
-                  letter += '\n';
+                  code.innerText = finishedLetters
                 }
                 else {
-                  letter += '<br>';
-
+                  code.innerHTML = finishedLetters
                 }
+                if (element.landscape) {
+                  code.classList.add("landscape");
+                }
+                section.appendChild(code);
               }
-              if (letter == '|') {
-                if (element.textCompile) {
-                  letter = '\n';
-                }
-                else {
-                  letter = '<br>';
-
-                }
-              }
-
-              finishedLetters += letter
+              lessonContainer.appendChild(section);
             });
-            
-            if (element.textCompile) {
-              code.innerText = finishedLetters
-            }
-            else {
-              code.innerHTML = finishedLetters
-            }
-
-            if (element.landscape) {
-              code.classList.add("landscape");
-            }
-
-            section.appendChild(code);
+          });
+          if (lesson.tasks) {
+            let title = document.createElement("h3");
+            title.innerHTML = "Oppgaver";
+            lessonContainer.appendChild(title);
+            let taskCounter = 0;
+            lesson.tasks.forEach((task) => {
+              taskCounter++;
+              let tas = document.createElement("p");
+              tas.innerHTML = `<span>Oppgave ${taskCounter}</span>: ${task.task}`;
+              lessonContainer.appendChild(tas);
+            });
           }
-
-          lessonContainer.appendChild(section);
+          parentElement.appendChild(lessonContainer);
         });
-      });
-
-      //  om det eksisterer oppgaver i json filen
-      if (lesson.tasks) {
-        //  lag tittel "oppgaver"
-        let title = document.createElement("h3");
-        title.innerHTML = "Oppgaver";
-        lessonContainer.appendChild(title);
-
-        //  teller antall oppgaver
-        let taskCounter = 0;
-        //  for hvert oppgave
-        lesson.tasks.forEach((task) => {
-          taskCounter++;
-
-          // lag en "p" tag med oppgaven, fyll den og send den til siden
-          let tas = document.createElement("p");
-          tas.innerHTML = `<span>Oppgave ${taskCounter}</span>: ${task.task}`;
-          lessonContainer.appendChild(tas);
-        });
+        resolve(); // Resolve the promise when finished
+      } catch (error) {
+        reject(error); // Reject the promise if there's an error
       }
-      parentElement.appendChild(lessonContainer);
-    });
-  })();
+    })();
+  });
 }
