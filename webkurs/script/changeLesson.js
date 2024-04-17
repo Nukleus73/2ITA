@@ -13,5 +13,6 @@ function changeLesson(lesson) {
             title.classList.remove("active");
         }
     });
+    document.querySelector('.courses').scrollTop = 0;
     lessonTitles[lesson].classList.add("active")
 }

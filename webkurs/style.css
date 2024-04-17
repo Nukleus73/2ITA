@@ -283,6 +283,7 @@ main {
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 #lessonList {
@@ -298,7 +299,13 @@ main {
     margin: 1rem 0;
     text-decoration: none;
     color: rgb(var(--secondaryMain));
+    transition-duration: .2s;
 }
+
+#lessonList a.active {
+    color: rgba(var(--secondaryMain), .6);
+}
+
 
 #lessonList a:after {
     display: block;
@@ -367,7 +374,8 @@ figure.landscape {
 .lesson a:active,
 .lesson a:visited {
     color: rgb(var(--accentMain));
-    margin-bottom: 3rem;
+    margin: 3rem;
+    margin-top: 0;
 }
 
 code {

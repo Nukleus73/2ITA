@@ -240,12 +240,70 @@
       ]
     },
     {
+      "title": "Seletorer",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Denne leksjonen er mest relevant for <span>knapper og linker</span>, de fire 'reaksjonene' du kommer til å lære er: link, :visited, :hover og :active. Vi kommer hovedsakelig til å vise med farger og lenker, men det er mulig å bruke mange andre funksjoner også. Se: linken under for mer informasjon om dette."
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "link": "https://www.w3schools.com/cssref/sel_hover.php",
+              "tag": "CSS :hover Selector (w3schools.com)"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å endre på en <span>lenkes standardfarge</span> kan vi bruke følgende kode:"
+            },
+            {
+              "code": "a:link {color: green; <span> Endrer fargen på lenken.</span>|}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For å få en lenke til å <span>reagere når musepekeren er over</span>, bruker vi følgende kode:"
+            },
+            {
+              "code": "a:visited {color: green; <span> Endrer fargen på lenkene som har blitt besøkt. </span>|}"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "For en lenke der <span>du trykker og den reagerer</span>, bruker du følgende kode:"
+            },
+            {
+              "code": "a:hover {color: red; <span> Endrer fargen når musepekeren er over lenken. </span>|}"
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "Få et element til å skalere to ganger sin størrelse når musen er over. Tenk over hvorfor dette kan være et problem."
+        },
+        {
+          "task": "Endre fargen på en link til rosa."
+        }
+      ]
+    },
+    {
       "title": "CSS farger",
       "content": [
         {
           "section": [
             {
-              "paragraph": " i html kan en farge ble spesifisert med å bruke farge navn. Noen eksempler på disse fargene er følgende:"
+              "paragraph": "I html kan en farge ble spesifisert med å bruke farge navn. Noen eksempler på disse fargene er følgende:"
             },
             {
               "image": "fargenavn.png"

@@ -28,6 +28,7 @@ function jsonToHTML(jsonPath, parentElement) {
           lesson.content.forEach((content) => {
             let section = document.createElement("section")
             content.section.forEach((element) => {
+              
               if (element.image) {
                 let figure = document.createElement("figure");
                 let img = document.createElement("img");
@@ -44,11 +45,13 @@ function jsonToHTML(jsonPath, parentElement) {
                 }
                 section.appendChild(figure);
               }
+
               if (element.paragraph) {
                 let paragraph = document.createElement("p");
                 paragraph.innerHTML = element.paragraph;
                 section.appendChild(paragraph);
               }
+
               if (element.link) {
                 let link = document.createElement("a");
                 link.href = element.link;
@@ -56,12 +59,14 @@ function jsonToHTML(jsonPath, parentElement) {
                 link.innerHTML = element.tag;
                 section.appendChild(link);
               }
+
               if (element.video) {
                 let video = document.createElement("video");
                 video.src = element.video;
                 video.controls = true;
                 section.appendChild(video);
               }
+
               if (element.code) {
                 let code = document.createElement("code");
                 if (element.space) {
