@@ -64,6 +64,10 @@ function jsonToHTML(jsonPath, parentElement) {
                 let video = document.createElement("video");
                 video.src = element.video;
                 video.controls = true;
+
+                if (element.short) {
+                  video.classList.add("short")
+                }
                 section.appendChild(video);
               }
 

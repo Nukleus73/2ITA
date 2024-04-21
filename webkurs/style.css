@@ -365,6 +365,20 @@ figure.landscape {
     box-shadow: 0 0 6px 2px rgba(var(--black), 0.4);
 }
 
+.lesson video {
+    margin: .5rem;
+    padding: 0;
+    border: 3px solid rgb(var(--accentMain));
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 0 6px 2px rgba(var(--black), 0.4);
+}
+
+.lesson video.short {
+    aspect-ratio: 9/16;
+    width: 50%;
+}
+
 .lesson p {
     width: 100%;
     margin: 1rem;
@@ -471,6 +485,7 @@ code.landscape {
 
     section {
         flex-direction: column;
+        align-items: center;
     }
 
     .lesson p {
@@ -481,5 +496,10 @@ code.landscape {
     code {
         width: 100%;
         margin: 1rem 0;
+    }
+
+    .lesson video,
+    .lesson video.short {
+        margin: 0 1rem;
     }
 }
