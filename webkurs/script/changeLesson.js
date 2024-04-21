@@ -14,6 +14,7 @@ function changeLesson(lesson) {
   });
   document.querySelector(".courses").scrollTop = 0;
   lessonTitles[lesson].classList.add("active");
+  document.querySelectorAll("#lessonNumber span")[0].innerHTML = lesson+1
 
   // Loop through each video element and pause it
   document.querySelectorAll("video").forEach(function (video) {
