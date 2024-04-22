@@ -4,15 +4,15 @@
 /* COLORS */
 
 :root {
-    --primaryMain: 21, 20, 31;
+    --primaryMain: 44, 45, 51;
     --secondaryMain: 246, 245, 240;
-    --tetriaryMain: 30, 30, 54;
+    --tetriaryMain: 35, 39, 47;
     --accentMain: 246, 245, 240;
 
-    --black: 21, 20, 31;
+    --black: 44, 45, 51;
     --white: 246, 245, 240;
-    --lightBlack: 30, 30, 54;
-    --blackWhite: 208, 208, 208;
+    --lightBlack: 35, 39, 47;
+    --blackWhite: 243, 245, 246;
 
     --accentCSS: 204, 129, 159;
     --accentJS: 245, 163, 22;
