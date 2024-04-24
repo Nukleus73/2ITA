@@ -1,0 +1,70 @@
+{
+  "lessons": [
+    {
+      "title": "Introduksjon til PHP",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "PHP er et språk som <span>må kjøres på serveren</span>, der nettsiden er hostet og vises ikke i inspect menyen til nettleseren. Den har funksjoner både innenfor backend og frontend programering.<br><br>Før du starter å skrive php, så må det ligge i en .php fil og da kan ikke nettleseren utføre koden men tolker det som en .txt fil. PHP <span>MÅ kjøres på en server</span> så når vi utvikler med php bruker vi en lokalserver tjeneste som WAMP eller MAMP for MacOS brukere. På w3 schools sitt php kurs får du også testet ut koden og lært flere komandoer.<br><br>PHP, som nå står for '<span>Hypertext Preprocessor</span>' men som er var forkortelse for 'Personal Home Page' som oppfineren kalte det. PHP er et kraftig skriptespråk som primært brukes til webutvikling. Det ble utviklet spesielt for å lage dynamiske nettsider og webapplikasjoner. PHP er en av de mest populære server-side skriptspråkene og brukes av millioner av nettsteder over hele verden."
+            },
+            {
+              "image": "php.jpg",
+              "caption": "Bilde av Ben Griffiths på Unsplash"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<b>Noen av bruksområdene for PHP er</b>:"
+            }
+          ]
+        },
+        {
+          "section": [
+            {
+              "paragraph": "<span>Dynamiske nettsider</span>: PHP tillater utviklere å lage dynamiske nettsider som kan tilpasse seg brukernes handlinger og data. For eksempel kan du bruke PHP til å generere ulike innhold basert på brukerens preferanser, innloggingstilstand eller andre variabler.<br><span>Data behandling</span>: Siden PHP ikke vises i inspect så kan man bruke den til å prossesere data som brukeren ikke får se foreksempel quiz. PHP har også masse funksjoner for matte og for å hente data som variabel lengde<br><span>Skjema behandling</span>: PHP er ofte brukt til å behandle skjema data som sendes fra HTML-skjemaer. Dette kan inkludere validering av inndata, lagring av skjema data i en database, og sende e-postmeldinger basert på brukerens inndata.<br><span>Database interaksjon</span>: PHP har omfattende støtte for å koble til og samhandle med databaser. Dette gjør det til et ideelt verktøy for å lage dynamiske nettapplikasjoner som trekker data fra en database og viser den til brukerne.<br>"
+            },
+            {
+              "paragraph": "<span>Brukerautentisering og tilgangskontroll</span>: PHP kan brukes til å implementere bruker autentiseringssystemer, som pålogging og registreringssider, samt tilgangskontroll for å begrense tilgangen til visse deler av et nettsted basert på brukerens roller og tillatelser.<br><span>E-handel og nettbutikker</span>: Mange e-handelsplattformer er bygget ved hjelp av PHP, som lar brukerne handle online, legge varer i handlekurven, behandle betalinger og administrere produktkataloger.<br><span>Content Management Systems (CMS)</span>: PHP er kjernen i mange populære CMS-plattformer som WordPress, Joomla og Drupal. Disse systemene tillater enkel opprettelse og administrasjon av nettsider uten behov for avansert programmeringskunnskap.<br><span>Webapplikasjoner og API-er</span>: PHP kan brukes til å lage avanserte webapplikasjoner og API-er som gir tjenester og funksjoner til andre applikasjoner og plattformer.<br><span>Bildebehandling</span>: PHP har innebygde funksjoner for bildebehandling som lar deg manipulere bilder dynamisk, for eksempel endre størrelse, rotere, beskjære og legge til filtre."
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "N/A"
+        },
+        {
+          "task": "N/A"
+        }
+      ]
+    },
+    {
+      "title": "Syntaks",
+      "content": [
+        {
+          "section": [
+            {
+              "paragraph": "Sånn her ser syntaxen til php ut, den starter og slutter sånn vi ser her og så bruker man echo for å skrive ut til sjermen i PHP. Variabler i PHP starter ikke med er deklarasjons komando, du navn gir den med ($Variabelnavn = noe)en verdi, om det er text så skriver du anførselstegn 'text her'også er det ferdig. Echo kan skrive ut variabler."
+            },
+            {
+              "code": "<php>|$verdi = 6;$text = 'Hello world';echo 'Variablen text holder' . $text . 'og variablen verdi holder på' . $verdi . '|<?php>'",
+              "space": true,
+              "textCompile": true
+            }
+          ]
+        }
+      ],
+      "tasks": [
+        {
+          "task": "N/A"
+        },
+        {
+          "task": "N/A"
+        }
+      ]
+    }
+  ]
+}
