@@ -31,14 +31,6 @@
             }
           ]
         }
-      ],
-      "tasks": [
-        {
-          "task": "N/A"
-        },
-        {
-          "task": "N/A"
-        }
       ]
     },
     {
@@ -50,19 +42,11 @@
               "paragraph": "Sånn her ser syntaxen til php ut, den starter og slutter sånn vi ser her og så bruker man echo for å skrive ut til sjermen i PHP. Variabler i PHP starter ikke med er deklarasjons komando, du navn gir den med ($Variabelnavn = noe)en verdi, om det er text så skriver du anførselstegn 'text her'også er det ferdig. Echo kan skrive ut variabler."
             },
             {
-              "code": "<php>|$verdi = 6;$text = 'Hello world';echo 'Variablen text holder' . $text . 'og variablen verdi holder på' . $verdi . '|<?php>'",
+              "code": "<?php||$verdi = 6;$text = 'Hello world';echo 'Variablen text holder' . $text . 'og variablen verdi holder på' . $verdi ||?>'",
               "space": true,
               "textCompile": true
             }
           ]
-        }
-      ],
-      "tasks": [
-        {
-          "task": "N/A"
-        },
-        {
-          "task": "N/A"
         }
       ]
     }
